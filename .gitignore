@@ -1,4 +1,6 @@
 node_modules/
 dist/
+site/.astro/
+site/public/api.json
 *.log
 .DS_Store

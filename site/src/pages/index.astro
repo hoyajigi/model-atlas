@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro'
+import { atlas, fmtContext, fmtParams } from '../lib/data'
+
+const models = Object.entries(atlas.models)
+  .map(([ref, m]) => ({ ref, ...m }))
+  .sort((a, b) => (b.params ?? 0) - (a.params ??  0))
+const orgs = [...new Set(models.map((m) => m.org))].sort()
+const modalities = [...new Set(models.map((m) => m.modality))].sort()
+const elo = (m: (typeof models)[number]): number | undefined =>
+  m.benchmarks?.['lmarena-text']?.score ?? m.benchmarks?.['lmarena-t2i']?.score
+---
+
+<Base title="Models">
+  <h1>Open-weights models</h1>
+  <p class="lede">
+    {models.length} curated models — LLMs and text-to-image, with exact parameter counts from safetensors metadata,
+    licenses, and arena Elo. API pricing lives under <a href="/pricing">API Pricing</a> and <a href="/t2i">Text-to-Image</a>.
+  </p>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search name / org / license…" />
+    <select id="modality">
+      <option value="">All modalities</option>
+      {modalities.map((m) => <option value={m}>{m}</option>)}
+    </select>
+    <select id="org">
+      <option value="">All orgs</option>
+      {orgs.map((o) => <option value={o}>{o}</option>)}
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table id="models">
+      <thead>
+        <tr>
+          <th>Model</th><th>Org</th><th>Modality</th><th>Params</th><th>Active</th>
+          <th>Context</th><th>License</th><th>Arena Elo</th><th>Released</th>
+        </tr>
+      </thead>
+      <tbody>
+        {models.map((m) => (
+          <tr data-name={`${m.name} ${m.org} ${m.license ?? ''}`.toLowerCase()} data-modality={m.modality} data-org={m.org}>
+            <td><a href={`/models/${m.ref}`}>{m.name}</a></td>
+            <td>{m.org}</td>
+            <td><span class="tag">{m.modality}</span></td>
+            <td>{fmtParams(m.params)}</td>
+            <td>{fmtParams(m.active_params)}</td>
+            <td>{fmtContext(m.context)}</td>
+            <td>{m.license ?? '—'}</td>
+            <td>{elo(m) ?? '—'}</td>
+            <td>{m.release_date ?? '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<script>
+  const q = document.getElementById('q') as HTMLInputElement
+  const modality = document.getElementById('modality') as HTMLSelectElement
+  const org = document.getElementById('org') as HTMLSelectElement
+  const rows = [...document.querySelectorAll<HTMLTableRowElement>('#models tbody tr')]
+
+  const apply = () => {
+    const needle = q.value.trim().toLowerCase()
+    for (const row of rows) {
+      const okText = !needle || (row.dataset.name ?? '').includes(needle)
+      const okModality = !modality.value || row.dataset.modality === modality.value
+      const okOrg = !org.value || row.dataset.org === org.value
+      row.style.display = okText && okModality && okOrg ? '' : 'none'
+    }
+  }
+  for (const el of [q, modality, org]) el.addEventListener('input', apply)
+</script>

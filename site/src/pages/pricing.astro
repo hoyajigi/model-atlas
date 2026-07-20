@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro'
+import { allOfferings, fmtContext } from '../lib/data'
+
+const rows = allOfferings()
+  .filter(({ offering }) => offering.pricing?.input_per_mtok !== undefined && offering.status === 'active')
+  .sort((a, b) => (a.offering.pricing?.input_per_mtok ?? 0) - (b.offering.pricing?.input_per_mtok ?? 0))
+const providers = [...new Set(rows.map((r) => r.provider.id))].sort()
+---
+
+<Base title="API Pricing">
+  <h1>LLM API pricing</h1>
+  <p class="lede">
+    {rows.length} active offerings across {providers.length} providers, in USD per million tokens.
+    Synced daily from <a href="https://models.dev">models.dev</a> and cross-checked against LiteLLM.
+  </p>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search model…" />
+    <select id="provider">
+      <option value="">All providers</option>
+      {providers.map((p) => <option value={p}>{p}</option>)}
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table id="pricing">
+      <thead>
+        <tr>
+          <th>Provider</th><th>Model</th><th>Context</th>
+          <th>Input $/M</th><th>Output $/M</th><th>Cache read $/M</th><th>As of</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map(({ provider, offering }) => (
+          <tr data-name={offering.name.toLowerCase()} data-provider={provider.id}>
+            <td>{provider.name}</td>
+            <td>{offering.model_ref ? <a href={`/models/${offering.model_ref}`}>{offering.name}</a> : offering.name}</td>
+            <td>{fmtContext(offering.context)}</td>
+            <td>${offering.pricing?.input_per_mtok}</td>
+            <td>${offering.pricing?.output_per_mtok ?? '—'}</td>
+            <td>{offering.pricing?.cache_read_per_mtok !== undefined ? `$${offering.pricing.cache_read_per_mtok}` : '—'}</td>
+            <td class="muted">{offering.source.as_of}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<script>
+  const q = document.getElementById('q') as HTMLInputElement
+  const provider = document.getElementById('provider') as HTMLSelectElement
+  const rows = [...document.querySelectorAll<HTMLTableRowElement>('#pricing tbody tr')]
+  const apply = () => {
+    const needle = q.value.trim().toLowerCase()
+    for (const row of rows) {
+      const okText = !needle || (row.dataset.name ?? '').includes(needle)
+      const okProvider = !provider.value || row.dataset.provider === provider.value
+      row.style.display = okText && okProvider ? '' : 'none'
+    }
+  }
+  for (const el of [q, provider]) el.addEventListener('input', apply)
+</script>

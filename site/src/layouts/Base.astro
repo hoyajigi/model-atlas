@@ -1,0 +1,123 @@
+---
+interface Props {
+  title: string
+  description?: string
+}
+const { title, description = 'Open database of LLM and text-to-image models — open weights and hosted APIs' } = Astro.props
+const nav = [
+  { href: '/', label: 'Models' },
+  { href: '/pricing', label: 'API Pricing' },
+  { href: '/t2i', label: 'Text-to-Image' },
+  { href: '/about', label: 'About / API' }
+]
+const current = Astro.url.pathname
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title} · model-atlas</title>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">model-atlas</a>
+      <nav>
+        {nav.map((item) => (
+          <a href={item.href} class={current === item.href || current === `${item.href}/` ? 'active' : ''}>{item.label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      Data: CC-BY-4.0 · Code: MIT · Sources:
+      <a href="https://models.dev">models.dev</a>, <a href="https://huggingface.co">HF Hub</a>,
+      <a href="https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset">LMArena</a> ·
+      Every fact carries a source URL and date.
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1d21;
+    --muted: #6a7178;
+    --border: #e3e6e9;
+    --accent: #2563eb;
+    --surface: #f6f7f9;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #e8eaed;
+      --muted: #9aa2ab;
+      --border: #2b2f36;
+      --accent: #7aa2f7;
+      --surface: #1c1f25;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.55;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .brand { font-weight: 700; font-size: 1.1rem; color: var(--fg); text-decoration: none; }
+  nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+  nav a.active, nav a:hover { color: var(--accent); }
+  main { max-width: 72rem; margin: 0 auto; padding: 1.5rem; }
+  footer {
+    max-width: 72rem;
+    margin: 2rem auto 0;
+    padding: 1rem 1.5rem 2rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--muted); }
+  h1 { font-size: 1.5rem; margin: 0.2rem 0 0.4rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  p.lede { color: var(--muted); margin-top: 0; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { background: var(--surface); position: sticky; top: 0; cursor: default; }
+  tr:last-child td { border-bottom: none; }
+  td a { color: var(--accent); text-decoration: none; }
+  .tag {
+    display: inline-block;
+    padding: 0.05rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .tag.open { color: #15803d; border-color: #15803d55; }
+  .filters { display: flex; gap: 0.6rem; margin: 1rem 0; flex-wrap: wrap; }
+  .filters input, .filters select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 0.9rem;
+  }
+  .muted { color: var(--muted); }
+</style>

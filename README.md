@@ -31,6 +31,15 @@ npm run build           # -> dist/api.json, dist/atlas.sqlite
 
 Consume `dist/api.json` (all data, one file) or `dist/atlas.sqlite` for queries.
 
+## Website
+
+`site/` is an Astro static site (model browser, LLM API pricing, normalized t2i pricing, per-model pages) deployed to GitHub Pages on every push to main. `/api.json` is served alongside it.
+
+```sh
+npm run site:dev     # local dev server
+npm run site:build   # data build + site build -> site/dist
+```
+
 ## Maintenance
 
 Two layers keep the data fresh:

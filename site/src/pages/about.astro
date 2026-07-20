@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro'
+import { atlas } from '../lib/data'
+
+const counts = {
+  models: Object.keys(atlas.models).length,
+  providers: Object.keys(atlas.providers).length,
+  offerings: Object.values(atlas.providers).reduce((n, p) => n + Object.keys(p.models).length, 0)
+}
+---
+
+<Base title="About & API">
+  <h1>About model-atlas</h1>
+  <p class="lede">
+    An open, source-annotated database of LLM and text-to-image models — {counts.models} open-weights models,
+    {counts.offerings} API offerings across {counts.providers} providers.
+  </p>
+
+  <h2>Why another model database?</h2>
+  <p>
+    models.dev covers LLM API pricing well and LiteLLM ships a pricing JSON, but three things were missing everywhere:
+    unified <strong>text-to-image coverage</strong> (open-weights specs joined with API pricing normalized to $/image),
+    <strong>hardware fit as data</strong> (measured VRAM and throughput per model × quant × GPU), and
+    <strong>Korean benchmark scores</strong> (KMMLU, LogicKor) in machine-readable form. This project fills those gaps
+    and credits its upstreams.
+  </p>
+
+  <h2>Use the data</h2>
+  <p>Everything on this site is one JSON file, CC-BY-4.0:</p>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th><code>/api.json</code></th><td>Full dataset: models, providers, offerings, benchmarks, hardware</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Every numeric fact carries <code>source.url</code> and <code>source.as_of</code>. The dataset is maintained in TOML
+    (one file per model) on GitHub, refreshed by a daily deterministic sync plus a Claude-based curator agent whose
+    changes land as reviewable pull requests.
+  </p>
+
+  <h2>Contributing</h2>
+  <p>
+    Add or fix a model with a PR — schema validation runs in CI. Measured VRAM / tok/s / sec-per-image data points from
+    your own hardware are especially welcome.
+  </p>
+</Base>

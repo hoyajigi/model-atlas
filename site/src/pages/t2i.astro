@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro'
+import { allOfferings, atlas } from '../lib/data'
+
+const rows = allOfferings()
+  .filter(({ offering }) => offering.pricing?.image !== undefined)
+  .sort(
+    (a, b) =>
+      (a.offering.pricing?.image?.usd_per_image_1024 ?? Infinity) -
+      (b.offering.pricing?.image?.usd_per_image_1024 ?? Infinity)
+  )
+const unitLabel: Record<string, string> = {
+  per_image: 'per image',
+  per_megapixel: 'per megapixel',
+  per_gpu_second: 'per GPU-second'
+}
+const eloOf = (ref?: string): number | undefined =>
+  ref ? atlas.models[ref]?.benchmarks?.['lmarena-t2i']?.score : undefined
+---
+
+<Base title="Text-to-Image">
+  <h1>Text-to-image API pricing</h1>
+  <p class="lede">
+    {rows.length} image-generation offerings, normalized to the cost of one 1024×1024 image so
+    per-image, per-megapixel and token-billed models are comparable. Open-weights models link to their spec page.
+    No other open database covers this — prices verified against official pricing pages.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Provider</th><th>Model</th><th>Billing unit</th><th>Listed price</th>
+          <th>≈ $/image (1024²)</th><th>Arena Elo</th><th>Open weights</th><th>As of</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map(({ provider, offering }) => {
+          const img = offering.pricing!.image!
+          const elo = eloOf(offering.model_ref)
+          return (
+            <tr>
+              <td>{provider.name}</td>
+              <td>{offering.model_ref ? <a href={`/models/${offering.model_ref}`}>{offering.name}</a> : offering.name}</td>
+              <td>{unitLabel[img.unit] ?? img.unit}</td>
+              <td>${img.usd}</td>
+              <td><strong>{img.usd_per_image_1024 !== undefined ? `$${img.usd_per_image_1024}` : '—'}</strong></td>
+              <td>{elo ?? '—'}</td>
+              <td>{offering.model_ref ? <span class="tag open">open</span> : <span class="tag">API only</span>}</td>
+              <td class="muted">{offering.source.as_of}</td>
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
+  </div>
+</Base>

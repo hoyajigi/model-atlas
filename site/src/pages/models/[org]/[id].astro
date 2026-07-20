@@ -1,0 +1,90 @@
+---
+import Base from '../../../layouts/Base.astro'
+import { allOfferings, atlas, fmtContext, fmtParams } from '../../../lib/data'
+
+export function getStaticPaths() {
+  return Object.keys(atlas.models).map((ref) => {
+    const [org, id] = ref.split('/')
+    return { params: { org, id } }
+  })
+}
+
+const { org, id } = Astro.params
+const ref = `${org}/${id}`
+const model = atlas.models[ref]
+if (!model) throw new Error(`Unknown model ${ref}`)
+const offerings = allOfferings().filter(({ offering }) => offering.model_ref === ref)
+const benchmarks = Object.entries(model.benchmarks ?? {})
+---
+
+<Base title={model.name}>
+  <h1>{model.name}</h1>
+  <p class="lede">
+    {model.org} · <span class="tag">{model.modality}</span>
+    {model.open_weights && <span class="tag open">open weights</span>}
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Parameters</th><td>{fmtParams(model.params)}{model.active_params ? ` (${fmtParams(model.active_params)} active)` : ''}</td></tr>
+        <tr><th>Context</th><td>{fmtContext(model.context)}</td></tr>
+        <tr><th>License</th><td>{model.license ?? 'unknown'}</td></tr>
+        <tr><th>Released</th><td>{model.release_date ?? '—'}</td></tr>
+        {model.hf_id && (
+          <tr><th>Hugging Face</th><td><a href={`https://huggingface.co/${model.hf_id}`}>{model.hf_id}</a></td></tr>
+        )}
+        <tr><th>Source</th><td><a href={model.source.url}>{model.source.url}</a> <span class="muted">as of {model.source.as_of}</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  {benchmarks.length > 0 && (
+    <>
+      <h2>Benchmarks</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Suite</th><th>Score</th><th>As of</th></tr></thead>
+          <tbody>
+            {benchmarks.map(([suite, b]) => (
+              <tr>
+                <td><a href={atlas.benchmarks[suite]?.url}>{atlas.benchmarks[suite]?.name ?? suite}</a></td>
+                <td>{b.score}</td>
+                <td class="muted">{b.as_of}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <h2>Hosted API offerings</h2>
+  {offerings.length === 0 ? (
+    <p class="muted">No linked API offerings yet — run it yourself from the weights.</p>
+  ) : (
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Provider</th><th>API model id</th><th>Pricing</th><th>Context</th></tr></thead>
+        <tbody>
+          {offerings.map(({ provider, offering }) => {
+            const p = offering.pricing
+            const price = p?.image
+              ? `$${p.image.usd_per_image_1024 ?? p.image.usd} / image`
+              : p?.input_per_mtok !== undefined
+                ? `$${p.input_per_mtok} in / $${p.output_per_mtok} out per Mtok`
+                : '—'
+            return (
+              <tr>
+                <td>{provider.name}</td>
+                <td><code>{offering.model_id}</code></td>
+                <td>{price}</td>
+                <td>{fmtContext(offering.context)}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
+  )}
+</Base>

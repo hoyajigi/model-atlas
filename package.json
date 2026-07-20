@@ -11,7 +11,9 @@
     "sync:modelsdev": "tsx src/sync/modelsdev.ts",
     "sync:litellm": "tsx src/sync/litellm.ts",
     "sync:hf": "tsx src/sync/hf.ts",
-    "sync:lmarena": "tsx src/sync/lmarena.ts"
+    "sync:lmarena": "tsx src/sync/lmarena.ts",
+    "site:build": "npm run build && cp dist/api.json site/public/api.json && npm --prefix site run build",
+    "site:dev": "npm --prefix site run dev"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
