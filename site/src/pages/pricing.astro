@@ -28,13 +28,25 @@ const providers = [...new Set(rows.map((r) => r.provider.id))].sort()
     <table id="pricing">
       <thead>
         <tr>
-          <th>Provider</th><th>Model</th><th>Context</th>
-          <th>Input $/M</th><th>Output $/M</th><th>Cache read $/M</th><th>As of</th>
+          <th data-sort="str" data-key="pname">Provider</th><th data-sort="str" data-key="mname">Model</th>
+          <th data-sort="num" data-key="context">Context</th>
+          <th data-sort="num" data-key="pin">Input $/M</th><th data-sort="num" data-key="pout">Output $/M</th>
+          <th data-sort="num" data-key="pcache">Cache read $/M</th><th data-sort="str" data-key="asof">As of</th>
         </tr>
       </thead>
       <tbody>
         {rows.map(({ provider, offering }) => (
-          <tr data-name={offering.name.toLowerCase()} data-provider={provider.id}>
+          <tr
+            data-name={offering.name.toLowerCase()}
+            data-provider={provider.id}
+            data-pname={provider.name}
+            data-mname={offering.name}
+            data-context={offering.context ?? ''}
+            data-pin={offering.pricing?.input_per_mtok ?? ''}
+            data-pout={offering.pricing?.output_per_mtok ?? ''}
+            data-pcache={offering.pricing?.cache_read_per_mtok ?? ''}
+            data-asof={offering.source.as_of}
+          >
             <td>{provider.name}</td>
             <td>{offering.model_ref ? <a href={href(`/models/${offering.model_ref}`)}>{offering.name}</a> : offering.name}</td>
             <td>{fmtContext(offering.context)}</td>
@@ -50,6 +62,9 @@ const providers = [...new Set(rows.map((r) => r.provider.id))].sort()
 </Base>
 
 <script>
+  import { initSort } from '../lib/table-client'
+
+  initSort(document.getElementById('pricing') as HTMLTableElement)
   const q = document.getElementById('q') as HTMLInputElement
   const provider = document.getElementById('provider') as HTMLSelectElement
   const rows = [...document.querySelectorAll<HTMLTableRowElement>('#pricing tbody tr')]

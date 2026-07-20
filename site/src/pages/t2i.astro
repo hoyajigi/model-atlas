@@ -27,11 +27,13 @@ const eloOf = (ref?: string): number | undefined =>
   </p>
 
   <div class="table-wrap">
-    <table>
+    <table id="t2i">
       <thead>
         <tr>
-          <th>Provider</th><th>Model</th><th>Billing unit</th><th>Listed price</th>
-          <th>≈ $/image (1024²)</th><th>Arena Elo</th><th>Open weights</th><th>As of</th>
+          <th data-sort="str" data-key="pname">Provider</th><th data-sort="str" data-key="mname">Model</th>
+          <th data-sort="str" data-key="unit">Billing unit</th><th data-sort="num" data-key="price">Listed price</th>
+          <th data-sort="num" data-key="norm">≈ $/image (1024²)</th><th data-sort="num" data-key="elo">Arena Elo</th>
+          <th data-sort="str" data-key="open">Open weights</th><th data-sort="str" data-key="asof">As of</th>
         </tr>
       </thead>
       <tbody>
@@ -39,7 +41,16 @@ const eloOf = (ref?: string): number | undefined =>
           const img = offering.pricing!.image!
           const elo = eloOf(offering.model_ref)
           return (
-            <tr>
+            <tr
+              data-pname={provider.name}
+              data-mname={offering.name}
+              data-unit={img.unit}
+              data-price={img.usd}
+              data-norm={img.usd_per_image_1024 ?? ''}
+              data-elo={elo ?? ''}
+              data-open={offering.model_ref ? 'open' : 'api'}
+              data-asof={offering.source.as_of}
+            >
               <td>{provider.name}</td>
               <td>{offering.model_ref ? <a href={href(`/models/${offering.model_ref}`)}>{offering.name}</a> : offering.name}</td>
               <td>{unitLabel[img.unit] ?? img.unit}</td>
@@ -55,3 +66,9 @@ const eloOf = (ref?: string): number | undefined =>
     </table>
   </div>
 </Base>
+
+<script>
+  import { initSort } from '../lib/table-client'
+
+  initSort(document.getElementById('t2i') as HTMLTableElement)
+</script>

@@ -15,7 +15,14 @@ const model = atlas.models[ref]
 if (!model) throw new Error(`Unknown model ${ref}`)
 const offerings = allOfferings().filter(({ offering }) => offering.model_ref === ref)
 const benchmarks = Object.entries(model.benchmarks ?? {})
-const hardware = (atlas.hardware ?? []).filter((h) => h.model_ref === ref)
+const hardware = (atlas.hardware ?? [])
+  .filter((h) => h.model_ref === ref)
+  .sort((a, b) => (b.tok_per_s ?? 0) - (a.tok_per_s ?? 0))
+const hwOptions = {
+  hardware: [...new Set(hardware.map((h) => h.hardware))].sort(),
+  engine: [...new Set(hardware.map((h) => h.engine))].sort(),
+  quant: [...new Set(hardware.map((h) => h.quant))].sort()
+}
 ---
 
 <Base title={model.name}>
@@ -63,12 +70,47 @@ const hardware = (atlas.hardware ?? []).filter((h) => h.model_ref === ref)
   {hardware.length > 0 && (
     <>
       <h2>Measured on real hardware</h2>
+      <div class="filters">
+        <span id="hw-count" class="muted" style="align-self: center;">{hardware.length} shown</span>
+        <select id="hw-hardware">
+          <option value="">All hardware</option>
+          {hwOptions.hardware.map((v) => <option value={v}>{v}</option>)}
+        </select>
+        <select id="hw-engine">
+          <option value="">All engines</option>
+          {hwOptions.engine.map((v) => <option value={v}>{v}</option>)}
+        </select>
+        <select id="hw-quant">
+          <option value="">All precisions</option>
+          {hwOptions.quant.map((v) => <option value={v}>{v}</option>)}
+        </select>
+      </div>
       <div class="table-wrap">
-        <table>
-          <thead><tr><th>Hardware</th><th>Precision</th><th>Engine</th><th>Workload</th><th>Speed</th><th>VRAM</th><th>Measured</th></tr></thead>
+        <table id="hw">
+          <thead>
+            <tr>
+              <th data-sort="str" data-key="hw">Hardware</th>
+              <th data-sort="str" data-key="quant">Precision</th>
+              <th data-sort="str" data-key="engine">Engine</th>
+              <th data-sort="num" data-key="conc">Workload</th>
+              <th data-sort="num" data-key="speed">Speed</th>
+              <th data-sort="num" data-key="ttft">TTFT</th>
+              <th data-sort="num" data-key="vram">VRAM</th>
+              <th data-sort="str" data-key="date">Measured</th>
+            </tr>
+          </thead>
           <tbody>
             {hardware.map((h) => (
-              <tr>
+              <tr
+                data-hw={h.hardware}
+                data-quant={h.quant}
+                data-engine={h.engine}
+                data-conc={h.concurrency}
+                data-speed={h.tok_per_s ?? (h.sec_per_image ? 1 / h.sec_per_image : '')}
+                data-ttft={h.ttft_ms ?? ''}
+                data-vram={h.vram_gb ?? ''}
+                data-date={h.measured_on ?? ''}
+              >
                 <td>{h.gpus > 1 ? `${h.gpus}× ` : ''}{h.hardware}</td>
                 <td>{h.quant}</td>
                 <td>{h.engine}{h.engine_version ? ` ${h.engine_version}` : ''}</td>
@@ -78,6 +120,7 @@ const hardware = (atlas.hardware ?? []).filter((h) => h.model_ref === ref)
                 <td>
                   {h.tok_per_s ? `${h.tok_per_s} tok/s` : h.sec_per_image ? `${h.sec_per_image}s / image` : '—'}
                 </td>
+                <td>{h.ttft_ms ? `${h.ttft_ms} ms` : '—'}</td>
                 <td>{h.vram_gb ? `${h.vram_gb} GB` : '—'}</td>
                 <td class="muted">{h.measured_on ?? '—'}</td>
               </tr>
@@ -87,6 +130,29 @@ const hardware = (atlas.hardware ?? []).filter((h) => h.model_ref === ref)
       </div>
     </>
   )}
+
+  <script>
+    import { initSort } from '../../../lib/table-client'
+
+    const table = document.getElementById('hw') as HTMLTableElement | null
+    if (table) {
+      initSort(table)
+      const selects = ['hw-hardware', 'hw-engine', 'hw-quant'].map((id) => document.getElementById(id) as HTMLSelectElement)
+      const keys = ['hw', 'engine', 'quant']
+      const count = document.getElementById('hw-count') as HTMLElement
+      const rows = [...table.tBodies[0]!.rows]
+      const apply = () => {
+        let shown = 0
+        for (const row of rows) {
+          const visible = selects.every((sel, i) => !sel.value || row.dataset[keys[i]!] === sel.value)
+          row.style.display = visible ? '' : 'none'
+          if (visible) shown += 1
+        }
+        count.textContent = `${shown} shown`
+      }
+      for (const sel of selects) sel.addEventListener('change', apply)
+    }
+  </script>
 
   <h2>Hosted API offerings</h2>
   {offerings.length === 0 ? (

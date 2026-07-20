@@ -2,8 +2,13 @@
 import Base from '../layouts/Base.astro'
 import { atlas, fmtContext, fmtParams, href } from '../lib/data'
 
+const hwByModel = new Map<string, { terms: string; count: number }>()
+for (const h of atlas.hardware ?? []) {
+  const seen = hwByModel.get(h.model_ref) ?? { terms: '', count: 0 }
+  hwByModel.set(h.model_ref, { terms: `${seen.terms} ${h.hardware} ${h.engine} ${h.quant}`, count: seen.count + 1 })
+}
 const models = Object.entries(atlas.models)
-  .map(([ref, m]) => ({ ref, ...m }))
+  .map(([ref, m]) => ({ ref, ...m, hw: hwByModel.get(ref) }))
   .sort((a, b) => (b.params ?? 0) - (a.params ??  0))
 const orgs = [...new Set(models.map((m) => m.org))].sort()
 const modalities = [...new Set(models.map((m) => m.modality))].sort()
@@ -19,7 +24,7 @@ const elo = (m: (typeof models)[number]): number | undefined =>
   </p>
 
   <div class="filters">
-    <input id="q" type="search" placeholder="Search name / org / license…" />
+    <input id="q" type="search" placeholder="Search name / org / license / hardware (e.g. h100)…" />
     <span id="count" class="muted" style="align-self: center;">{models.length} shown</span>
     <select id="modality">
       <option value="">All modalities</option>
@@ -35,13 +40,28 @@ const elo = (m: (typeof models)[number]): number | undefined =>
     <table id="models">
       <thead>
         <tr>
-          <th>Model</th><th>Org</th><th>Modality</th><th>Params</th><th>Active</th>
-          <th>Context</th><th>License</th><th>Arena Elo</th><th>Released</th>
+          <th data-sort="str" data-key="mname">Model</th><th data-sort="str" data-key="org">Org</th><th>Modality</th>
+          <th data-sort="num" data-key="params">Params</th><th data-sort="num" data-key="active">Active</th>
+          <th data-sort="num" data-key="context">Context</th><th data-sort="str" data-key="license">License</th>
+          <th data-sort="num" data-key="elo">Arena Elo</th><th data-sort="num" data-key="hw">Measured</th>
+          <th data-sort="str" data-key="released">Released</th>
         </tr>
       </thead>
       <tbody>
         {models.map((m) => (
-          <tr data-name={`${m.name} ${m.org} ${m.license ?? ''}`.toLowerCase()} data-modality={m.modality} data-org={m.org}>
+          <tr
+            data-name={`${m.name} ${m.org} ${m.license ?? ''}${m.hw?.terms ?? ''}`.toLowerCase()}
+            data-modality={m.modality}
+            data-org={m.org}
+            data-mname={m.name}
+            data-params={m.params ?? ''}
+            data-active={m.active_params ?? ''}
+            data-context={m.context ?? ''}
+            data-license={m.license ?? ''}
+            data-elo={elo(m) ?? ''}
+            data-hw={m.hw?.count ?? 0}
+            data-released={m.release_date ?? ''}
+          >
             <td><a href={href(`/models/${m.ref}`)}>{m.name}</a></td>
             <td>{m.org}</td>
             <td><span class="tag">{m.modality}</span></td>
@@ -50,6 +70,7 @@ const elo = (m: (typeof models)[number]): number | undefined =>
             <td>{fmtContext(m.context)}</td>
             <td>{m.license ?? '—'}</td>
             <td>{elo(m) ?? '—'}</td>
+            <td>{m.hw ? <a href={href(`/models/${m.ref}`)}>{m.hw.count} configs</a> : '—'}</td>
             <td>{m.release_date ?? '—'}</td>
           </tr>
         ))}
@@ -59,6 +80,9 @@ const elo = (m: (typeof models)[number]): number | undefined =>
 </Base>
 
 <script>
+  import { initSort } from '../lib/table-client'
+
+  initSort(document.getElementById('models') as HTMLTableElement)
   const q = document.getElementById('q') as HTMLInputElement
   const modality = document.getElementById('modality') as HTMLSelectElement
   const org = document.getElementById('org') as HTMLSelectElement

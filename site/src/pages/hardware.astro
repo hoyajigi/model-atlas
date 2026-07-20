@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro'
+import { atlas, fmtParams, href } from '../lib/data'
+
+const rows = (atlas.hardware ?? [])
+  .map((h) => ({ ...h, model: atlas.models[h.model_ref] }))
+  .filter((h) => h.model !== undefined)
+  .sort((a, b) => (b.tok_per_s ?? 0) - (a.tok_per_s ?? 0))
+const options = {
+  hardware: [...new Set(rows.map((h) => h.hardware))].sort(),
+  engine: [...new Set(rows.map((h) => h.engine))].sort(),
+  quant: [...new Set(rows.map((h) => h.quant))].sort()
+}
+---
+
+<Base title="Hardware">
+  <h1>Measured on real hardware</h1>
+  <p class="lede">
+    {rows.length} measured configurations — find which models have real numbers on your hardware, then compare
+    engines and precisions. Datacenter GPUs from
+    <a href="https://inferencex.semianalysis.com">InferenceX by SemiAnalysis</a> (Apache-2.0), consumer hardware
+    measured by contributors. Click a column header to sort.
+  </p>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search model…" />
+    <span id="count" class="muted" style="align-self: center;">{rows.length} shown</span>
+    <select id="f-hardware">
+      <option value="">All hardware</option>
+      {options.hardware.map((v) => <option value={v}>{v}</option>)}
+    </select>
+    <select id="f-engine">
+      <option value="">All engines</option>
+      {options.engine.map((v) => <option value={v}>{v}</option>)}
+    </select>
+    <select id="f-quant">
+      <option value="">All precisions</option>
+      {options.quant.map((v) => <option value={v}>{v}</option>)}
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table id="hw">
+      <thead>
+        <tr>
+          <th data-sort="str" data-key="name">Model</th>
+          <th data-sort="num" data-key="params">Params</th>
+          <th data-sort="str" data-key="hw">Hardware</th>
+          <th data-sort="str" data-key="quant">Precision</th>
+          <th data-sort="str" data-key="engine">Engine</th>
+          <th data-sort="num" data-key="conc">Workload</th>
+          <th data-sort="num" data-key="speed">Speed</th>
+          <th data-sort="num" data-key="ttft">TTFT</th>
+          <th data-sort="str" data-key="date">Measured</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((h) => (
+          <tr
+            data-name={`${h.model!.name} ${h.model!.org} ${h.model_ref}`.toLowerCase()}
+            data-params={h.model!.params ?? ''}
+            data-hw={h.hardware}
+            data-quant={h.quant}
+            data-engine={h.engine}
+            data-conc={h.concurrency}
+            data-speed={h.tok_per_s ?? (h.sec_per_image ? 1 / h.sec_per_image : '')}
+            data-ttft={h.ttft_ms ?? ''}
+            data-date={h.measured_on ?? ''}
+          >
+            <td><a href={href(`/models/${h.model_ref}`)}>{h.model!.name}</a></td>
+            <td>{fmtParams(h.model!.params)}</td>
+            <td>{h.gpus > 1 ? `${h.gpus}× ` : ''}{h.hardware}</td>
+            <td>{h.quant}</td>
+            <td>{h.engine}</td>
+            <td>{h.seq_in ? `${h.seq_in}/${h.seq_out}, c=${h.concurrency}` : h.resolution ? `${h.resolution}, ${h.steps} steps` : '—'}</td>
+            <td>{h.tok_per_s ? `${h.tok_per_s} tok/s` : h.sec_per_image ? `${h.sec_per_image}s / image` : '—'}</td>
+            <td>{h.ttft_ms ? `${h.ttft_ms} ms` : '—'}</td>
+            <td class="muted">{h.measured_on ?? '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<script>
+  import { initSort } from '../lib/table-client'
+
+  const table = document.getElementById('hw') as HTMLTableElement
+  initSort(table)
+
+  const q = document.getElementById('q') as HTMLInputElement
+  const selects = ['f-hardware', 'f-engine', 'f-quant'].map((id) => document.getElementById(id) as HTMLSelectElement)
+  const keys = ['hw', 'engine', 'quant']
+  const count = document.getElementById('count') as HTMLElement
+  const rows = [...table.tBodies[0]!.rows]
+
+  const apply = () => {
+    const needle = q.value.trim().toLowerCase()
+    let shown = 0
+    for (const row of rows) {
+      const okText = !needle || (row.dataset.name ?? '').includes(needle)
+      const okSelects = selects.every((sel, i) => !sel.value || row.dataset[keys[i]!] === sel.value)
+      const visible = okText && okSelects
+      row.style.display = visible ? '' : 'none'
+      if (visible) shown += 1
+    }
+    count.textContent = `${shown} shown`
+  }
+  q.addEventListener('input', apply)
+  for (const sel of selects) sel.addEventListener('change', apply)
+</script>

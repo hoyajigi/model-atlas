@@ -10,6 +10,7 @@ const nav = [
   { href: href('/'), label: 'Models' },
   { href: href('/pricing'), label: 'API Pricing' },
   { href: href('/t2i'), label: 'Text-to-Image' },
+  { href: href('/hardware'), label: 'Hardware' },
   { href: href('/about'), label: 'About / API' }
 ]
 const current = Astro.url.pathname.replace(/\/$/, '') || '/'
@@ -24,6 +25,7 @@ const isActive = (target: string): boolean => {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="icon" href={href('/favicon.svg')} type="image/svg+xml" />
     <title>{title} · model-atlas</title>
   </head>
   <body>
@@ -104,6 +106,11 @@ const isActive = (target: string): boolean => {
   table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
   th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
   th { background: var(--surface); position: sticky; top: 0; cursor: default; }
+  th[data-sort] { cursor: pointer; user-select: none; }
+  th[data-sort]:hover { color: var(--accent); }
+  th[data-sort]::after { content: ' ↕'; opacity: 0.35; font-size: 0.8em; }
+  th[data-sort][data-dir='asc']::after { content: ' ↑'; opacity: 1; }
+  th[data-sort][data-dir='desc']::after { content: ' ↓'; opacity: 1; }
   tr:last-child td { border-bottom: none; }
   td a { color: var(--accent); text-decoration: none; }
   .tag {
