@@ -1,0 +1,14 @@
+model_id = "flux-2-klein-9b"
+name = "FLUX.2 [klein] 9B"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_megapixel"
+usd = 0.015
+usd_per_image_1024 = 0.015
+
+[source]
+url = "https://bfl.ai/pricing"
+as_of = "2026-07-20"
+note = "first MP $0.015, +$0.002 per additional MP"

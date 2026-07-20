@@ -1,0 +1,16 @@
+model_id = "sd3.5-large"
+model_ref = "stabilityai/sd-3.5-large"
+name = "Stable Diffusion 3.5 Large"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_image"
+usd = 0.065
+resolution = "1024x1024"
+usd_per_image_1024 = 0.065
+
+[source]
+url = "https://platform.stability.ai/pricing"
+as_of = "2026-07-20"
+note = "6.5 credits @ $0.01/credit"

@@ -1,0 +1,14 @@
+model_id = "flux-2-pro"
+name = "FLUX.2 [pro]"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_megapixel"
+usd = 0.03
+usd_per_image_1024 = 0.03
+
+[source]
+url = "https://bfl.ai/pricing"
+as_of = "2026-07-20"
+note = "first MP $0.03, +$0.015 per additional MP"

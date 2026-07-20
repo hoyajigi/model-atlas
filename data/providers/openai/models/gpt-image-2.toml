@@ -9,6 +9,12 @@ input_per_mtok = 5
 output_per_mtok = 30
 cache_read_per_mtok = 1.25
 
+[pricing.image]
+unit = "per_image"
+usd = 0.053
+resolution = "1024x1024"
+usd_per_image_1024 = 0.053
+
 [capabilities]
 tool_call = false
 reasoning = false

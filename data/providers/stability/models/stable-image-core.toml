@@ -1,0 +1,15 @@
+model_id = "stable-image-core"
+name = "Stable Image Core"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_image"
+usd = 0.03
+resolution = "1024x1024"
+usd_per_image_1024 = 0.03
+
+[source]
+url = "https://platform.stability.ai/pricing"
+as_of = "2026-07-20"
+note = "3 credits @ $0.01/credit"

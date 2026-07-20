@@ -1,0 +1,10 @@
+id = "fal"
+name = "fal.ai"
+api_base = "https://fal.run"
+docs_url = "https://docs.fal.ai"
+pricing_url = "https://fal.ai/pricing"
+
+[source]
+url = "https://fal.ai/pricing"
+as_of = "2026-07-20"
+note = "manually curated"

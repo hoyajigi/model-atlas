@@ -1,0 +1,13 @@
+model_id = "fal-ai/flux-pro/v1.1"
+name = "FLUX 1.1 [pro]"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_megapixel"
+usd = 0.04
+usd_per_image_1024 = 0.04
+
+[source]
+url = "https://fal.ai/models/fal-ai/flux-pro/v1.1"
+as_of = "2026-07-20"

@@ -1,0 +1,14 @@
+model_id = "flux-1.1-pro"
+name = "FLUX 1.1 [pro]"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_image"
+usd = 0.04
+resolution = "1024x1024"
+usd_per_image_1024 = 0.04
+
+[source]
+url = "https://bfl.ai/pricing"
+as_of = "2026-07-20"

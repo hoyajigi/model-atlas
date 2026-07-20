@@ -1,0 +1,14 @@
+model_id = "fal-ai/qwen-image"
+model_ref = "qwen/qwen-image"
+name = "Qwen-Image"
+modality = "text-to-image"
+status = "active"
+
+[pricing.image]
+unit = "per_megapixel"
+usd = 0.02
+usd_per_image_1024 = 0.02
+
+[source]
+url = "https://fal.ai/models/fal-ai/qwen-image"
+as_of = "2026-07-20"

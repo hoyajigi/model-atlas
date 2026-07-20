@@ -1,0 +1,10 @@
+id = "replicate"
+name = "Replicate"
+api_base = "https://api.replicate.com/v1"
+docs_url = "https://replicate.com/docs"
+pricing_url = "https://replicate.com/pricing"
+
+[source]
+url = "https://replicate.com/pricing"
+as_of = "2026-07-20"
+note = "manually curated"

@@ -1,0 +1,10 @@
+id = "stability"
+name = "Stability AI"
+api_base = "https://api.stability.ai"
+docs_url = "https://platform.stability.ai/docs"
+pricing_url = "https://platform.stability.ai/pricing"
+
+[source]
+url = "https://platform.stability.ai/pricing"
+as_of = "2026-07-20"
+note = "manually curated"

@@ -1,0 +1,10 @@
+id = "bfl"
+name = "Black Forest Labs"
+api_base = "https://api.bfl.ai"
+docs_url = "https://docs.bfl.ai"
+pricing_url = "https://bfl.ai/pricing"
+
+[source]
+url = "https://bfl.ai/pricing"
+as_of = "2026-07-20"
+note = "manually curated"

@@ -11,6 +11,12 @@ release_date = "2025-11-20"
 input_per_mtok = 2
 output_per_mtok = 120
 
+[pricing.image]
+unit = "per_image"
+usd = 0.134
+resolution = "1024x1024"
+usd_per_image_1024 = 0.134
+
 [capabilities]
 tool_call = false
 reasoning = true
