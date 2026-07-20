@@ -12,6 +12,14 @@ release_date = "2025-04-27"
 hf_downloads_30d = 16980225
 hf_likes = 1215
 
+[architecture]
+n_layers = 36
+hidden_size = 4096
+n_heads = 32
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 151936
+
 [source]
 url = "https://huggingface.co/Qwen/Qwen3-8B"
 as_of = "2026-07-20"

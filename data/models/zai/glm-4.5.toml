@@ -13,6 +13,16 @@ release_date = "2025-07-20"
 hf_downloads_30d = 132767
 hf_likes = 1407
 
+[architecture]
+n_layers = 92
+hidden_size = 5120
+n_heads = 96
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 151552
+moe_experts = 160
+moe_active_experts = 8
+
 [source]
 url = "https://huggingface.co/zai-org/GLM-4.5"
 as_of = "2026-07-20"

@@ -7,9 +7,18 @@ open_weights = true
 hf_id = "Qwen/Qwen3.5-9B"
 license = "apache-2.0"
 params = 9653104368
+context = 262144
 release_date = "2026-02-27"
 hf_downloads_30d = 9228130
 hf_likes = 1726
+
+[architecture]
+n_layers = 32
+hidden_size = 4096
+n_heads = 16
+n_kv_heads = 4
+head_dim = 256
+vocab_size = 248320
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3.5-9B"

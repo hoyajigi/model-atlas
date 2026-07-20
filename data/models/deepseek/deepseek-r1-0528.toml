@@ -13,6 +13,16 @@ release_date = "2025-05-28"
 hf_downloads_30d = 452842
 hf_likes = 2458
 
+[architecture]
+n_layers = 61
+hidden_size = 7168
+n_heads = 128
+n_kv_heads = 128
+head_dim = 56
+vocab_size = 129280
+moe_experts = 256
+moe_active_experts = 8
+
 [source]
 url = "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528"
 as_of = "2026-07-20"

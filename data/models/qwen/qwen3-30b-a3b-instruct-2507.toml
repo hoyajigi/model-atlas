@@ -13,6 +13,16 @@ release_date = "2025-07-28"
 hf_downloads_30d = 1817927
 hf_likes = 819
 
+[architecture]
+n_layers = 48
+hidden_size = 2048
+n_heads = 32
+n_kv_heads = 4
+head_dim = 128
+vocab_size = 151936
+moe_experts = 128
+moe_active_experts = 8
+
 [source]
 url = "https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507"
 as_of = "2026-07-20"

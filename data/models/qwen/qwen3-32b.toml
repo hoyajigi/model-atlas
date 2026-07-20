@@ -12,6 +12,14 @@ release_date = "2025-04-27"
 hf_downloads_30d = 7564634
 hf_likes = 716
 
+[architecture]
+n_layers = 64
+hidden_size = 5120
+n_heads = 64
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 151936
+
 [source]
 url = "https://huggingface.co/Qwen/Qwen3-32B"
 as_of = "2026-07-20"

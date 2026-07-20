@@ -7,6 +7,20 @@ export const BenchmarkScore = z.object({
   as_of: isoDate
 })
 
+/** Transformer geometry needed to compute KV-cache size and memory footprints. */
+export const Architecture = z
+  .object({
+    n_layers: z.number().int().positive().optional(),
+    hidden_size: z.number().int().positive().optional(),
+    n_heads: z.number().int().positive().optional(),
+    n_kv_heads: z.number().int().positive().optional(),
+    head_dim: z.number().int().positive().optional(),
+    vocab_size: z.number().int().positive().optional(),
+    moe_experts: z.number().int().positive().optional(),
+    moe_active_experts: z.number().int().positive().optional()
+  })
+  .strict()
+
 /** A model entity, independent of any hosting provider. */
 export const Model = z
   .object({
@@ -31,6 +45,7 @@ export const Model = z
         output: z.array(z.string())
       })
       .optional(),
+    architecture: Architecture.optional(),
     /** Available quantization variants, e.g. ["fp8", "gguf-q4_k_m", "mlx-4bit"] */
     quants: z.array(z.string()).optional(),
     /** Precision -> required VRAM in GB, e.g. { fp16 = 48.0, q4 = 14.5 } */

@@ -12,6 +12,14 @@ release_date = "2024-12-11"
 hf_downloads_30d = 786751
 hf_likes = 2278
 
+[architecture]
+n_layers = 40
+hidden_size = 5120
+n_heads = 40
+n_kv_heads = 10
+head_dim = 128
+vocab_size = 100352
+
 [source]
 url = "https://huggingface.co/microsoft/phi-4"
 as_of = "2026-07-20"

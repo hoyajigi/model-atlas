@@ -13,6 +13,16 @@ release_date = "2025-10-22"
 hf_downloads_30d = 112102
 hf_likes = 1500
 
+[architecture]
+n_layers = 62
+hidden_size = 3072
+n_heads = 48
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 200064
+moe_experts = 256
+moe_active_experts = 8
+
 [source]
 url = "https://huggingface.co/MiniMaxAI/MiniMax-M2"
 as_of = "2026-07-20"

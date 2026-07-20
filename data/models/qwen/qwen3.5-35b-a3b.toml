@@ -8,9 +8,20 @@ hf_id = "Qwen/Qwen3.5-35B-A3B"
 license = "apache-2.0"
 params = 35951822704
 active_params = 3000000000
+context = 262144
 release_date = "2026-02-24"
 hf_downloads_30d = 2395485
 hf_likes = 1467
+
+[architecture]
+n_layers = 40
+hidden_size = 2048
+n_heads = 16
+n_kv_heads = 2
+head_dim = 256
+vocab_size = 248320
+moe_experts = 256
+moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"

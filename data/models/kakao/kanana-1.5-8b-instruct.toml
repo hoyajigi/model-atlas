@@ -12,6 +12,14 @@ release_date = "2025-05-21"
 hf_downloads_30d = 5449
 hf_likes = 58
 
+[architecture]
+n_layers = 32
+hidden_size = 4096
+n_heads = 32
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 128259
+
 [source]
 url = "https://huggingface.co/kakaocorp/kanana-1.5-8b-instruct-2505"
 as_of = "2026-07-20"

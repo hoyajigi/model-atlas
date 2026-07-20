@@ -10,7 +10,15 @@ params = 23572403200
 context = 131072
 release_date = "2025-07-04"
 hf_downloads_30d = 35539
-hf_likes = 367
+hf_likes = 368
+
+[architecture]
+n_layers = 40
+hidden_size = 5120
+n_heads = 32
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 131072
 
 [source]
 url = "https://huggingface.co/mistralai/Devstral-Small-2507"

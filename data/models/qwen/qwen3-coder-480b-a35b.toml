@@ -13,6 +13,16 @@ release_date = "2025-07-22"
 hf_downloads_30d = 29765
 hf_likes = 1354
 
+[architecture]
+n_layers = 62
+hidden_size = 6144
+n_heads = 96
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 151936
+moe_experts = 160
+moe_active_experts = 8
+
 [source]
 url = "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct"
 as_of = "2026-07-20"
