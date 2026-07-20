@@ -23,3 +23,12 @@ score = 1275
 source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
 as_of = "2026-07-16"
 
+[benchmarks."kmmlu-redux"]
+score = 56.17
+source = "https://arxiv.org/abs/2507.08924"
+as_of = "2026-07-20"
+
+[benchmarks."kmmlu-pro"]
+score = 53.24
+source = "https://arxiv.org/abs/2507.08924"
+as_of = "2026-07-20"

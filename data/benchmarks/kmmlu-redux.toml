@@ -1,0 +1,10 @@
+id = "kmmlu-redux"
+name = "KMMLU-Redux"
+url = "https://arxiv.org/abs/2507.08924"
+category = "korean"
+higher_is_better = true
+description = "Cleaned/hardened revision of KMMLU by HAERAE-HUB + LG AI Research; 0-shot CoT"
+
+[source]
+url = "https://arxiv.org/abs/2507.08924"
+as_of = "2026-07-20"

@@ -3,7 +3,7 @@ name = "LogicKor"
 url = "https://github.com/instructkr/LogicKor"
 category = "korean"
 higher_is_better = true
-description = "Korean multi-domain instruction-following benchmark (LLM-as-judge, 0-10)"
+description = "Korean multi-domain instruction-following benchmark (LLM-as-judge, 0-10). Leaderboard frozen since 2024-10; no scores exist for models released after that."
 
 [source]
 url = "https://github.com/instructkr/LogicKor"

@@ -1,0 +1,10 @@
+id = "kmmlu-pro"
+name = "KMMLU-Pro"
+url = "https://arxiv.org/abs/2507.08924"
+category = "korean"
+higher_is_better = true
+description = "Korean professional-license exam benchmark by HAERAE-HUB + LG AI Research; 0-shot CoT"
+
+[source]
+url = "https://arxiv.org/abs/2507.08924"
+as_of = "2026-07-20"

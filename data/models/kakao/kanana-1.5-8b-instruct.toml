@@ -17,3 +17,7 @@ url = "https://huggingface.co/kakaocorp/kanana-1.5-8b-instruct-2505"
 as_of = "2026-07-20"
 note = "synced from HF Hub API"
 
+[benchmarks."kmmlu"]
+score = 48.28
+source = "https://huggingface.co/kakaocorp/kanana-1.5-8b-instruct-2505"
+as_of = "2026-07-20"
