@@ -1,0 +1,21 @@
+id = "llama-4-scout"
+name = "Llama-4-Scout-17B-16E-Instruct"
+org = "meta"
+family = "llama-4"
+modality = "multimodal"
+open_weights = true
+hf_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+license = "other"
+params = 108641793536
+active_params = 17000000000
+context = 10485760
+release_date = "2025-04-02"
+hf_downloads_30d = 460050
+hf_likes = 1327
+gated = true
+
+[source]
+url = "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

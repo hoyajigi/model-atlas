@@ -1,0 +1,23 @@
+{
+  "name": "model-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open database of LLM and text-to-image models — open weights and hosted APIs",
+  "scripts": {
+    "validate": "tsx src/validate.ts",
+    "build": "node --experimental-sqlite --import tsx src/build.ts",
+    "schema": "tsx src/emit-json-schema.ts",
+    "sync:modelsdev": "tsx src/sync/modelsdev.ts",
+    "sync:litellm": "tsx src/sync/litellm.ts",
+    "sync:hf": "tsx src/sync/hf.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "smol-toml": "^1.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
+  }
+}

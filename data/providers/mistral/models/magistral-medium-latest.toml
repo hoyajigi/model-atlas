@@ -1,0 +1,25 @@
+model_id = "magistral-medium-latest"
+name = "Magistral Medium (latest)"
+modality = "text"
+status = "active"
+context = 128000
+max_output = 16384
+knowledge_cutoff = "2025-06"
+release_date = "2025-03-17"
+
+[pricing]
+input_per_mtok = 2
+output_per_mtok = 5
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,25 @@
+model_id = "gemini-embedding-001"
+name = "Gemini Embedding 001"
+modality = "text"
+status = "active"
+context = 2048
+max_output = 1
+knowledge_cutoff = "2025-05"
+release_date = "2025-05-20"
+
+[pricing]
+input_per_mtok = 0.15
+output_per_mtok = 0
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

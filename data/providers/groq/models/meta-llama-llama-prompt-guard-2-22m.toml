@@ -1,0 +1,24 @@
+model_id = "meta-llama/llama-prompt-guard-2-22m"
+name = "Llama Prompt Guard 2 22M"
+modality = "text"
+status = "active"
+context = 512
+max_output = 512
+release_date = "2025-05-29"
+
+[pricing]
+input_per_mtok = 0.03
+output_per_mtok = 0.03
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,25 @@
+model_id = "gemini-3-pro-image-preview"
+name = "Nano Banana Pro"
+modality = "text-to-image"
+status = "active"
+context = 131072
+max_output = 32768
+knowledge_cutoff = "2025-01"
+release_date = "2025-11-20"
+
+[pricing]
+input_per_mtok = 2
+output_per_mtok = 120
+
+[capabilities]
+tool_call = false
+reasoning = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

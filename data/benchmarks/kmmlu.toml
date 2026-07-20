@@ -1,0 +1,10 @@
+id = "kmmlu"
+name = "KMMLU"
+url = "https://huggingface.co/datasets/HAERAE-HUB/KMMLU"
+category = "korean"
+higher_is_better = true
+description = "Korean massive multitask language understanding (45 subjects, native Korean)"
+
+[source]
+url = "https://huggingface.co/datasets/HAERAE-HUB/KMMLU"
+as_of = "2026-07-20"

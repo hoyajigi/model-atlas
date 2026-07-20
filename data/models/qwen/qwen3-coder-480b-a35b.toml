@@ -1,0 +1,20 @@
+id = "qwen3-coder-480b-a35b"
+name = "Qwen3-Coder-480B-A35B-Instruct"
+org = "qwen"
+family = "qwen3"
+modality = "text"
+open_weights = true
+hf_id = "Qwen/Qwen3-Coder-480B-A35B-Instruct"
+license = "apache-2.0"
+params = 480154875392
+active_params = 35000000000
+context = 262144
+release_date = "2025-07-22"
+hf_downloads_30d = 29765
+hf_likes = 1354
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

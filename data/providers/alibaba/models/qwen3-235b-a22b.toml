@@ -1,0 +1,25 @@
+model_id = "qwen3-235b-a22b"
+name = "Qwen3 235B-A22B"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 16384
+knowledge_cutoff = "2025-04"
+release_date = "2025-04"
+
+[pricing]
+input_per_mtok = 0.7
+output_per_mtok = 2.8
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

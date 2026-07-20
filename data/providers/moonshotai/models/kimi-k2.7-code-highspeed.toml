@@ -1,0 +1,27 @@
+model_id = "kimi-k2.7-code-highspeed"
+name = "Kimi K2.7 Code HighSpeed"
+modality = "text"
+status = "active"
+context = 262144
+max_output = 262144
+knowledge_cutoff = "2025-01"
+release_date = "2026-06-12"
+
+[pricing]
+input_per_mtok = 1.9
+output_per_mtok = 8
+cache_read_per_mtok = 0.38
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

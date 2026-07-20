@@ -1,0 +1,10 @@
+id = "mmlu-pro"
+name = "MMLU-Pro"
+url = "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+category = "knowledge"
+higher_is_better = true
+description = "Harder multi-task language understanding benchmark (10-option MCQ)"
+
+[source]
+url = "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+as_of = "2026-07-20"

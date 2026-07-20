@@ -1,0 +1,20 @@
+id = "qwen3-235b-a22b-instruct-2507"
+name = "Qwen3-235B-A22B-Instruct-2507"
+org = "qwen"
+family = "qwen3"
+modality = "text"
+open_weights = true
+hf_id = "Qwen/Qwen3-235B-A22B-Instruct-2507"
+license = "apache-2.0"
+params = 235093634560
+active_params = 22000000000
+context = 262144
+release_date = "2025-07-21"
+hf_downloads_30d = 64201
+hf_likes = 791
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

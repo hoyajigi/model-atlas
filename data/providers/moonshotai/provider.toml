@@ -1,0 +1,10 @@
+id = "moonshotai"
+name = "Moonshot AI"
+api_base = "https://api.moonshot.ai/v1"
+docs_url = "https://platform.moonshot.ai/docs/api/chat"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

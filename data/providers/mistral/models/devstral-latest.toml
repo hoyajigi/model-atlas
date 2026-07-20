@@ -1,0 +1,25 @@
+model_id = "devstral-latest"
+name = "Devstral 2"
+modality = "text"
+status = "deprecated"
+context = 262144
+max_output = 262144
+knowledge_cutoff = "2025-12"
+release_date = "2025-12-09"
+
+[pricing]
+input_per_mtok = 0.4
+output_per_mtok = 2
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,9 @@
+id = "groq"
+name = "Groq"
+docs_url = "https://console.groq.com/docs/models"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

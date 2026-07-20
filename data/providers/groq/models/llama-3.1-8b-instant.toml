@@ -1,0 +1,25 @@
+model_id = "llama-3.1-8b-instant"
+name = "Llama 3.1 8B"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 131072
+knowledge_cutoff = "2023-12"
+release_date = "2024-07-23"
+
+[pricing]
+input_per_mtok = 0.05
+output_per_mtok = 0.08
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

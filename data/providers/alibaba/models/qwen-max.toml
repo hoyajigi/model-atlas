@@ -1,0 +1,25 @@
+model_id = "qwen-max"
+name = "Qwen Max"
+modality = "text"
+status = "active"
+context = 32768
+max_output = 8192
+knowledge_cutoff = "2024-04"
+release_date = "2024-04-03"
+
+[pricing]
+input_per_mtok = 1.6
+output_per_mtok = 6.4
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

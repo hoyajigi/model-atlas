@@ -1,0 +1,25 @@
+model_id = "google/gemma-3n-E4B-it"
+name = "Gemma 3N E4B Instruct"
+modality = "text"
+status = "active"
+context = 32768
+max_output = 32768
+release_date = "2025-05-20"
+
+[pricing]
+input_per_mtok = 0.06
+output_per_mtok = 0.12
+
+[capabilities]
+tool_call = false
+reasoning = false
+structured_output = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

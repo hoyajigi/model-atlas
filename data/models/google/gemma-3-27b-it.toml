@@ -1,0 +1,20 @@
+id = "gemma-3-27b-it"
+name = "gemma-3-27b-it"
+org = "google"
+family = "gemma-3"
+modality = "multimodal"
+open_weights = true
+hf_id = "google/gemma-3-27b-it"
+license = "gemma"
+params = 27432406640
+context = 131072
+release_date = "2025-03-01"
+hf_downloads_30d = 786115
+hf_likes = 1997
+gated = true
+
+[source]
+url = "https://huggingface.co/google/gemma-3-27b-it"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

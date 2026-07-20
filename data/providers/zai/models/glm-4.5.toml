@@ -1,0 +1,27 @@
+model_id = "glm-4.5"
+name = "GLM-4.5"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 98304
+knowledge_cutoff = "2025-04"
+release_date = "2025-07-28"
+
+[pricing]
+input_per_mtok = 0.6
+output_per_mtok = 2.2
+cache_read_per_mtok = 0.11
+cache_write_per_mtok = 0
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

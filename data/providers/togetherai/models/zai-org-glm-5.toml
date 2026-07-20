@@ -1,0 +1,25 @@
+model_id = "zai-org/GLM-5"
+name = "GLM-5"
+modality = "text"
+status = "deprecated"
+context = 202752
+max_output = 131072
+release_date = "2026-02-11"
+
+[pricing]
+input_per_mtok = 1
+output_per_mtok = 3.2
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

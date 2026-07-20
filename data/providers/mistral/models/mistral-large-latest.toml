@@ -1,0 +1,25 @@
+model_id = "mistral-large-latest"
+name = "Mistral Large (latest)"
+modality = "text"
+status = "active"
+context = 262144
+max_output = 262144
+knowledge_cutoff = "2024-11"
+release_date = "2024-11-01"
+
+[pricing]
+input_per_mtok = 0.5
+output_per_mtok = 1.5
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

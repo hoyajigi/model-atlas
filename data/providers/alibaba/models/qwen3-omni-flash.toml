@@ -1,0 +1,25 @@
+model_id = "qwen3-omni-flash"
+name = "Qwen3-Omni Flash"
+modality = "text"
+status = "active"
+context = 65536
+max_output = 16384
+knowledge_cutoff = "2024-04"
+release_date = "2025-09-15"
+
+[pricing]
+input_per_mtok = 0.43
+output_per_mtok = 1.66
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

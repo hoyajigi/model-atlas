@@ -1,0 +1,28 @@
+model_id = "claude-opus-4-7"
+name = "Claude Opus 4.7"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 128000
+knowledge_cutoff = "2026-01-31"
+release_date = "2026-04-14"
+
+[pricing]
+input_per_mtok = 5
+output_per_mtok = 25
+cache_read_per_mtok = 0.5
+cache_write_per_mtok = 6.25
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

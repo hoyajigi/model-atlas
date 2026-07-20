@@ -1,0 +1,9 @@
+id = "togetherai"
+name = "Together AI"
+docs_url = "https://docs.together.ai/docs/serverless-models"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

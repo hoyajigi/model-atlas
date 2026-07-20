@@ -1,0 +1,20 @@
+id = "llama-3.1-8b-instruct"
+name = "Llama-3.1-8B-Instruct"
+org = "meta"
+family = "llama-3"
+modality = "text"
+open_weights = true
+hf_id = "meta-llama/Llama-3.1-8B-Instruct"
+license = "llama3.1"
+params = 8030261248
+context = 131072
+release_date = "2024-07-18"
+hf_downloads_30d = 8164214
+hf_likes = 6343
+gated = true
+
+[source]
+url = "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

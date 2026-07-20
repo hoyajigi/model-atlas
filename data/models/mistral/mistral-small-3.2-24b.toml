@@ -1,0 +1,19 @@
+id = "mistral-small-3.2-24b"
+name = "Mistral-Small-3.2-24B-Instruct-2506"
+org = "mistral"
+family = "mistral-small"
+modality = "text"
+open_weights = true
+hf_id = "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+license = "apache-2.0"
+params = 24011361280
+context = 131072
+release_date = "2025-06-19"
+hf_downloads_30d = 367879
+hf_likes = 598
+
+[source]
+url = "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

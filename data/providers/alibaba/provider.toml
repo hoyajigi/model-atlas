@@ -1,0 +1,10 @@
+id = "alibaba"
+name = "Alibaba"
+api_base = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+docs_url = "https://www.alibabacloud.com/help/en/model-studio/models"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

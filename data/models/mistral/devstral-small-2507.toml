@@ -1,0 +1,19 @@
+id = "devstral-small-2507"
+name = "Devstral-Small-2507"
+org = "mistral"
+family = "devstral"
+modality = "text"
+open_weights = true
+hf_id = "mistralai/Devstral-Small-2507"
+license = "apache-2.0"
+params = 23572403200
+context = 131072
+release_date = "2025-07-04"
+hf_downloads_30d = 35539
+hf_likes = 367
+
+[source]
+url = "https://huggingface.co/mistralai/Devstral-Small-2507"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

@@ -1,0 +1,25 @@
+model_id = "qwen3.5-plus"
+name = "Qwen3.5 Plus"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 65536
+knowledge_cutoff = "2025-04"
+release_date = "2026-02-16"
+
+[pricing]
+input_per_mtok = 0.4
+output_per_mtok = 2.4
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

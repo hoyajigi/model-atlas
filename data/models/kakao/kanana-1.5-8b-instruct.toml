@@ -1,0 +1,19 @@
+id = "kanana-1.5-8b-instruct"
+name = "kanana-1.5-8b-instruct-2505"
+org = "kakao"
+family = "kanana"
+modality = "text"
+open_weights = true
+hf_id = "kakaocorp/kanana-1.5-8b-instruct-2505"
+license = "apache-2.0"
+params = 8030285824
+context = 32768
+release_date = "2025-05-21"
+hf_downloads_30d = 5449
+hf_likes = 58
+
+[source]
+url = "https://huggingface.co/kakaocorp/kanana-1.5-8b-instruct-2505"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

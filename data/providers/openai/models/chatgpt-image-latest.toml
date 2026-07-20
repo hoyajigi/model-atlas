@@ -1,0 +1,18 @@
+model_id = "chatgpt-image-latest"
+name = "chatgpt-image-latest"
+modality = "text-to-image"
+status = "active"
+release_date = "2025-12-16"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,18 @@
+model_id = "whisper-large-v3"
+name = "Whisper"
+modality = "audio"
+status = "active"
+release_date = "2023-09-01"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

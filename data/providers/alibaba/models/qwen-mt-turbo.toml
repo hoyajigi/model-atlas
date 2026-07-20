@@ -1,0 +1,25 @@
+model_id = "qwen-mt-turbo"
+name = "Qwen-MT Turbo"
+modality = "text"
+status = "active"
+context = 16384
+max_output = 8192
+knowledge_cutoff = "2024-04"
+release_date = "2025-01"
+
+[pricing]
+input_per_mtok = 0.16
+output_per_mtok = 0.49
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

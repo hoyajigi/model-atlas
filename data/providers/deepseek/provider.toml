@@ -1,0 +1,10 @@
+id = "deepseek"
+name = "DeepSeek"
+api_base = "https://api.deepseek.com"
+docs_url = "https://api-docs.deepseek.com/quick_start/pricing"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

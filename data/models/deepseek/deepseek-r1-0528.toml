@@ -1,0 +1,20 @@
+id = "deepseek-r1-0528"
+name = "DeepSeek-R1-0528"
+org = "deepseek"
+family = "deepseek-r1"
+modality = "text"
+open_weights = true
+hf_id = "deepseek-ai/DeepSeek-R1-0528"
+license = "mit"
+params = 684531386000
+active_params = 37000000000
+context = 131072
+release_date = "2025-05-28"
+hf_downloads_30d = 452842
+hf_likes = 2458
+
+[source]
+url = "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

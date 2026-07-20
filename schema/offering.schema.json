@@ -1,0 +1,174 @@
+{
+  "$ref": "#/definitions/offering",
+  "definitions": {
+    "offering": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_ref": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "modality": {
+          "type": "string",
+          "enum": [
+            "text",
+            "text-to-image",
+            "image-edit",
+            "text-to-video",
+            "audio",
+            "embedding",
+            "multimodal"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "deprecated",
+            "retired"
+          ],
+          "default": "active"
+        },
+        "context": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "max_output": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "knowledge_cutoff": {
+          "type": "string"
+        },
+        "release_date": {
+          "type": "string"
+        },
+        "pricing": {
+          "type": "object",
+          "properties": {
+            "input_per_mtok": {
+              "type": "number",
+              "minimum": 0
+            },
+            "output_per_mtok": {
+              "type": "number",
+              "minimum": 0
+            },
+            "cache_read_per_mtok": {
+              "type": "number",
+              "minimum": 0
+            },
+            "cache_write_per_mtok": {
+              "type": "number",
+              "minimum": 0
+            },
+            "reasoning_per_mtok": {
+              "type": "number",
+              "minimum": 0
+            },
+            "per_request": {
+              "type": "number",
+              "minimum": 0
+            },
+            "image": {
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "type": "string",
+                  "enum": [
+                    "per_image",
+                    "per_megapixel",
+                    "per_gpu_second"
+                  ]
+                },
+                "usd": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "resolution": {
+                  "type": "string"
+                },
+                "gpu": {
+                  "type": "string"
+                },
+                "usd_per_image_1024": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "unit",
+                "usd"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "capabilities": {
+          "type": "object",
+          "properties": {
+            "tool_call": {
+              "type": "boolean"
+            },
+            "reasoning": {
+              "type": "boolean"
+            },
+            "structured_output": {
+              "type": "boolean"
+            },
+            "vision": {
+              "type": "boolean"
+            },
+            "audio_input": {
+              "type": "boolean"
+            },
+            "pdf_input": {
+              "type": "boolean"
+            },
+            "caching": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "as_of": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "as_of"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "model_id",
+        "name",
+        "modality",
+        "source"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

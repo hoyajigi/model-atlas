@@ -1,0 +1,24 @@
+model_id = "deepcogito/cogito-v2-1-671b"
+name = "Cogito v2.1 671B"
+modality = "text"
+status = "active"
+context = 163840
+max_output = 163840
+release_date = "2025-11-13"
+
+[pricing]
+input_per_mtok = 1.25
+output_per_mtok = 1.25
+
+[capabilities]
+tool_call = false
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,11 @@
+id = "lmarena-text"
+name = "LMArena Text Elo"
+url = "https://lmarena.ai/leaderboard"
+category = "arena-elo"
+higher_is_better = true
+data_license = "CC-BY-4.0"
+description = "Crowdsourced pairwise-preference Elo rating, text arena"
+
+[source]
+url = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-07-20"

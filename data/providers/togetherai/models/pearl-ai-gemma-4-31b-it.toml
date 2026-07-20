@@ -1,0 +1,24 @@
+model_id = "pearl-ai/gemma-4-31b-it"
+name = "Pearl AI Gemma 4 31B Instruct"
+modality = "text"
+status = "active"
+context = 32000
+max_output = 32000
+release_date = "2026-04-07"
+
+[pricing]
+input_per_mtok = 0.28
+output_per_mtok = 0.86
+
+[capabilities]
+tool_call = false
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

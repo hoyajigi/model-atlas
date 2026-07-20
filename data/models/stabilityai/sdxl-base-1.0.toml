@@ -1,0 +1,18 @@
+id = "sdxl-base-1.0"
+name = "stable-diffusion-xl-base-1.0"
+org = "stabilityai"
+family = "stable-diffusion"
+modality = "text-to-image"
+open_weights = true
+hf_id = "stabilityai/stable-diffusion-xl-base-1.0"
+license = "openrail++"
+params = 2567463684
+release_date = "2023-07-25"
+hf_downloads_30d = 1388385
+hf_likes = 7955
+
+[source]
+url = "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

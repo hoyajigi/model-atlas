@@ -1,0 +1,24 @@
+model_id = "qwen/qwen3-32b"
+name = "Qwen3-32B"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 40960
+release_date = "2025-06-11"
+
+[pricing]
+input_per_mtok = 0.29
+output_per_mtok = 0.59
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

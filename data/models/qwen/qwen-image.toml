@@ -1,0 +1,18 @@
+id = "qwen-image"
+name = "Qwen-Image"
+org = "qwen"
+family = "qwen-image"
+modality = "text-to-image"
+open_weights = true
+hf_id = "Qwen/Qwen-Image"
+license = "apache-2.0"
+params = 20430401088
+release_date = "2025-08-02"
+hf_downloads_30d = 180775
+hf_likes = 2544
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen-Image"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

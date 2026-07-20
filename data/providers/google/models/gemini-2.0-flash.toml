@@ -1,0 +1,27 @@
+model_id = "gemini-2.0-flash"
+name = "Gemini 2.0 Flash"
+modality = "text"
+status = "deprecated"
+context = 1048576
+max_output = 8192
+knowledge_cutoff = "2024-06"
+release_date = "2024-12-11"
+
+[pricing]
+input_per_mtok = 0.1
+output_per_mtok = 0.4
+cache_read_per_mtok = 0.025
+
+[capabilities]
+tool_call = true
+reasoning = false
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

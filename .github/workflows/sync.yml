@@ -1,0 +1,33 @@
+name: Daily sync
+
+on:
+  schedule:
+    - cron: '20 21 * * *' # 06:20 KST daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run sync:modelsdev
+      - run: npm run sync:hf
+      - run: npm run validate
+      - name: Cross-check pricing against LiteLLM
+        run: npm run sync:litellm 2> litellm-report.txt || true
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: sync/upstream
+          title: 'sync: upstream data refresh'
+          commit-message: 'chore: sync upstream data (models.dev, HF Hub)'
+          body-path: litellm-report.txt
+          add-paths: data/

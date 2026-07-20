@@ -1,0 +1,26 @@
+model_id = "grok-4.3"
+name = "Grok 4.3"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 30000
+release_date = "2026-04-17"
+
+[pricing]
+input_per_mtok = 1.25
+output_per_mtok = 2.5
+cache_read_per_mtok = 0.2
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

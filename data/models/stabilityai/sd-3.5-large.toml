@@ -1,0 +1,19 @@
+id = "sd-3.5-large"
+name = "stable-diffusion-3.5-large"
+org = "stabilityai"
+family = "stable-diffusion"
+modality = "text-to-image"
+open_weights = true
+hf_id = "stabilityai/stable-diffusion-3.5-large"
+license = "other"
+params = 8146280768
+release_date = "2024-10-22"
+hf_downloads_30d = 42843
+hf_likes = 3594
+gated = true
+
+[source]
+url = "https://huggingface.co/stabilityai/stable-diffusion-3.5-large"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

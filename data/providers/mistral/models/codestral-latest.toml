@@ -1,0 +1,25 @@
+model_id = "codestral-latest"
+name = "Codestral (latest)"
+modality = "text"
+status = "active"
+context = 256000
+max_output = 4096
+knowledge_cutoff = "2024-10"
+release_date = "2024-05-29"
+
+[pricing]
+input_per_mtok = 0.3
+output_per_mtok = 0.9
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

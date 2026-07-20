@@ -1,0 +1,25 @@
+model_id = "mistral-small-2603"
+name = "Mistral Small 4"
+modality = "text"
+status = "active"
+context = 256000
+max_output = 256000
+knowledge_cutoff = "2025-06"
+release_date = "2026-03-16"
+
+[pricing]
+input_per_mtok = 0.15
+output_per_mtok = 0.6
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,80 @@
+{
+  "$ref": "#/definitions/hardware",
+  "definitions": {
+    "hardware": {
+      "type": "object",
+      "properties": {
+        "model_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hardware": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backend": {
+          "type": "string"
+        },
+        "vram_gb": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "tok_per_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "sec_per_image": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "resolution": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "batch_size": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "measured_on": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "as_of": {
+              "$ref": "#/definitions/hardware/properties/measured_on"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "as_of"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "model_ref",
+        "quant",
+        "hardware",
+        "source"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

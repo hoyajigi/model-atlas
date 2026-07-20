@@ -1,0 +1,164 @@
+{
+  "$ref": "#/definitions/model",
+  "definitions": {
+    "model": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "org": {
+          "$ref": "#/definitions/model/properties/id"
+        },
+        "family": {
+          "type": "string"
+        },
+        "modality": {
+          "type": "string",
+          "enum": [
+            "text",
+            "text-to-image",
+            "image-edit",
+            "text-to-video",
+            "audio",
+            "embedding",
+            "multimodal"
+          ]
+        },
+        "open_weights": {
+          "type": "boolean"
+        },
+        "hf_id": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "params": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "active_params": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "context": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "release_date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "knowledge_cutoff": {
+          "$ref": "#/definitions/model/properties/release_date"
+        },
+        "modalities": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "output": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "input",
+            "output"
+          ],
+          "additionalProperties": false
+        },
+        "quants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vram_gb": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "benchmarks": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "score": {
+                "type": "number"
+              },
+              "source": {
+                "type": "string",
+                "format": "uri"
+              },
+              "as_of": {
+                "$ref": "#/definitions/model/properties/release_date"
+              }
+            },
+            "required": [
+              "score",
+              "source",
+              "as_of"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hf_downloads_30d": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hf_likes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gated": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "as_of": {
+              "$ref": "#/definitions/model/properties/release_date"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "as_of"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "org",
+        "modality",
+        "open_weights",
+        "source"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

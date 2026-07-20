@@ -1,0 +1,25 @@
+model_id = "open-mistral-7b"
+name = "Mistral 7B"
+modality = "text"
+status = "active"
+context = 8000
+max_output = 8000
+knowledge_cutoff = "2023-12"
+release_date = "2023-09-27"
+
+[pricing]
+input_per_mtok = 0.25
+output_per_mtok = 0.25
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

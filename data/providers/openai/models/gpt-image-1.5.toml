@@ -1,0 +1,18 @@
+model_id = "gpt-image-1.5"
+name = "gpt-image-1.5"
+modality = "text-to-image"
+status = "active"
+release_date = "2025-11-25"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

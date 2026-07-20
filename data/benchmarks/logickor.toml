@@ -1,0 +1,10 @@
+id = "logickor"
+name = "LogicKor"
+url = "https://github.com/instructkr/LogicKor"
+category = "korean"
+higher_is_better = true
+description = "Korean multi-domain instruction-following benchmark (LLM-as-judge, 0-10)"
+
+[source]
+url = "https://github.com/instructkr/LogicKor"
+as_of = "2026-07-20"

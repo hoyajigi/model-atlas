@@ -1,0 +1,25 @@
+model_id = "accounts/fireworks/routers/glm-5p1-fast"
+name = "GLM 5.1 Fast"
+modality = "text"
+status = "active"
+context = 202800
+max_output = 131072
+release_date = "2026-04-01"
+
+[pricing]
+input_per_mtok = 2.8
+output_per_mtok = 8.8
+cache_read_per_mtok = 0.52
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,27 @@
+model_id = "gpt-4.1-nano"
+name = "GPT-4.1 nano"
+modality = "text"
+status = "active"
+context = 1047576
+max_output = 32768
+knowledge_cutoff = "2024-04"
+release_date = "2025-04-14"
+
+[pricing]
+input_per_mtok = 0.1
+output_per_mtok = 0.4
+cache_read_per_mtok = 0.025
+
+[capabilities]
+tool_call = true
+reasoning = false
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

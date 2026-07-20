@@ -1,0 +1,26 @@
+name: Curator agent
+
+on:
+  schedule:
+    - cron: '20 22 * * 1,4' # 07:20 KST Mon/Thu
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: /curate
+          claude_args: '--max-turns 80'

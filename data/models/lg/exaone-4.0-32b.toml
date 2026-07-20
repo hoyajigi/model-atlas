@@ -1,0 +1,19 @@
+id = "exaone-4.0-32b"
+name = "EXAONE-4.0-32B"
+org = "lg"
+family = "exaone"
+modality = "text"
+open_weights = true
+hf_id = "LGAI-EXAONE/EXAONE-4.0-32B"
+license = "other"
+params = 32003216384
+context = 131072
+release_date = "2025-07-11"
+hf_downloads_30d = 29888
+hf_likes = 281
+
+[source]
+url = "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

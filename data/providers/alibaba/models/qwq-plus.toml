@@ -1,0 +1,25 @@
+model_id = "qwq-plus"
+name = "QwQ Plus"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 8192
+knowledge_cutoff = "2024-04"
+release_date = "2025-03-05"
+
+[pricing]
+input_per_mtok = 0.8
+output_per_mtok = 2.4
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

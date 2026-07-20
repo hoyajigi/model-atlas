@@ -1,0 +1,19 @@
+id = "phi-4"
+name = "phi-4"
+org = "microsoft"
+family = "phi"
+modality = "text"
+open_weights = true
+hf_id = "microsoft/phi-4"
+license = "mit"
+params = 14659507200
+context = 16384
+release_date = "2024-12-11"
+hf_downloads_30d = 786751
+hf_likes = 2278
+
+[source]
+url = "https://huggingface.co/microsoft/phi-4"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

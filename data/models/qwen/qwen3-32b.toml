@@ -1,0 +1,19 @@
+id = "qwen3-32b"
+name = "Qwen3-32B"
+org = "qwen"
+family = "qwen3"
+modality = "text"
+open_weights = true
+hf_id = "Qwen/Qwen3-32B"
+license = "apache-2.0"
+params = 32762123264
+context = 131072
+release_date = "2025-04-27"
+hf_downloads_30d = 7564634
+hf_likes = 716
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3-32B"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

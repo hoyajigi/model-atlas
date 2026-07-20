@@ -1,0 +1,10 @@
+id = "gpqa-diamond"
+name = "GPQA Diamond"
+url = "https://github.com/idavidrein/gpqa"
+category = "reasoning"
+higher_is_better = true
+description = "Graduate-level science questions, diamond (hardest) subset"
+
+[source]
+url = "https://github.com/idavidrein/gpqa"
+as_of = "2026-07-20"

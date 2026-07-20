@@ -1,0 +1,21 @@
+id = "llama-4-maverick"
+name = "Llama-4-Maverick-17B-128E-Instruct"
+org = "meta"
+family = "llama-4"
+modality = "multimodal"
+open_weights = true
+hf_id = "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
+license = "other"
+params = 401583781376
+active_params = 17000000000
+context = 1048576
+release_date = "2025-04-01"
+hf_downloads_30d = 69605
+hf_likes = 502
+gated = true
+
+[source]
+url = "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

@@ -1,0 +1,27 @@
+model_id = "kimi-k2.6"
+name = "Kimi K2.6"
+modality = "text"
+status = "active"
+context = 262144
+max_output = 262144
+knowledge_cutoff = "2025-01"
+release_date = "2026-04-21"
+
+[pricing]
+input_per_mtok = 0.95
+output_per_mtok = 4
+cache_read_per_mtok = 0.16
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

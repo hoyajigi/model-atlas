@@ -1,0 +1,26 @@
+model_id = "gpt-4"
+name = "GPT-4"
+modality = "text"
+status = "active"
+context = 8192
+max_output = 8192
+knowledge_cutoff = "2023-11"
+release_date = "2023-11-06"
+
+[pricing]
+input_per_mtok = 30
+output_per_mtok = 60
+
+[capabilities]
+tool_call = true
+reasoning = false
+structured_output = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,20 @@
+model_id = "groq/compound-mini"
+name = "Compound Mini"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 8192
+release_date = "2025-09-04"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

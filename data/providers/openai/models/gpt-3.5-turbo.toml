@@ -1,0 +1,27 @@
+model_id = "gpt-3.5-turbo"
+name = "GPT-3.5-turbo"
+modality = "text"
+status = "active"
+context = 16385
+max_output = 4096
+knowledge_cutoff = "2021-09-01"
+release_date = "2023-03-01"
+
+[pricing]
+input_per_mtok = 0.5
+output_per_mtok = 1.5
+cache_read_per_mtok = 0
+
+[capabilities]
+tool_call = false
+reasoning = false
+structured_output = false
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

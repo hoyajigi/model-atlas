@@ -1,0 +1,27 @@
+model_id = "gpt-4.1-mini"
+name = "GPT-4.1 mini"
+modality = "text"
+status = "active"
+context = 1047576
+max_output = 32768
+knowledge_cutoff = "2024-04"
+release_date = "2025-04-14"
+
+[pricing]
+input_per_mtok = 0.4
+output_per_mtok = 1.6
+cache_read_per_mtok = 0.1
+
+[capabilities]
+tool_call = true
+reasoning = false
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

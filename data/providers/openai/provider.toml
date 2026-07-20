@@ -1,0 +1,9 @@
+id = "openai"
+name = "OpenAI"
+docs_url = "https://platform.openai.com/docs/models"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

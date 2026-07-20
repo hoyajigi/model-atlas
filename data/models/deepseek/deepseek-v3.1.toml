@@ -1,0 +1,20 @@
+id = "deepseek-v3.1"
+name = "DeepSeek-V3.1"
+org = "deepseek"
+family = "deepseek-v3"
+modality = "text"
+open_weights = true
+hf_id = "deepseek-ai/DeepSeek-V3.1"
+license = "mit"
+params = 684531386000
+active_params = 37000000000
+context = 131072
+release_date = "2025-08-21"
+hf_downloads_30d = 302787
+hf_likes = 826
+
+[source]
+url = "https://huggingface.co/deepseek-ai/DeepSeek-V3.1"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

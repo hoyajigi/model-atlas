@@ -1,0 +1,25 @@
+model_id = "qwen2-5-omni-7b"
+name = "Qwen2.5-Omni 7B"
+modality = "text"
+status = "active"
+context = 32768
+max_output = 2048
+knowledge_cutoff = "2024-04"
+release_date = "2024-12"
+
+[pricing]
+input_per_mtok = 0.1
+output_per_mtok = 0.4
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

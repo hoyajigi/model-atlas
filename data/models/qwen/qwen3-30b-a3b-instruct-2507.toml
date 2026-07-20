@@ -1,0 +1,20 @@
+id = "qwen3-30b-a3b-instruct-2507"
+name = "Qwen3-30B-A3B-Instruct-2507"
+org = "qwen"
+family = "qwen3"
+modality = "text"
+open_weights = true
+hf_id = "Qwen/Qwen3-30B-A3B-Instruct-2507"
+license = "apache-2.0"
+params = 30532122624
+active_params = 3300000000
+context = 262144
+release_date = "2025-07-28"
+hf_downloads_30d = 1817927
+hf_likes = 819
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

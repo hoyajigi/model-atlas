@@ -1,0 +1,23 @@
+model_id = "gpt-image-2"
+name = "gpt-image-2"
+modality = "text-to-image"
+status = "active"
+release_date = "2026-04-21"
+
+[pricing]
+input_per_mtok = 5
+output_per_mtok = 30
+cache_read_per_mtok = 1.25
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,26 @@
+model_id = "deepseek-chat"
+name = "DeepSeek Chat"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 384000
+knowledge_cutoff = "2025-09"
+release_date = "2025-12-01"
+
+[pricing]
+input_per_mtok = 0.14
+output_per_mtok = 0.28
+cache_read_per_mtok = 0.0028
+
+[capabilities]
+tool_call = true
+reasoning = false
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

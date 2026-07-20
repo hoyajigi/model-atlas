@@ -1,0 +1,19 @@
+id = "flux.1-dev"
+name = "FLUX.1-dev"
+org = "black-forest-labs"
+family = "flux"
+modality = "text-to-image"
+open_weights = true
+hf_id = "black-forest-labs/FLUX.1-dev"
+license = "other"
+params = 11901408320
+release_date = "2024-07-31"
+hf_downloads_30d = 587775
+hf_likes = 13709
+gated = true
+
+[source]
+url = "https://huggingface.co/black-forest-labs/FLUX.1-dev"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

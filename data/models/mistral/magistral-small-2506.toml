@@ -1,0 +1,19 @@
+id = "magistral-small-2506"
+name = "Magistral-Small-2506"
+org = "mistral"
+family = "magistral"
+modality = "text"
+open_weights = true
+hf_id = "mistralai/Magistral-Small-2506"
+license = "apache-2.0"
+params = 23572403200
+context = 40960
+release_date = "2025-06-04"
+hf_downloads_30d = 17238
+hf_likes = 609
+
+[source]
+url = "https://huggingface.co/mistralai/Magistral-Small-2506"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

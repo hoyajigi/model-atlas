@@ -1,0 +1,27 @@
+model_id = "o3-mini"
+name = "o3-mini"
+modality = "text"
+status = "active"
+context = 200000
+max_output = 100000
+knowledge_cutoff = "2024-05"
+release_date = "2024-12-20"
+
+[pricing]
+input_per_mtok = 1.1
+output_per_mtok = 4.4
+cache_read_per_mtok = 0.55
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

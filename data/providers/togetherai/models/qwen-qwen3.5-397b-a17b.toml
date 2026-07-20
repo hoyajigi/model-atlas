@@ -1,0 +1,24 @@
+model_id = "Qwen/Qwen3.5-397B-A17B"
+name = "Qwen3.5 397B A17B"
+modality = "text"
+status = "deprecated"
+context = 262144
+max_output = 130000
+release_date = "2026-02-16"
+
+[pricing]
+input_per_mtok = 0.6
+output_per_mtok = 3.6
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

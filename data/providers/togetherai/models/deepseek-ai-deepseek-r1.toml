@@ -1,0 +1,25 @@
+model_id = "deepseek-ai/DeepSeek-R1"
+name = "DeepSeek-R1"
+modality = "text"
+status = "deprecated"
+context = 163839
+max_output = 163839
+knowledge_cutoff = "2024-07"
+release_date = "2025-01-20"
+
+[pricing]
+input_per_mtok = 3
+output_per_mtok = 7
+
+[capabilities]
+tool_call = false
+reasoning = true
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

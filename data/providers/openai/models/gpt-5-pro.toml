@@ -1,0 +1,26 @@
+model_id = "gpt-5-pro"
+name = "GPT-5 Pro"
+modality = "text"
+status = "active"
+context = 400000
+max_output = 272000
+knowledge_cutoff = "2024-09-30"
+release_date = "2025-10-06"
+
+[pricing]
+input_per_mtok = 15
+output_per_mtok = 120
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

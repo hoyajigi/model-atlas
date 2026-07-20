@@ -1,0 +1,20 @@
+id = "kimi-k2-instruct"
+name = "Kimi-K2-Instruct"
+org = "moonshotai"
+family = "kimi-k2"
+modality = "text"
+open_weights = true
+hf_id = "moonshotai/Kimi-K2-Instruct"
+license = "other"
+params = 1026470731056
+active_params = 32000000000
+context = 131072
+release_date = "2025-07-11"
+hf_downloads_30d = 219113
+hf_likes = 2368
+
+[source]
+url = "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

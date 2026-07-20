@@ -1,0 +1,28 @@
+model_id = "claude-sonnet-4-5-20250929"
+name = "Claude Sonnet 4.5"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 64000
+knowledge_cutoff = "2025-07-31"
+release_date = "2025-09-29"
+
+[pricing]
+input_per_mtok = 3
+output_per_mtok = 15
+cache_read_per_mtok = 0.3
+cache_write_per_mtok = 3.75
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+

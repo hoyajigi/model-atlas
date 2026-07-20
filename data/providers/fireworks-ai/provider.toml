@@ -1,0 +1,10 @@
+id = "fireworks-ai"
+name = "Fireworks AI"
+api_base = "https://api.fireworks.ai/inference/v1/"
+docs_url = "https://fireworks.ai/docs/"
+
+[source]
+url = "https://models.dev"
+as_of = "2026-07-20"
+note = "synced from models.dev (MIT)"
+
