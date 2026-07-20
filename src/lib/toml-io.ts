@@ -11,6 +11,14 @@ export const readToml = async (path: string): Promise<Record<string, unknown>> =
   }
 }
 
+export const readTomlIfExists = async (path: string): Promise<Record<string, unknown> | null> => {
+  try {
+    return parse(await readFile(path, 'utf8'))
+  } catch {
+    return null
+  }
+}
+
 export const writeToml = async (path: string, data: Record<string, unknown>): Promise<void> => {
   await mkdir(dirname(path), { recursive: true })
   await writeFile(path, `${stringify(data)}\n`, 'utf8')

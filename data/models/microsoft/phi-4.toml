@@ -17,3 +17,8 @@ url = "https://huggingface.co/microsoft/phi-4"
 as_of = "2026-07-20"
 note = "synced from HF Hub API"
 
+[benchmarks.lmarena-text]
+score = 1216.8
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-07-16"
+

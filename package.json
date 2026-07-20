@@ -10,7 +10,8 @@
     "schema": "tsx src/emit-json-schema.ts",
     "sync:modelsdev": "tsx src/sync/modelsdev.ts",
     "sync:litellm": "tsx src/sync/litellm.ts",
-    "sync:hf": "tsx src/sync/hf.ts"
+    "sync:hf": "tsx src/sync/hf.ts",
+    "sync:lmarena": "tsx src/sync/lmarena.ts"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",

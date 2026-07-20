@@ -16,3 +16,8 @@ url = "https://huggingface.co/Qwen/Qwen-Image"
 as_of = "2026-07-20"
 note = "synced from HF Hub API"
 
+[benchmarks.lmarena-t2i]
+score = 1056.7
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-07-10"
+

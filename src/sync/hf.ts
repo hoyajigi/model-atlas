@@ -1,9 +1,10 @@
 import { join } from 'node:path'
 import { DATA_DIR } from '../lib/dataset.ts'
 import { info, warn } from '../lib/log.ts'
-import { writeToml } from '../lib/toml-io.ts'
+import { readTomlIfExists, writeToml } from '../lib/toml-io.ts'
 import { Model } from '../schema/index.ts'
 import { compact, fetchJson, today } from './fetch.ts'
+import { preserveFields } from './preserve.ts'
 import { LLM_SEEDS, T2I_SEEDS, type Seed } from './seeds.ts'
 
 interface HfModel {
@@ -62,13 +63,17 @@ const syncSeed = async (seed: Seed, asOf: string): Promise<boolean> => {
     warn(`${seed.hf_id}: ${err instanceof Error ? err.message : String(err)}`)
     return false
   }
-  const model = toModel(seed, hf, asOf)
+  const path = join(DATA_DIR, 'models', seed.org, `${seed.id}.toml`)
+  const existing = await readTomlIfExists(path)
+  const model = preserveFields(toModel(seed, hf, asOf), existing, [
+    'benchmarks', 'vram_gb', 'quants', 'knowledge_cutoff', 'modalities'
+  ])
   const parsed = Model.safeParse(model)
   if (!parsed.success) {
     warn(`${seed.hf_id}: invalid — ${parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`)
     return false
   }
-  await writeToml(join(DATA_DIR, 'models', seed.org, `${seed.id}.toml`), model)
+  await writeToml(path, model)
   return true
 }
 

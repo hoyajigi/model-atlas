@@ -1,9 +1,10 @@
 import { join } from 'node:path'
 import { DATA_DIR } from '../lib/dataset.ts'
 import { info, warn } from '../lib/log.ts'
-import { writeToml } from '../lib/toml-io.ts'
+import { readTomlIfExists, writeToml } from '../lib/toml-io.ts'
 import { Offering, Provider } from '../schema/index.ts'
 import { compact, fetchJson, fileSlug, today } from './fetch.ts'
+import { preserveFields, preserveImagePricing } from './preserve.ts'
 
 const API_URL = 'https://models.dev/api.json'
 
@@ -98,13 +99,16 @@ const syncProvider = async (p: UpstreamProvider, asOf: string): Promise<number> 
 
   let count = 0
   for (const m of Object.values(p.models)) {
-    const offering = toOffering(m, asOf)
+    const path = join(dir, 'models', `${fileSlug(m.id)}.toml`)
+    const existing = await readTomlIfExists(path)
+    const generated = toOffering(m, asOf)
+    const offering = preserveImagePricing(preserveFields(generated, existing, ['model_ref']), existing)
     const parsed = Offering.safeParse(offering)
     if (!parsed.success) {
       warn(`${p.id}/${m.id}: skipped — ${parsed.error.issues[0]?.message}`)
       continue
     }
-    await writeToml(join(dir, 'models', `${fileSlug(m.id)}.toml`), offering)
+    await writeToml(path, offering)
     count += 1
   }
   return count

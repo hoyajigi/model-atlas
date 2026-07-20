@@ -21,6 +21,7 @@ jobs:
       - run: npm ci
       - run: npm run sync:modelsdev
       - run: npm run sync:hf
+      - run: npm run sync:lmarena
       - run: npm run validate
       - name: Cross-check pricing against LiteLLM
         run: npm run sync:litellm 2> litellm-report.txt || true

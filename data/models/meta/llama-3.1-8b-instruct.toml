@@ -18,3 +18,8 @@ url = "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
 as_of = "2026-07-20"
 note = "synced from HF Hub API"
 
+[benchmarks.lmarena-text]
+score = 1186.7
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-07-16"
+

@@ -19,3 +19,8 @@ url = "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
 as_of = "2026-07-20"
 note = "synced from HF Hub API"
 
+[benchmarks.lmarena-text]
+score = 1280.9
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-07-16"
+

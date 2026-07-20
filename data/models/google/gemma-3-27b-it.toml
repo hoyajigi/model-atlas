@@ -18,3 +18,8 @@ url = "https://huggingface.co/google/gemma-3-27b-it"
 as_of = "2026-07-20"
 note = "synced from HF Hub API"
 
+[benchmarks.lmarena-text]
+score = 1358.2
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-07-16"
+

@@ -1,12 +1,23 @@
-/** Fetch JSON with a descriptive error on failure. */
+export const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms))
+
+const RETRY_DELAYS_MS = [5_000, 20_000, 60_000]
+
+/** Fetch JSON with retry/backoff on 429 and 5xx, and a descriptive error on failure. */
 export const fetchJson = async <T = unknown>(url: string): Promise<T> => {
-  try {
-    const res = await fetch(url, { headers: { 'user-agent': 'model-atlas-sync/0.1' } })
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    return (await res.json()) as T
-  } catch (err) {
-    throw new Error(`Failed to fetch ${url}: ${err instanceof Error ? err.message : String(err)}`)
+  let lastError = ''
+  for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt += 1) {
+    try {
+      const res = await fetch(url, { headers: { 'user-agent': 'model-atlas-sync/0.1' } })
+      if (res.ok) return (await res.json()) as T
+      lastError = `HTTP ${res.status}`
+      if (res.status !== 429 && res.status < 500) break
+    } catch (err) {
+      lastError = err instanceof Error ? err.message : String(err)
+    }
+    const delay = RETRY_DELAYS_MS[attempt]
+    if (delay !== undefined) await sleep(delay)
   }
+  throw new Error(`Failed to fetch ${url}: ${lastError}`)
 }
 
 export const today = (): string => {
