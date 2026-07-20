@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro'
-import { allOfferings, fmtContext } from '../lib/data'
+import { allOfferings, fmtContext, href } from '../lib/data'
 
 const rows = allOfferings()
   .filter(({ offering }) => offering.pricing?.input_per_mtok !== undefined && offering.status === 'active')
@@ -35,7 +35,7 @@ const providers = [...new Set(rows.map((r) => r.provider.id))].sort()
         {rows.map(({ provider, offering }) => (
           <tr data-name={offering.name.toLowerCase()} data-provider={provider.id}>
             <td>{provider.name}</td>
-            <td>{offering.model_ref ? <a href={`/models/${offering.model_ref}`}>{offering.name}</a> : offering.name}</td>
+            <td>{offering.model_ref ? <a href={href(`/models/${offering.model_ref}`)}>{offering.name}</a> : offering.name}</td>
             <td>{fmtContext(offering.context)}</td>
             <td>${offering.pricing?.input_per_mtok}</td>
             <td>${offering.pricing?.output_per_mtok ?? '—'}</td>

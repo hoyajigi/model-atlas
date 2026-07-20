@@ -63,6 +63,9 @@ export interface Atlas {
   hardware: AtlasHardware[]
 }
 
+/** Prefix an absolute site path with the configured base (GitHub Pages subpath). */
+export const href = (path: string): string => `${import.meta.env.BASE_URL.replace(/\/$/, '')}${path}`
+
 const apiPath = fileURLToPath(new URL('../../../dist/api.json', import.meta.url))
 
 export const atlas: Atlas = JSON.parse(readFileSync(apiPath, 'utf8'))

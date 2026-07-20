@@ -1,16 +1,22 @@
 ---
+import { href } from '../lib/data'
+
 interface Props {
   title: string
   description?: string
 }
 const { title, description = 'Open database of LLM and text-to-image models — open weights and hosted APIs' } = Astro.props
 const nav = [
-  { href: '/', label: 'Models' },
-  { href: '/pricing', label: 'API Pricing' },
-  { href: '/t2i', label: 'Text-to-Image' },
-  { href: '/about', label: 'About / API' }
+  { href: href('/'), label: 'Models' },
+  { href: href('/pricing'), label: 'API Pricing' },
+  { href: href('/t2i'), label: 'Text-to-Image' },
+  { href: href('/about'), label: 'About / API' }
 ]
-const current = Astro.url.pathname
+const current = Astro.url.pathname.replace(/\/$/, '') || '/'
+const isActive = (target: string): boolean => {
+  const normalized = target.replace(/\/$/, '') || '/'
+  return current === normalized
+}
 ---
 
 <html lang="en">
@@ -22,10 +28,10 @@ const current = Astro.url.pathname
   </head>
   <body>
     <header>
-      <a class="brand" href="/">model-atlas</a>
+      <a class="brand" href={href('/')}>model-atlas</a>
       <nav>
         {nav.map((item) => (
-          <a href={item.href} class={current === item.href || current === `${item.href}/` ? 'active' : ''}>{item.label}</a>
+          <a href={item.href} class={isActive(item.href) ? 'active' : ''}>{item.label}</a>
         ))}
       </nav>
     </header>

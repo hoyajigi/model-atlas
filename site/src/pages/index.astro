@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro'
-import { atlas, fmtContext, fmtParams } from '../lib/data'
+import { atlas, fmtContext, fmtParams, href } from '../lib/data'
 
 const models = Object.entries(atlas.models)
   .map(([ref, m]) => ({ ref, ...m }))
@@ -15,7 +15,7 @@ const elo = (m: (typeof models)[number]): number | undefined =>
   <h1>Open-weights models</h1>
   <p class="lede">
     {models.length} curated models — LLMs and text-to-image, with exact parameter counts from safetensors metadata,
-    licenses, and arena Elo. API pricing lives under <a href="/pricing">API Pricing</a> and <a href="/t2i">Text-to-Image</a>.
+    licenses, and arena Elo. API pricing lives under <a href={href("/pricing")}>API Pricing</a> and <a href={href("/t2i")}>Text-to-Image</a>.
   </p>
 
   <div class="filters">
@@ -41,7 +41,7 @@ const elo = (m: (typeof models)[number]): number | undefined =>
       <tbody>
         {models.map((m) => (
           <tr data-name={`${m.name} ${m.org} ${m.license ?? ''}`.toLowerCase()} data-modality={m.modality} data-org={m.org}>
-            <td><a href={`/models/${m.ref}`}>{m.name}</a></td>
+            <td><a href={href(`/models/${m.ref}`)}>{m.name}</a></td>
             <td>{m.org}</td>
             <td><span class="tag">{m.modality}</span></td>
             <td>{fmtParams(m.params)}</td>

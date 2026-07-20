@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro'
-import { allOfferings, atlas } from '../lib/data'
+import { allOfferings, atlas, href } from '../lib/data'
 
 const rows = allOfferings()
   .filter(({ offering }) => offering.pricing?.image !== undefined)
@@ -41,7 +41,7 @@ const eloOf = (ref?: string): number | undefined =>
           return (
             <tr>
               <td>{provider.name}</td>
-              <td>{offering.model_ref ? <a href={`/models/${offering.model_ref}`}>{offering.name}</a> : offering.name}</td>
+              <td>{offering.model_ref ? <a href={href(`/models/${offering.model_ref}`)}>{offering.name}</a> : offering.name}</td>
               <td>{unitLabel[img.unit] ?? img.unit}</td>
               <td>${img.usd}</td>
               <td><strong>{img.usd_per_image_1024 !== undefined ? `$${img.usd_per_image_1024}` : '—'}</strong></td>
