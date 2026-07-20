@@ -6,6 +6,7 @@ context = 262144
 max_output = 65536
 knowledge_cutoff = "2025-04"
 release_date = "2025-04"
+model_ref = "qwen/qwen3-coder-480b-a35b"
 
 [pricing]
 input_per_mtok = 1.5

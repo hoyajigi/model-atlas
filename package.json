@@ -12,6 +12,7 @@
     "sync:litellm": "tsx src/sync/litellm.ts",
     "sync:hf": "tsx src/sync/hf.ts",
     "sync:lmarena": "tsx src/sync/lmarena.ts",
+    "sync:link": "tsx src/sync/linkrefs.ts",
     "site:build": "npm run build && cp dist/api.json site/public/api.json && npm --prefix site run build",
     "site:dev": "npm --prefix site run dev"
   },

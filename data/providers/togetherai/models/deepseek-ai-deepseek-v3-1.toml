@@ -6,6 +6,7 @@ context = 131072
 max_output = 131072
 knowledge_cutoff = "2025-08"
 release_date = "2025-08-21"
+model_ref = "deepseek/deepseek-v3.1"
 
 [pricing]
 input_per_mtok = 0.6

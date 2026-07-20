@@ -6,6 +6,7 @@ context = 131072
 max_output = 8192
 knowledge_cutoff = "2024-08"
 release_date = "2025-04-05"
+model_ref = "meta/llama-4-scout"
 
 [pricing]
 input_per_mtok = 0.11

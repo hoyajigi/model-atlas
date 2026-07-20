@@ -6,6 +6,7 @@ context = 128000
 max_output = 128000
 knowledge_cutoff = "2025-05"
 release_date = "2025-07-10"
+model_ref = "mistral/devstral-small-2507"
 
 [pricing]
 input_per_mtok = 0.1

@@ -6,6 +6,7 @@ context = 131072
 max_output = 8192
 knowledge_cutoff = "2025-04"
 release_date = "2025-04"
+model_ref = "qwen/qwen3-8b"
 
 [pricing]
 input_per_mtok = 0.18

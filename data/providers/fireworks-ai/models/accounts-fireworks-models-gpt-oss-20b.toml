@@ -5,6 +5,7 @@ status = "active"
 context = 131072
 max_output = 32768
 release_date = "2025-08-05"
+model_ref = "openai/gpt-oss-20b"
 
 [pricing]
 input_per_mtok = 0.07

@@ -6,6 +6,7 @@ context = 204800
 max_output = 131072
 knowledge_cutoff = "2025-04"
 release_date = "2025-09-30"
+model_ref = "zai/glm-4.6"
 
 [pricing]
 input_per_mtok = 0.6
