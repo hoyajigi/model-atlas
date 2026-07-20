@@ -10,7 +10,7 @@ params = 70553706496
 context = 131072
 release_date = "2024-11-26"
 hf_downloads_30d = 711312
-hf_likes = 2911
+hf_likes = 2912
 gated = true
 
 [source]
@@ -23,12 +23,13 @@ score = 1275
 source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
 as_of = "2026-07-16"
 
-[benchmarks."kmmlu-redux"]
+[benchmarks.kmmlu-redux]
 score = 56.17
 source = "https://arxiv.org/abs/2507.08924"
 as_of = "2026-07-20"
 
-[benchmarks."kmmlu-pro"]
+[benchmarks.kmmlu-pro]
 score = 53.24
 source = "https://arxiv.org/abs/2507.08924"
 as_of = "2026-07-20"
+

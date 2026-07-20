@@ -41,7 +41,7 @@ const toModel = (seed: Seed, hf: HfModel, asOf: string): Record<string, unknown>
     name: hf.id.split('/')[1] ?? seed.id,
     org: seed.org,
     family: seed.family,
-    modality: modalityOf(hf),
+    modality: seed.modality ?? modalityOf(hf),
     open_weights: true,
     hf_id: hf.id,
     license: licenseOf(hf),

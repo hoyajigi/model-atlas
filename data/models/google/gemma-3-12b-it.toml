@@ -10,7 +10,7 @@ params = 12187325040
 context = 131072
 release_date = "2025-03-01"
 hf_downloads_30d = 1248361
-hf_likes = 785
+hf_likes = 786
 gated = true
 
 [source]
