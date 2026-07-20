@@ -45,5 +45,7 @@ export const T2I_SEEDS: Seed[] = [
   { hf_id: 'black-forest-labs/FLUX.1-schnell', org: 'black-forest-labs', id: 'flux.1-schnell', family: 'flux' },
   { hf_id: 'stabilityai/stable-diffusion-xl-base-1.0', org: 'stabilityai', id: 'sdxl-base-1.0', family: 'stable-diffusion' },
   { hf_id: 'stabilityai/stable-diffusion-3.5-large', org: 'stabilityai', id: 'sd-3.5-large', family: 'stable-diffusion' },
-  { hf_id: 'Qwen/Qwen-Image', org: 'qwen', id: 'qwen-image', family: 'qwen-image' }
+  { hf_id: 'Qwen/Qwen-Image', org: 'qwen', id: 'qwen-image', family: 'qwen-image' },
+  { hf_id: 'black-forest-labs/FLUX.2-klein-4B', org: 'black-forest-labs', id: 'flux.2-klein-4b', family: 'flux' },
+  { hf_id: 'black-forest-labs/FLUX.2-klein-9B', org: 'black-forest-labs', id: 'flux.2-klein-9b', family: 'flux' }
 ]

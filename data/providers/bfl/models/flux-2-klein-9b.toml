@@ -1,4 +1,5 @@
 model_id = "flux-2-klein-9b"
+model_ref = "black-forest-labs/flux.2-klein-9b"
 name = "FLUX.2 [klein] 9B"
 modality = "text-to-image"
 status = "active"

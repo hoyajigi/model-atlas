@@ -43,10 +43,24 @@ export interface AtlasProvider {
   models: Record<string, AtlasOffering>
 }
 
+export interface AtlasHardware {
+  model_ref: string
+  quant: string
+  hardware: string
+  backend?: string
+  vram_gb?: number
+  tok_per_s?: number
+  sec_per_image?: number
+  resolution?: string
+  steps?: number
+  measured_on?: string
+}
+
 export interface Atlas {
   models: Record<string, AtlasModel>
   providers: Record<string, AtlasProvider>
   benchmarks: Record<string, { id: string; name: string; category: string; url: string }>
+  hardware: AtlasHardware[]
 }
 
 const apiPath = fileURLToPath(new URL('../../../dist/api.json', import.meta.url))

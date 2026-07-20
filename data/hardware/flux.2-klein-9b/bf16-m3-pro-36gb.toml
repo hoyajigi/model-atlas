@@ -1,0 +1,14 @@
+model_ref = "black-forest-labs/flux.2-klein-9b"
+quant = "bf16"
+hardware = "m3-pro-36gb"
+backend = "comfyui-mps"
+sec_per_image = 75.0
+resolution = "1024x1024"
+steps = 4
+batch_size = 1
+measured_on = "2026-04-18"
+
+[source]
+url = "https://github.com/hoyajigi/model-atlas"
+as_of = "2026-07-20"
+note = "measured locally (image-bench, avg over 59 images)"

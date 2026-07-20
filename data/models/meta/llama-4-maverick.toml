@@ -11,7 +11,7 @@ active_params = 17000000000
 context = 1048576
 release_date = "2025-04-01"
 hf_downloads_30d = 69605
-hf_likes = 502
+hf_likes = 503
 gated = true
 
 [source]

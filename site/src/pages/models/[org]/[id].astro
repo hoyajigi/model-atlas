@@ -15,6 +15,7 @@ const model = atlas.models[ref]
 if (!model) throw new Error(`Unknown model ${ref}`)
 const offerings = allOfferings().filter(({ offering }) => offering.model_ref === ref)
 const benchmarks = Object.entries(model.benchmarks ?? {})
+const hardware = (atlas.hardware ?? []).filter((h) => h.model_ref === ref)
 ---
 
 <Base title={model.name}>
@@ -51,6 +52,31 @@ const benchmarks = Object.entries(model.benchmarks ?? {})
                 <td><a href={atlas.benchmarks[suite]?.url}>{atlas.benchmarks[suite]?.name ?? suite}</a></td>
                 <td>{b.score}</td>
                 <td class="muted">{b.as_of}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  {hardware.length > 0 && (
+    <>
+      <h2>Measured on real hardware</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Hardware</th><th>Precision</th><th>Backend</th><th>Speed</th><th>VRAM</th><th>Measured</th></tr></thead>
+          <tbody>
+            {hardware.map((h) => (
+              <tr>
+                <td>{h.hardware}</td>
+                <td>{h.quant}</td>
+                <td>{h.backend ?? '—'}</td>
+                <td>
+                  {h.tok_per_s ? `${h.tok_per_s} tok/s` : h.sec_per_image ? `${h.sec_per_image}s / image (${h.resolution}, ${h.steps} steps)` : '—'}
+                </td>
+                <td>{h.vram_gb ? `${h.vram_gb} GB` : '—'}</td>
+                <td class="muted">{h.measured_on ?? '—'}</td>
               </tr>
             ))}
           </tbody>
