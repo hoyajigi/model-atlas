@@ -53,6 +53,8 @@ Two layers keep the data fresh:
 npm run sync:modelsdev  # API offerings for allowlisted providers (models.dev, MIT)
 npm run sync:hf         # open-weights model specs from HF Hub (seeds in src/sync/seeds.ts)
 npm run sync:litellm    # pricing cross-check against LiteLLM (report only)
+npm run sync:inferencex # datacenter GPU throughput from InferenceX by SemiAnalysis (Apache-2.0)
+npm run discover        # scan HF for notable new models not yet in the dataset
 ```
 
 ## Licenses & credits

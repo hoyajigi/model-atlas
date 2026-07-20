@@ -35,8 +35,8 @@ const buildSqlite = (ds: Dataset, path: string): void => {
     CREATE TABLE providers (id TEXT PRIMARY KEY, name TEXT, json TEXT);
     CREATE TABLE offerings (provider TEXT, model_id TEXT, model_ref TEXT, modality TEXT, status TEXT,
       input_per_mtok REAL, output_per_mtok REAL, json TEXT, PRIMARY KEY (provider, model_id));
-    CREATE TABLE hardware (model_ref TEXT, quant TEXT, hardware TEXT, vram_gb REAL,
-      tok_per_s REAL, sec_per_image REAL, json TEXT);
+    CREATE TABLE hardware (model_ref TEXT, quant TEXT, hardware TEXT, engine TEXT, gpus INTEGER,
+      concurrency INTEGER, vram_gb REAL, tok_per_s REAL, sec_per_image REAL, json TEXT);
   `)
   const insertModel = db.prepare('INSERT INTO models VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)')
   for (const [ref, m] of ds.models) {
@@ -49,9 +49,10 @@ const buildSqlite = (ds: Dataset, path: string): void => {
     insertOffering.run(provider, o.model_id, o.model_ref ?? null, o.modality, o.status,
       o.pricing?.input_per_mtok ?? null, o.pricing?.output_per_mtok ?? null, JSON.stringify(o))
   }
-  const insertHw = db.prepare('INSERT INTO hardware VALUES (?, ?, ?, ?, ?, ?, ?)')
+  const insertHw = db.prepare('INSERT INTO hardware VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)')
   for (const h of ds.hardware) {
-    insertHw.run(h.model_ref, h.quant, h.hardware, h.vram_gb ?? null, h.tok_per_s ?? null, h.sec_per_image ?? null, JSON.stringify(h))
+    insertHw.run(h.model_ref, h.quant, h.hardware, h.engine, h.gpus, h.concurrency,
+      h.vram_gb ?? null, h.tok_per_s ?? null, h.sec_per_image ?? null, JSON.stringify(h))
   }
   db.close()
 }

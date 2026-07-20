@@ -1,0 +1,18 @@
+model_ref = "deepseek/deepseek-r1-0528"
+quant = "fp8"
+hardware = "mi355x"
+gpus = 8
+engine = "atom"
+engine_version = "rocm7.2.4_ubuntu24.04_py3.12_pytorch_release_2.10.0_atom0.1.3"
+concurrency = 256
+seq_in = 8192
+seq_out = 1024
+tok_per_s = 3022.1
+ttft_ms = 762.3
+measured_on = "2026-06-02"
+
+[source]
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/26829715287/attempts/1"
+as_of = "2026-07-20"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+

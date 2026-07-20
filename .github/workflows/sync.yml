@@ -22,6 +22,7 @@ jobs:
       - run: npm run sync:modelsdev
       - run: npm run sync:hf
       - run: npm run sync:lmarena
+      - run: npm run sync:inferencex
       - run: npm run sync:link
       - run: npm run validate
       - name: Cross-check pricing against LiteLLM

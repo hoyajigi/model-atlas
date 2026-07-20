@@ -47,9 +47,15 @@ export interface AtlasHardware {
   model_ref: string
   quant: string
   hardware: string
-  backend?: string
+  engine: string
+  engine_version?: string
+  gpus: number
+  concurrency: number
+  seq_in?: number
+  seq_out?: number
   vram_gb?: number
   tok_per_s?: number
+  ttft_ms?: number
   sec_per_image?: number
   resolution?: string
   steps?: number

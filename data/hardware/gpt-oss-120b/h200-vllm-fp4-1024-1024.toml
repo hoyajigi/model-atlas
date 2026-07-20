@@ -1,0 +1,18 @@
+model_ref = "openai/gpt-oss-120b"
+quant = "fp4"
+hardware = "h200"
+gpus = 2
+engine = "vllm"
+engine_version = "v0.22.0"
+concurrency = 64
+seq_in = 1024
+seq_out = 1024
+tok_per_s = 4258.8
+ttft_ms = 69.7
+measured_on = "2026-05-30"
+
+[source]
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/26696231118/attempts/1"
+as_of = "2026-07-20"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+

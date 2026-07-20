@@ -1,0 +1,17 @@
+model_ref = "meta/llama-3.3-70b-instruct"
+quant = "fp8"
+hardware = "mi355x"
+gpus = 1
+engine = "vllm"
+concurrency = 64
+seq_in = 1024
+seq_out = 1024
+tok_per_s = 2078.9
+ttft_ms = 224.2
+measured_on = "2025-10-29"
+
+[source]
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/18924448230/attempts/2"
+as_of = "2026-07-20"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+

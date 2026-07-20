@@ -1,0 +1,18 @@
+model_ref = "deepseek/deepseek-r1-0528"
+quant = "fp4"
+hardware = "b300"
+gpus = 16
+engine = "sglang"
+engine_version = "v0.5.12-cu130"
+concurrency = 128
+seq_in = 8192
+seq_out = 1024
+tok_per_s = 10034.3
+ttft_ms = 1559.5
+measured_on = "2026-05-22"
+
+[source]
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/26306422380/attempts/1"
+as_of = "2026-07-20"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+

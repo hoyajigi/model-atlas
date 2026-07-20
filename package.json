@@ -14,6 +14,7 @@
     "sync:lmarena": "tsx src/sync/lmarena.ts",
     "sync:link": "tsx src/sync/linkrefs.ts",
     "discover": "tsx src/sync/discover.ts",
+    "sync:inferencex": "tsx src/sync/inferencex.ts",
     "site:build": "npm run build && cp dist/api.json site/public/api.json && npm --prefix site run build",
     "site:dev": "npm --prefix site run dev"
   },

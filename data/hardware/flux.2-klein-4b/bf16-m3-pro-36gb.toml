@@ -1,7 +1,9 @@
 model_ref = "black-forest-labs/flux.2-klein-4b"
 quant = "bf16"
 hardware = "m3-pro-36gb"
-backend = "comfyui-mps"
+engine = "comfyui"
+gpus = 1
+concurrency = 1
 sec_per_image = 36.0
 resolution = "1024x1024"
 steps = 4
