@@ -20,6 +20,7 @@ const elo = (m: (typeof models)[number]): number | undefined =>
 
   <div class="filters">
     <input id="q" type="search" placeholder="Search name / org / license…" />
+    <span id="count" class="muted" style="align-self: center;">{models.length} shown</span>
     <select id="modality">
       <option value="">All modalities</option>
       {modalities.map((m) => <option value={m}>{m}</option>)}
@@ -63,14 +64,24 @@ const elo = (m: (typeof models)[number]): number | undefined =>
   const org = document.getElementById('org') as HTMLSelectElement
   const rows = [...document.querySelectorAll<HTMLTableRowElement>('#models tbody tr')]
 
+  const count = document.getElementById('count') as HTMLElement
+
   const apply = () => {
     const needle = q.value.trim().toLowerCase()
+    let shown = 0
     for (const row of rows) {
       const okText = !needle || (row.dataset.name ?? '').includes(needle)
       const okModality = !modality.value || row.dataset.modality === modality.value
       const okOrg = !org.value || row.dataset.org === org.value
-      row.style.display = okText && okModality && okOrg ? '' : 'none'
+      const visible = okText && okModality && okOrg
+      row.style.display = visible ? '' : 'none'
+      if (visible) shown += 1
     }
+    count.textContent = `${shown} shown`
   }
-  for (const el of [q, modality, org]) el.addEventListener('input', apply)
+  for (const el of [q, modality, org]) {
+    el.addEventListener('input', apply)
+    el.addEventListener('change', apply)
+  }
+  apply()
 </script>

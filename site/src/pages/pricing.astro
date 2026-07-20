@@ -17,6 +17,7 @@ const providers = [...new Set(rows.map((r) => r.provider.id))].sort()
 
   <div class="filters">
     <input id="q" type="search" placeholder="Search model…" />
+    <span id="count" class="muted" style="align-self: center;">{rows.length} shown</span>
     <select id="provider">
       <option value="">All providers</option>
       {providers.map((p) => <option value={p}>{p}</option>)}
@@ -52,13 +53,23 @@ const providers = [...new Set(rows.map((r) => r.provider.id))].sort()
   const q = document.getElementById('q') as HTMLInputElement
   const provider = document.getElementById('provider') as HTMLSelectElement
   const rows = [...document.querySelectorAll<HTMLTableRowElement>('#pricing tbody tr')]
+  const count = document.getElementById('count') as HTMLElement
+
   const apply = () => {
     const needle = q.value.trim().toLowerCase()
+    let shown = 0
     for (const row of rows) {
       const okText = !needle || (row.dataset.name ?? '').includes(needle)
       const okProvider = !provider.value || row.dataset.provider === provider.value
-      row.style.display = okText && okProvider ? '' : 'none'
+      const visible = okText && okProvider
+      row.style.display = visible ? '' : 'none'
+      if (visible) shown += 1
     }
+    count.textContent = `${shown} shown`
   }
-  for (const el of [q, provider]) el.addEventListener('input', apply)
+  for (const el of [q, provider]) {
+    el.addEventListener('input', apply)
+    el.addEventListener('change', apply)
+  }
+  apply()
 </script>
