@@ -1,0 +1,19 @@
+id = "qwen-agentworld-35b-a3b"
+name = "Qwen-AgentWorld-35B-A3B"
+org = "qwen"
+family = "qwen-agentworld"
+modality = "text"
+open_weights = true
+hf_id = "Qwen/Qwen-AgentWorld-35B-A3B"
+license = "apache-2.0"
+params = 34660610688
+active_params = 3000000000
+release_date = "2026-06-22"
+hf_downloads_30d = 104365
+hf_likes = 609
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

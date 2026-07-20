@@ -5,6 +5,7 @@ status = "deprecated"
 context = 262144
 max_output = 130000
 release_date = "2026-02-16"
+model_ref = "qwen/qwen3.5-397b-a17b"
 
 [pricing]
 input_per_mtok = 0.6

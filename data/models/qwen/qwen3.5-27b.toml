@@ -1,0 +1,18 @@
+id = "qwen3.5-27b"
+name = "Qwen3.5-27B"
+org = "qwen"
+family = "qwen3.5"
+modality = "multimodal"
+open_weights = true
+hf_id = "Qwen/Qwen3.5-27B"
+license = "apache-2.0"
+params = 27781427952
+release_date = "2026-02-24"
+hf_downloads_30d = 2643530
+hf_likes = 1009
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3.5-27B"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

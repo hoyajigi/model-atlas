@@ -1,0 +1,39 @@
+name: Discover new models
+
+on:
+  schedule:
+    - cron: '10 */2 * * *' # every 2 hours
+  workflow_dispatch:
+  repository_dispatch:
+    types: [hf-webhook] # optional: HF webhook relay for true real-time
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: scan
+        run: npm run discover | tee discover.txt
+      - name: File issue and trigger curator
+        if: steps.scan.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="discover: new model candidates $(date -u +%F)"
+          EXISTING=$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file discover.txt
+          else
+            gh issue create --title "$TITLE" --body-file discover.txt --label discovery
+          fi
+          gh workflow run 'Curator agent' || true

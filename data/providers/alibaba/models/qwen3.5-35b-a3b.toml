@@ -5,6 +5,7 @@ status = "active"
 context = 262144
 max_output = 65536
 release_date = "2026-02-23"
+model_ref = "qwen/qwen3.5-35b-a3b"
 
 [pricing]
 input_per_mtok = 0.25

@@ -1,0 +1,19 @@
+id = "qwen3.5-397b-a17b"
+name = "Qwen3.5-397B-A17B"
+org = "qwen"
+family = "qwen3.5"
+modality = "multimodal"
+open_weights = true
+hf_id = "Qwen/Qwen3.5-397B-A17B"
+license = "apache-2.0"
+params = 403397928944
+active_params = 17000000000
+release_date = "2026-02-16"
+hf_downloads_30d = 401166
+hf_likes = 1533
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

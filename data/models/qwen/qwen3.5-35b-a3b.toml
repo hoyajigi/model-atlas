@@ -1,0 +1,19 @@
+id = "qwen3.5-35b-a3b"
+name = "Qwen3.5-35B-A3B"
+org = "qwen"
+family = "qwen3.5"
+modality = "multimodal"
+open_weights = true
+hf_id = "Qwen/Qwen3.5-35B-A3B"
+license = "apache-2.0"
+params = 35951822704
+active_params = 3000000000
+release_date = "2026-02-24"
+hf_downloads_30d = 2395485
+hf_likes = 1467
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"
+as_of = "2026-07-20"
+note = "synced from HF Hub API"
+

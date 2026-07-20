@@ -12,6 +12,13 @@ export interface Seed {
 }
 
 export const LLM_SEEDS: Seed[] = [
+  { hf_id: 'Qwen/Qwen3.5-397B-A17B', org: 'qwen', id: 'qwen3.5-397b-a17b', family: 'qwen3.5', active_params: 17_000_000_000 },
+  { hf_id: 'Qwen/Qwen3.5-122B-A10B', org: 'qwen', id: 'qwen3.5-122b-a10b', family: 'qwen3.5', active_params: 10_000_000_000 },
+  { hf_id: 'Qwen/Qwen3.5-35B-A3B', org: 'qwen', id: 'qwen3.5-35b-a3b', family: 'qwen3.5', active_params: 3_000_000_000 },
+  { hf_id: 'Qwen/Qwen3.5-27B', org: 'qwen', id: 'qwen3.5-27b', family: 'qwen3.5' },
+  { hf_id: 'Qwen/Qwen3.5-9B', org: 'qwen', id: 'qwen3.5-9b', family: 'qwen3.5' },
+  { hf_id: 'Qwen/Qwen3.5-4B', org: 'qwen', id: 'qwen3.5-4b', family: 'qwen3.5' },
+  { hf_id: 'Qwen/Qwen-AgentWorld-35B-A3B', org: 'qwen', id: 'qwen-agentworld-35b-a3b', family: 'qwen-agentworld', active_params: 3_000_000_000 },
   { hf_id: 'Qwen/Qwen3-235B-A22B-Instruct-2507', org: 'qwen', id: 'qwen3-235b-a22b-instruct-2507', family: 'qwen3', context: 262144, active_params: 22_000_000_000 },
   { hf_id: 'Qwen/Qwen3-Coder-480B-A35B-Instruct', org: 'qwen', id: 'qwen3-coder-480b-a35b', family: 'qwen3', context: 262144, active_params: 35_000_000_000 },
   { hf_id: 'Qwen/Qwen3-32B', org: 'qwen', id: 'qwen3-32b', family: 'qwen3', context: 131072 },
