@@ -29,6 +29,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh label create discovery --description "New model candidates found by the discover workflow" --color 0E8A16 --force
           TITLE="discover: new model candidates $(date -u +%F)"
           EXISTING=$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number // empty')
           if [ -n "$EXISTING" ]; then
