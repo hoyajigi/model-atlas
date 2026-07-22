@@ -9,14 +9,15 @@ license = "other"
 params = 108641793536
 active_params = 17000000000
 context = 10485760
+languages = [ "ar", "de", "en", "es", "fr", "hi", "id", "it", "pt", "th", "tl", "vi" ]
 release_date = "2025-04-02"
-hf_downloads_30d = 460050
-hf_likes = 1327
+hf_downloads_30d = 461973
+hf_likes = 1329
 gated = true
 
 [source]
 url = "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]

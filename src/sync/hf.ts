@@ -71,6 +71,12 @@ const licenseOf = (hf: HfModel): string | undefined => {
   return tag?.slice('license:'.length)
 }
 
+/** HF tags mix language codes with everything else; keep plain ISO 639-1 codes, capped. */
+const languagesOf = (hf: HfModel): string[] | undefined => {
+  const codes = (hf.tags ?? []).filter((t) => /^[a-z]{2}$/.test(t)).slice(0, 16)
+  return codes.length > 0 ? codes : undefined
+}
+
 const modalityOf = (hf: HfModel): string => {
   const byTag: Record<string, string> = {
     'text-generation': 'text',
@@ -95,6 +101,7 @@ const toModel = (seed: Seed, hf: HfModel, config: HfConfig | null, asOf: string)
     active_params: seed.active_params,
     context: seed.context ?? (config ? textConfig(config).max_position_embeddings : undefined),
     architecture: toArchitecture(config),
+    languages: languagesOf(hf),
     release_date: hf.createdAt?.slice(0, 10),
     hf_downloads_30d: hf.downloads,
     hf_likes: hf.likes,

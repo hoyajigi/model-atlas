@@ -1,0 +1,28 @@
+id = "qwen-sea-lion-v4.5-27b-it"
+name = "Qwen-SEA-LION-v4.5-27B-IT"
+org = "aisingapore"
+family = "sea-lion"
+modality = "multimodal"
+open_weights = true
+hf_id = "aisingapore/Qwen-SEA-LION-v4.5-27B-IT"
+license = "mit"
+params = 27781427952
+context = 262144
+languages = [ "en", "zh", "vi", "id", "th", "ta", "ms", "my" ]
+release_date = "2026-05-14"
+hf_downloads_30d = 7876
+hf_likes = 7
+
+[architecture]
+n_layers = 64
+hidden_size = 5120
+n_heads = 24
+n_kv_heads = 4
+head_dim = 256
+vocab_size = 248320
+
+[source]
+url = "https://huggingface.co/aisingapore/Qwen-SEA-LION-v4.5-27B-IT"
+as_of = "2026-07-22"
+note = "synced from HF Hub API"
+

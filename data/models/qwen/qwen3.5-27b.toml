@@ -9,8 +9,8 @@ license = "apache-2.0"
 params = 27781427952
 context = 262144
 release_date = "2026-02-24"
-hf_downloads_30d = 2643530
-hf_likes = 1009
+hf_downloads_30d = 2545970
+hf_likes = 1013
 
 [architecture]
 n_layers = 64
@@ -22,6 +22,6 @@ vocab_size = 248320
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3.5-27B"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 

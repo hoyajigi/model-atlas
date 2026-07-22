@@ -7,7 +7,8 @@ import { fetchJson, sleep } from './fetch.ts'
 const TRACKED_ORGS = [
   'Qwen', 'deepseek-ai', 'meta-llama', 'google', 'mistralai', 'openai',
   'zai-org', 'moonshotai', 'MiniMaxAI', 'microsoft', 'nvidia',
-  'LGAI-EXAONE', 'kakaocorp', 'naver-hyperclovax',
+  'LGAI-EXAONE', 'kakaocorp', 'naver-hyperclovax', 'upstage',
+  'aisingapore', 'sarvamai', 'sbintuitions', 'CohereLabs', 'tiiuae', 'inceptionai',
   'black-forest-labs', 'stabilityai'
 ]
 

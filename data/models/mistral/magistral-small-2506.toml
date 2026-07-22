@@ -8,9 +8,10 @@ hf_id = "mistralai/Magistral-Small-2506"
 license = "apache-2.0"
 params = 23572403200
 context = 40960
+languages = [ "en", "fr", "de", "es", "pt", "it", "ja", "ko", "ru", "zh", "ar", "fa", "id", "ms", "ne", "pl" ]
 release_date = "2025-06-04"
-hf_downloads_30d = 17238
-hf_likes = 609
+hf_downloads_30d = 17142
+hf_likes = 610
 
 [architecture]
 n_layers = 40
@@ -22,6 +23,6 @@ vocab_size = 131072
 
 [source]
 url = "https://huggingface.co/mistralai/Magistral-Small-2506"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 

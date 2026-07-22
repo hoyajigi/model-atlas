@@ -8,14 +8,15 @@ hf_id = "meta-llama/Llama-3.3-70B-Instruct"
 license = "llama3.3"
 params = 70553706496
 context = 131072
+languages = [ "en", "fr", "it", "pt", "hi", "es", "th", "de" ]
 release_date = "2024-11-26"
-hf_downloads_30d = 711312
-hf_likes = 2912
+hf_downloads_30d = 702706
+hf_likes = 2915
 gated = true
 
 [source]
 url = "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]

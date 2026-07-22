@@ -1,0 +1,30 @@
+id = "solar-open-100b"
+name = "Solar-Open-100B"
+org = "upstage"
+family = "solar"
+modality = "text"
+open_weights = true
+hf_id = "upstage/Solar-Open-100B"
+license = "other"
+params = 102651793408
+context = 131072
+languages = [ "en", "ko" ]
+release_date = "2025-12-10"
+hf_downloads_30d = 5356
+hf_likes = 484
+
+[architecture]
+n_layers = 48
+hidden_size = 4096
+n_heads = 64
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 196608
+moe_experts = 128
+moe_active_experts = 8
+
+[source]
+url = "https://huggingface.co/upstage/Solar-Open-100B"
+as_of = "2026-07-22"
+note = "synced from HF Hub API"
+

@@ -7,13 +7,14 @@ open_weights = true
 hf_id = "black-forest-labs/FLUX.2-klein-9B"
 license = "other"
 params = 9078581248
+languages = [ "en" ]
 release_date = "2026-01-14"
-hf_downloads_30d = 326320
-hf_likes = 1080
+hf_downloads_30d = 326557
+hf_likes = 1087
 gated = true
 
 [source]
 url = "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 

@@ -8,8 +8,9 @@ hf_id = "kakaocorp/kanana-1.5-8b-instruct-2505"
 license = "apache-2.0"
 params = 8030285824
 context = 32768
+languages = [ "en", "ko" ]
 release_date = "2025-05-21"
-hf_downloads_30d = 5449
+hf_downloads_30d = 5324
 hf_likes = 58
 
 [architecture]
@@ -22,7 +23,7 @@ vocab_size = 128259
 
 [source]
 url = "https://huggingface.co/kakaocorp/kanana-1.5-8b-instruct-2505"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.kmmlu]

@@ -7,13 +7,14 @@ open_weights = true
 hf_id = "black-forest-labs/FLUX.1-schnell"
 license = "apache-2.0"
 params = 11891178560
+languages = [ "en" ]
 release_date = "2024-07-31"
-hf_downloads_30d = 238976
-hf_likes = 5386
+hf_downloads_30d = 244667
+hf_likes = 5403
 gated = true
 
 [source]
 url = "https://huggingface.co/black-forest-labs/FLUX.1-schnell"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 

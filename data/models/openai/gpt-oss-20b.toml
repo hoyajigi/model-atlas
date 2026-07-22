@@ -10,8 +10,8 @@ params = 21511953984
 active_params = 3600000000
 context = 131072
 release_date = "2025-08-04"
-hf_downloads_30d = 7417090
-hf_likes = 4820
+hf_downloads_30d = 7319441
+hf_likes = 4827
 
 [architecture]
 n_layers = 24
@@ -25,7 +25,7 @@ moe_active_experts = 4
 
 [source]
 url = "https://huggingface.co/openai/gpt-oss-20b"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]

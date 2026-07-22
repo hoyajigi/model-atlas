@@ -10,8 +10,8 @@ params = 480154875392
 active_params = 35000000000
 context = 262144
 release_date = "2025-07-22"
-hf_downloads_30d = 29765
-hf_likes = 1354
+hf_downloads_30d = 29491
+hf_likes = 1356
 
 [architecture]
 n_layers = 62
@@ -25,7 +25,7 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]

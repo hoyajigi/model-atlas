@@ -46,7 +46,15 @@ export const LLM_SEEDS: Seed[] = [
   { hf_id: 'MiniMaxAI/MiniMax-M2', org: 'minimax', id: 'minimax-m2', family: 'minimax-m', context: 196608, active_params: 10_000_000_000 },
   { hf_id: 'microsoft/phi-4', org: 'microsoft', id: 'phi-4', family: 'phi', context: 16384 },
   { hf_id: 'LGAI-EXAONE/EXAONE-4.0-32B', org: 'lg', id: 'exaone-4.0-32b', family: 'exaone', context: 131072 },
-  { hf_id: 'kakaocorp/kanana-1.5-8b-instruct-2505', org: 'kakao', id: 'kanana-1.5-8b-instruct', family: 'kanana', context: 32768 }
+  { hf_id: 'kakaocorp/kanana-1.5-8b-instruct-2505', org: 'kakao', id: 'kanana-1.5-8b-instruct', family: 'kanana', context: 32768 },
+  { hf_id: 'upstage/Solar-Open2-250B', org: 'upstage', id: 'solar-open2-250b', family: 'solar' },
+  { hf_id: 'upstage/Solar-Open-100B', org: 'upstage', id: 'solar-open-100b', family: 'solar' },
+  { hf_id: 'naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B', org: 'naver', id: 'hyperclovax-seed-vision-3b', family: 'hyperclovax' },
+  { hf_id: 'sarvamai/sarvam-105b', org: 'sarvam', id: 'sarvam-105b', family: 'sarvam' },
+  { hf_id: 'sarvamai/sarvam-m', org: 'sarvam', id: 'sarvam-m', family: 'sarvam' },
+  { hf_id: 'aisingapore/Qwen-SEA-LION-v4.5-27B-IT', org: 'aisingapore', id: 'qwen-sea-lion-v4.5-27b-it', family: 'sea-lion' },
+  { hf_id: 'sbintuitions/sarashina2.2-3b-instruct-v0.1', org: 'sbintuitions', id: 'sarashina2.2-3b-instruct', family: 'sarashina' },
+  { hf_id: 'CohereLabs/command-a-plus-05-2026-bf16', org: 'cohere', id: 'command-a-plus-05-2026', family: 'command' }
 ]
 
 export const T2I_SEEDS: Seed[] = [

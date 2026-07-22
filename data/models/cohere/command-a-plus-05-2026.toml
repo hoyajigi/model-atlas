@@ -1,0 +1,30 @@
+id = "command-a-plus-05-2026"
+name = "command-a-plus-05-2026-bf16"
+org = "cohere"
+family = "command"
+modality = "multimodal"
+open_weights = true
+hf_id = "CohereLabs/command-a-plus-05-2026-bf16"
+license = "apache-2.0"
+params = 218750277872
+context = 200000
+languages = [ "en", "ar", "bg", "bn", "ca", "cs", "da", "de", "el", "es", "et", "fa", "fi", "fr", "ga", "he" ]
+release_date = "2026-05-11"
+hf_downloads_30d = 38170
+hf_likes = 140
+
+[architecture]
+n_layers = 32
+hidden_size = 4096
+n_heads = 128
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 262144
+moe_experts = 128
+moe_active_experts = 8
+
+[source]
+url = "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16"
+as_of = "2026-07-22"
+note = "synced from HF Hub API"
+

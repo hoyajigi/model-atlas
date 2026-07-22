@@ -9,8 +9,9 @@ license = "mit"
 params = 356785898816
 active_params = 32000000000
 context = 202752
+languages = [ "en", "zh" ]
 release_date = "2025-09-29"
-hf_downloads_30d = 12280
+hf_downloads_30d = 12326
 hf_likes = 1230
 
 [architecture]
@@ -25,7 +26,7 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/zai-org/GLM-4.6"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]

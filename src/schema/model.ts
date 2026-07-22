@@ -45,6 +45,8 @@ export const Model = z
         output: z.array(z.string())
       })
       .optional(),
+    /** ISO 639-1 language codes the model targets (from HF tags), notable for regional models */
+    languages: z.array(z.string()).optional(),
     architecture: Architecture.optional(),
     /** Available quantization variants, e.g. ["fp8", "gguf-q4_k_m", "mlx-4bit"] */
     quants: z.array(z.string()).optional(),

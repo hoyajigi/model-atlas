@@ -1,0 +1,30 @@
+id = "solar-open2-250b"
+name = "Solar-Open2-250B"
+org = "upstage"
+family = "solar"
+modality = "text"
+open_weights = true
+hf_id = "upstage/Solar-Open2-250B"
+license = "other"
+params = 250287810304
+context = 1048576
+languages = [ "en", "ko", "ja" ]
+release_date = "2026-07-22"
+hf_downloads_30d = 0
+hf_likes = 123
+
+[architecture]
+n_layers = 48
+hidden_size = 4096
+n_heads = 64
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 196608
+moe_experts = 320
+moe_active_experts = 8
+
+[source]
+url = "https://huggingface.co/upstage/Solar-Open2-250B"
+as_of = "2026-07-22"
+note = "synced from HF Hub API"
+

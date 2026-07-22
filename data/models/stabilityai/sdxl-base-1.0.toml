@@ -8,11 +8,11 @@ hf_id = "stabilityai/stable-diffusion-xl-base-1.0"
 license = "openrail++"
 params = 2567463684
 release_date = "2023-07-25"
-hf_downloads_30d = 1388385
-hf_likes = 7955
+hf_downloads_30d = 1427581
+hf_likes = 7967
 
 [source]
 url = "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 

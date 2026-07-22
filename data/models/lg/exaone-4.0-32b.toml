@@ -8,8 +8,9 @@ hf_id = "LGAI-EXAONE/EXAONE-4.0-32B"
 license = "other"
 params = 32003216384
 context = 131072
+languages = [ "en", "ko", "es" ]
 release_date = "2025-07-11"
-hf_downloads_30d = 29888
+hf_downloads_30d = 29710
 hf_likes = 281
 
 [architecture]
@@ -22,7 +23,7 @@ vocab_size = 102400
 
 [source]
 url = "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B"
-as_of = "2026-07-20"
+as_of = "2026-07-22"
 note = "synced from HF Hub API"
 
 [benchmarks.kmmlu-redux]
