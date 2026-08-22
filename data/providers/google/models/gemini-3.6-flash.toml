@@ -1,0 +1,27 @@
+model_id = "gemini-3.6-flash"
+name = "Gemini 3.6 Flash"
+modality = "text"
+status = "active"
+context = 1048576
+max_output = 65536
+knowledge_cutoff = "2026-03"
+release_date = "2026-07-21"
+
+[pricing]
+input_per_mtok = 0.75
+output_per_mtok = 3.75
+cache_read_per_mtok = 0.075
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,26 @@
+model_id = "accounts/fireworks/routers/kimi-k3-fast"
+name = "Kimi K3 Fast"
+modality = "text"
+status = "active"
+context = 1048576
+max_output = 131072
+release_date = "2026-07-27"
+
+[pricing]
+input_per_mtok = 4.5
+output_per_mtok = 22.5
+cache_read_per_mtok = 0.45
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

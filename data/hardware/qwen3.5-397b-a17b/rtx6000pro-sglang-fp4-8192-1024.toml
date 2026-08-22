@@ -1,0 +1,18 @@
+model_ref = "qwen/qwen3.5-397b-a17b"
+quant = "fp4"
+hardware = "rtx6000pro"
+gpus = 16
+engine = "sglang"
+engine_version = "v0.5.16-cu130"
+concurrency = 64
+seq_in = 8192
+seq_out = 1024
+tok_per_s = 3068.7
+ttft_ms = 5814.1
+measured_on = "2026-07-30"
+
+[source]
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/30252251058/attempts/1"
+as_of = "2026-08-22"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+

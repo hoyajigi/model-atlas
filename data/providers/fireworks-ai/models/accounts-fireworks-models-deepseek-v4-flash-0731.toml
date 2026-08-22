@@ -1,0 +1,27 @@
+model_id = "accounts/fireworks/models/deepseek-v4-flash-0731"
+name = "DeepSeek V4 Flash 0731"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 384000
+knowledge_cutoff = "2025-05"
+release_date = "2026-07-31"
+
+[pricing]
+input_per_mtok = 0.14
+output_per_mtok = 0.28
+cache_read_per_mtok = 0.028
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

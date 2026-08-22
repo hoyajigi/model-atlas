@@ -11,7 +11,7 @@ active_params = 3600000000
 context = 131072
 release_date = "2025-08-04"
 hf_downloads_30d = 7376531
-hf_likes = 4936
+hf_likes = 4937
 
 [architecture]
 n_layers = 24

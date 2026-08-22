@@ -12,9 +12,9 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://platform.openai.com/docs/pricing"
+url = "https://models.dev"
 as_of = "2026-08-22"
-note = "curator: usd_per_image_1024 filled — OpenAI's pricing page lists no flat per-image rate for this model, only per-token rates ($8/$2/$32 input/cached/output per Mtok) identical to gpt-image-1.5, so the estimate mirrors gpt-image-1.5's usd_per_image_1024"
+note = "synced from models.dev (MIT)"
 
 [pricing.image]
 unit = "per_image"

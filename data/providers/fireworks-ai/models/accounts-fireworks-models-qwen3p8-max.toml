@@ -1,0 +1,25 @@
+model_id = "accounts/fireworks/models/qwen3p8-max"
+name = "Qwen3.8 Max"
+modality = "text"
+status = "active"
+context = 262144
+max_output = 131072
+release_date = "2026-08-03"
+
+[pricing]
+input_per_mtok = 2
+output_per_mtok = 6
+cache_read_per_mtok = 0.25
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

@@ -1,0 +1,25 @@
+model_id = "gemini-3.5-live-translate-preview"
+name = "Gemini 3.5 Live Translate Preview"
+modality = "audio"
+status = "active"
+context = 16384
+max_output = 32768
+knowledge_cutoff = "2025-01"
+release_date = "2026-06-09"
+
+[pricing]
+input_per_mtok = 3.5
+output_per_mtok = 21
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

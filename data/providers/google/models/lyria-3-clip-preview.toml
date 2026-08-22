@@ -1,0 +1,25 @@
+model_id = "lyria-3-clip-preview"
+name = "Lyria 3 Clip Preview"
+modality = "text"
+status = "active"
+context = 1048576
+max_output = 65536
+release_date = "2026-03-25"
+
+[pricing]
+input_per_mtok = 0
+output_per_mtok = 0
+
+[capabilities]
+tool_call = false
+reasoning = false
+structured_output = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

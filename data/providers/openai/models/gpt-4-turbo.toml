@@ -1,7 +1,7 @@
 model_id = "gpt-4-turbo"
 name = "GPT-4 Turbo"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 128000
 max_output = 4096
 knowledge_cutoff = "2023-12"
@@ -21,6 +21,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-07-20"
+as_of = "2026-08-22"
 note = "synced from models.dev (MIT)"
 

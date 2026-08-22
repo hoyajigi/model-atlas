@@ -9,16 +9,17 @@ release_date = "2026-05-21"
 [pricing]
 input_per_mtok = 1.25
 output_per_mtok = 3.75
+cache_read_per_mtok = 0.125
 
 [capabilities]
 tool_call = true
 reasoning = false
 vision = false
 pdf_input = false
-caching = false
+caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-07-20"
+as_of = "2026-08-22"
 note = "synced from models.dev (MIT)"
 

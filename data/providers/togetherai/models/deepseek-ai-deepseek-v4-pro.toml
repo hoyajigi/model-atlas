@@ -5,6 +5,7 @@ status = "active"
 context = 512000
 max_output = 384000
 release_date = "2026-04-24"
+model_ref = "deepseek/deepseek-v4-pro"
 
 [pricing]
 input_per_mtok = 1.74
@@ -21,6 +22,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-07-20"
+as_of = "2026-08-22"
 note = "synced from models.dev (MIT)"
 

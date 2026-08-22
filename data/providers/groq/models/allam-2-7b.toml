@@ -1,0 +1,24 @@
+model_id = "allam-2-7b"
+name = "ALLaM-2-7b"
+modality = "text"
+status = "active"
+context = 4096
+max_output = 4096
+release_date = "2025-01-23"
+
+[pricing]
+input_per_mtok = 0
+output_per_mtok = 0
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

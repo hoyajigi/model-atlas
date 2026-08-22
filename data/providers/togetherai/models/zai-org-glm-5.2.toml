@@ -2,7 +2,7 @@ model_id = "zai-org/GLM-5.2"
 name = "GLM-5.2"
 modality = "text"
 status = "active"
-context = 262144
+context = 512000
 max_output = 164000
 release_date = "2026-06-16"
 
@@ -21,6 +21,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-07-20"
+as_of = "2026-08-22"
 note = "synced from models.dev (MIT)"
 
