@@ -29,6 +29,9 @@ jobs:
         run: npm run sync:litellm 2> litellm-report.txt || true
       - uses: peter-evans/create-pull-request@v7
         with:
+          # Same reason as curator.yml: a PR opened with GITHUB_TOKEN does not
+          # trigger CI. Falls back so the job keeps working without the PAT.
+          token: ${{ secrets.CURATOR_PAT || secrets.GITHUB_TOKEN }}
           branch: sync/upstream
           title: 'sync: upstream data refresh'
           commit-message: 'chore: sync upstream data (models.dev, HF Hub)'

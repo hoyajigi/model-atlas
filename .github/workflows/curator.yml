@@ -22,10 +22,16 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          # Pass the job's GITHUB_TOKEN explicitly: without it the action falls
-          # back to the GitHub App path and requests an OIDC token, which needs
+          # Pass a token explicitly: without one the action falls back to the
+          # GitHub App path and requests an OIDC token, which needs
           # `id-token: write` and fails the job before Claude ever starts.
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #
+          # Prefer CURATOR_PAT. GitHub refuses to trigger workflows for events
+          # created with GITHUB_TOKEN, so a PR opened with it gets no CI run
+          # (see PR #2, which sat a month with an unapproved check). A PAT opens
+          # the PR under a real account and CI runs normally. Falls back to
+          # GITHUB_TOKEN so the job still works before the PAT exists.
+          github_token: ${{ secrets.CURATOR_PAT || secrets.GITHUB_TOKEN }}
           prompt: /curate
           # The curator edits TOML/seeds, runs npm scripts, and opens a PR.
           # Without --allowedTools the action denies those calls and the job
