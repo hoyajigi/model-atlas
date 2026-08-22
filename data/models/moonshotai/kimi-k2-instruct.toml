@@ -6,12 +6,12 @@ modality = "text"
 open_weights = true
 hf_id = "moonshotai/Kimi-K2-Instruct"
 license = "other"
-params = 1026470731056
+params = 1026408235864
 active_params = 32000000000
 context = 131072
 release_date = "2025-07-11"
-hf_downloads_30d = 210344
-hf_likes = 2369
+hf_downloads_30d = 166602
+hf_likes = 2374
 
 [architecture]
 n_layers = 61
@@ -25,6 +25,6 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
-as_of = "2026-07-22"
+as_of = "2026-08-22"
 note = "synced from HF Hub API"
 

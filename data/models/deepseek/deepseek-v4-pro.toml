@@ -1,0 +1,30 @@
+id = "deepseek-v4-pro"
+name = "DeepSeek-V4-Pro"
+org = "deepseek"
+family = "deepseek-v4"
+modality = "text"
+open_weights = true
+hf_id = "deepseek-ai/DeepSeek-V4-Pro"
+license = "mit"
+params = 1598839674782
+active_params = 49000000000
+context = 1048576
+release_date = "2026-04-22"
+hf_downloads_30d = 1103127
+hf_likes = 5470
+
+[architecture]
+n_layers = 61
+hidden_size = 7168
+n_heads = 128
+n_kv_heads = 1
+head_dim = 512
+vocab_size = 129280
+moe_experts = 384
+moe_active_experts = 6
+
+[source]
+url = "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+as_of = "2026-08-22"
+note = "synced from HF Hub API"
+

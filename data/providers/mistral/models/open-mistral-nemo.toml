@@ -1,7 +1,7 @@
 model_id = "open-mistral-nemo"
 name = "Open Mistral Nemo"
 modality = "text"
-status = "deprecated"
+status = "retired"
 context = 128000
 max_output = 128000
 knowledge_cutoff = "2024-07"
@@ -19,7 +19,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-07-20"
-note = "synced from models.dev (MIT)"
+url = "https://docs.mistral.ai/getting-started/models/models_overview/"
+as_of = "2026-08-22"
+note = "curator: marked retired per Mistral's model overview (open-mistral-nemo-2407 deprecated 2026-05-22, retired 2026-07-31); pricing left as last-known since no live price exists"
 

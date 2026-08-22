@@ -1,0 +1,30 @@
+id = "qwen3.8-2.4t-a95b"
+name = "Qwen3.8-2.4T-A95B"
+org = "qwen"
+family = "qwen3.8"
+modality = "text"
+open_weights = true
+hf_id = "Qwen/Qwen3.8-2.4T-A95B"
+license = "other"
+params = 2446182725504
+active_params = 95000000000
+context = 262144
+release_date = "2026-08-08"
+hf_downloads_30d = 17386
+hf_likes = 1141
+
+[architecture]
+n_layers = 92
+hidden_size = 8192
+n_heads = 64
+n_kv_heads = 4
+head_dim = 256
+vocab_size = 248320
+moe_experts = 512
+moe_active_experts = 10
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+as_of = "2026-08-22"
+note = "synced from HF Hub API"
+
