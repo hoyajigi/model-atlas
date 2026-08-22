@@ -10,7 +10,7 @@ params = 27781427952
 context = 262144
 release_date = "2026-08-05"
 hf_downloads_30d = 2090699
-hf_likes = 12033
+hf_likes = 12042
 
 [architecture]
 n_layers = 64

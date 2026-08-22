@@ -1,0 +1,26 @@
+model_id = "deep-research-preview-04-2026"
+name = "Deep Research Preview (Apr-21-2026)"
+modality = "text-to-image"
+status = "active"
+context = 131072
+max_output = 65536
+knowledge_cutoff = "2025-01"
+release_date = "2026-04-21"
+
+[pricing]
+input_per_mtok = 2
+output_per_mtok = 12
+cache_read_per_mtok = 0.2
+
+[capabilities]
+tool_call = true
+reasoning = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

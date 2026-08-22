@@ -1,0 +1,19 @@
+model_id = "grok-imagine-video-1.5"
+name = "Grok Imagine Video 1.5"
+modality = "text-to-video"
+status = "active"
+context = 1024
+release_date = "2026-05-30"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = true
+pdf_input = true
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

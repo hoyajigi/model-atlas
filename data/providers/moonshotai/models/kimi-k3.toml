@@ -5,6 +5,7 @@ status = "active"
 context = 1048576
 max_output = 131072
 release_date = "2026-07-16"
+model_ref = "moonshotai/kimi-k3"
 
 [pricing]
 input_per_mtok = 3
@@ -21,6 +22,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-07-20"
+as_of = "2026-08-22"
 note = "synced from models.dev (MIT)"
 

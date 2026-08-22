@@ -1,0 +1,26 @@
+model_id = "deepseek-ai/DeepSeek-V4-Pro-0813"
+name = "DeepSeek V4 Pro 0813"
+modality = "text"
+status = "active"
+context = 1048576
+max_output = 384000
+release_date = "2026-08-12"
+
+[pricing]
+input_per_mtok = 1.32
+output_per_mtok = 3.96
+cache_read_per_mtok = 0.13
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

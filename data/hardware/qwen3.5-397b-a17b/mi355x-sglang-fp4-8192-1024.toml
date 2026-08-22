@@ -3,16 +3,16 @@ quant = "fp4"
 hardware = "mi355x"
 gpus = 2
 engine = "sglang"
-engine_version = "v0.5.15-rocm720-mi35x-20260713"
+engine_version = "v0.5.16-rocm720-mi35x-20260730"
 concurrency = 256
 seq_in = 8192
 seq_out = 1024
-tok_per_s = 2187.4
-ttft_ms = 759.9
-measured_on = "2026-07-16"
+tok_per_s = 2290.7
+ttft_ms = 717
+measured_on = "2026-08-06"
 
 [source]
-url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/29333759620/attempts/1"
-as_of = "2026-07-20"
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/30595171778/attempts/1"
+as_of = "2026-08-22"
 note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
 

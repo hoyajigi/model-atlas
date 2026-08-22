@@ -1,7 +1,7 @@
 model_id = "gpt-4"
 name = "GPT-4"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 8192
 max_output = 8192
 knowledge_cutoff = "2023-11"
@@ -21,6 +21,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-07-20"
+as_of = "2026-08-22"
 note = "synced from models.dev (MIT)"
 

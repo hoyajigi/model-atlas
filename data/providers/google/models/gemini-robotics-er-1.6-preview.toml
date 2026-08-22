@@ -1,0 +1,26 @@
+model_id = "gemini-robotics-er-1.6-preview"
+name = "Gemini Robotics-ER 1.6 Preview"
+modality = "text"
+status = "active"
+context = 131072
+max_output = 65536
+knowledge_cutoff = "2025-01"
+release_date = "2026-04-14"
+
+[pricing]
+input_per_mtok = 1
+output_per_mtok = 5
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

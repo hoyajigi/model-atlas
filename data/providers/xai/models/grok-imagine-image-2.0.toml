@@ -3,6 +3,7 @@ name = "Grok Imagine Image 2.0"
 modality = "text-to-image"
 status = "active"
 context = 8000
+release_date = "2026-08-07"
 
 [capabilities]
 tool_call = false
@@ -12,12 +13,13 @@ pdf_input = true
 caching = false
 
 [source]
-url = "https://docs.x.ai/docs/models"
+url = "https://models.dev"
 as_of = "2026-08-22"
-note = "added by curator: new model found on xAI's Imagine pricing table, not yet tracked"
+note = "synced from models.dev (MIT)"
 
 [pricing.image]
 unit = "per_image"
 usd = 0.04
 resolution = "1024x1024"
 usd_per_image_1024 = 0.04
+

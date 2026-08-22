@@ -1,0 +1,18 @@
+model_id = "voxtral-mini-tts-latest"
+name = "Voxtral Mini TTS (latest)"
+modality = "text"
+status = "active"
+release_date = "2026-03-01"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

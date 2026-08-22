@@ -1,0 +1,26 @@
+model_id = "gemini-3.1-flash-lite-image"
+name = "Nano Banana 2 Lite"
+modality = "text-to-image"
+status = "active"
+context = 65536
+max_output = 65536
+knowledge_cutoff = "2025-01"
+release_date = "2026-06-30"
+
+[pricing]
+input_per_mtok = 0.25
+output_per_mtok = 30
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+

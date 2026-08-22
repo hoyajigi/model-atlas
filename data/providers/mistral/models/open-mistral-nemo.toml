@@ -1,7 +1,7 @@
 model_id = "open-mistral-nemo"
 name = "Open Mistral Nemo"
 modality = "text"
-status = "retired"
+status = "deprecated"
 context = 128000
 max_output = 128000
 knowledge_cutoff = "2024-07"

@@ -1,0 +1,20 @@
+model_id = "veo-3.1-fast-generate-preview"
+name = "Veo 3.1 fast"
+modality = "text-to-video"
+status = "active"
+context = 480
+max_output = 8192
+release_date = "2025-10-15"
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-08-22"
+note = "synced from models.dev (MIT)"
+
