@@ -21,7 +21,7 @@ jobs:
       - run: npm ci
       - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # Pass the job's GITHUB_TOKEN explicitly: without it the action falls
           # back to the GitHub App path and requests an OIDC token, which needs
           # `id-token: write` and fails the job before Claude ever starts.
