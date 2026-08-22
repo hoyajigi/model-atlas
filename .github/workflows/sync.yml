@@ -19,14 +19,33 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run sync:modelsdev
-      - run: npm run sync:hf
-      - run: npm run sync:lmarena
-      - run: npm run sync:inferencex
+      # Each upstream is fetched independently. A single flaky source used to
+      # abort the whole job before the PR step -- HuggingFace's datasets-server
+      # returned 501 ("Job manager crashed") on 2026-08-22 and took the entire
+      # daily sync with it. Failures are collected and reported in the PR body
+      # rather than swallowed, so a source that stays broken stays visible.
+      - name: Sync upstream sources
+        run: |
+          failed=()
+          for s in modelsdev hf lmarena inferencex; do
+            echo "::group::sync:$s"
+            if npm run "sync:$s"; then echo "sync:$s ok"; else failed+=("$s"); fi
+            echo "::endgroup::"
+          done
+          if [ ${#failed[@]} -gt 0 ]; then
+            printf '%s\n' "## Upstream sources that failed this run" '' > sync-failures.txt
+            for s in "${failed[@]}"; do
+              echo "- \`npm run sync:$s\` failed; its data is unchanged in this PR." >> sync-failures.txt
+            done
+            echo '' >> sync-failures.txt
+            echo "::warning::${#failed[@]} upstream source(s) failed: ${failed[*]}"
+          fi
       - run: npm run sync:link
       - run: npm run validate
       - name: Cross-check pricing against LiteLLM
         run: npm run sync:litellm 2> litellm-report.txt || true
+      - name: Assemble PR body
+        run: cat sync-failures.txt litellm-report.txt > pr-body.txt 2>/dev/null || cp litellm-report.txt pr-body.txt
       - uses: peter-evans/create-pull-request@v7
         with:
           # Same reason as curator.yml: a PR opened with GITHUB_TOKEN does not
@@ -35,5 +54,5 @@ jobs:
           branch: sync/upstream
           title: 'sync: upstream data refresh'
           commit-message: 'chore: sync upstream data (models.dev, HF Hub)'
-          body-path: litellm-report.txt
+          body-path: pr-body.txt
           add-paths: data/
