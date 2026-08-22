@@ -1,16 +1,16 @@
-id = "qwen3.5-27b"
-name = "Qwen3.5-27B"
+id = "qwen3.8-27b"
+name = "Qwen3.8-27B"
 org = "qwen"
-family = "qwen3.5"
+family = "qwen3.8"
 modality = "multimodal"
 open_weights = true
-hf_id = "Qwen/Qwen3.5-27B"
+hf_id = "Qwen/Qwen3.8-27B"
 license = "apache-2.0"
 params = 27781427952
 context = 262144
-release_date = "2026-02-24"
-hf_downloads_30d = 2765350
-hf_likes = 1031
+release_date = "2026-08-05"
+hf_downloads_30d = 2090699
+hf_likes = 12033
 
 [architecture]
 n_layers = 64
@@ -21,7 +21,7 @@ head_dim = 256
 vocab_size = 248320
 
 [source]
-url = "https://huggingface.co/Qwen/Qwen3.5-27B"
+url = "https://huggingface.co/Qwen/Qwen3.8-27B"
 as_of = "2026-08-22"
 note = "synced from HF Hub API"
 

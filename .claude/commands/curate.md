@@ -26,3 +26,5 @@ Append noteworthy events since the last entry to `changelog/<YYYY-MM>.md`: new m
 - `npm run validate` must pass before you open the PR.
 - Small, reviewable PR. If a task yields nothing this run, say so in the PR body (or skip the PR entirely if there are no changes at all).
 - Do not add API keys, secrets, or scrape sites that prohibit it.
+- No AI attribution anywhere: keep "Generated with Claude Code", "Co-Authored-By: Claude"
+  and similar lines out of commit messages and the PR body.

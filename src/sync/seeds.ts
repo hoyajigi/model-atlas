@@ -54,7 +54,12 @@ export const LLM_SEEDS: Seed[] = [
   { hf_id: 'sarvamai/sarvam-m', org: 'sarvam', id: 'sarvam-m', family: 'sarvam' },
   { hf_id: 'aisingapore/Qwen-SEA-LION-v4.5-27B-IT', org: 'aisingapore', id: 'qwen-sea-lion-v4.5-27b-it', family: 'sea-lion' },
   { hf_id: 'sbintuitions/sarashina2.2-3b-instruct-v0.1', org: 'sbintuitions', id: 'sarashina2.2-3b-instruct', family: 'sarashina' },
-  { hf_id: 'CohereLabs/command-a-plus-05-2026-bf16', org: 'cohere', id: 'command-a-plus-05-2026', family: 'command' }
+  { hf_id: 'CohereLabs/command-a-plus-05-2026-bf16', org: 'cohere', id: 'command-a-plus-05-2026', family: 'command' },
+  { hf_id: 'Qwen/Qwen3.8-27B', org: 'qwen', id: 'qwen3.8-27b', family: 'qwen3.8' },
+  { hf_id: 'Qwen/Qwen3.8-2.4T-A95B', org: 'qwen', id: 'qwen3.8-2.4t-a95b', family: 'qwen3.8', active_params: 95_000_000_000 },
+  { hf_id: 'deepseek-ai/DeepSeek-V4-Pro', org: 'deepseek', id: 'deepseek-v4-pro', family: 'deepseek-v4', active_params: 49_000_000_000 },
+  { hf_id: 'deepseek-ai/DeepSeek-V4-Flash', org: 'deepseek', id: 'deepseek-v4-flash', family: 'deepseek-v4', active_params: 13_000_000_000 },
+  { hf_id: 'moonshotai/Kimi-K3', org: 'moonshotai', id: 'kimi-k3', family: 'kimi-k3', active_params: 104_000_000_000 }
 ]
 
 export const T2I_SEEDS: Seed[] = [
@@ -64,5 +69,7 @@ export const T2I_SEEDS: Seed[] = [
   { hf_id: 'stabilityai/stable-diffusion-3.5-large', org: 'stabilityai', id: 'sd-3.5-large', family: 'stable-diffusion' },
   { hf_id: 'Qwen/Qwen-Image', org: 'qwen', id: 'qwen-image', family: 'qwen-image' },
   { hf_id: 'black-forest-labs/FLUX.2-klein-4B', org: 'black-forest-labs', id: 'flux.2-klein-4b', family: 'flux', modality: 'text-to-image' },
-  { hf_id: 'black-forest-labs/FLUX.2-klein-9B', org: 'black-forest-labs', id: 'flux.2-klein-9b', family: 'flux', modality: 'text-to-image' }
+  { hf_id: 'black-forest-labs/FLUX.2-klein-9B', org: 'black-forest-labs', id: 'flux.2-klein-9b', family: 'flux', modality: 'text-to-image' },
+  { hf_id: 'krea/Krea-2-Raw', org: 'krea', id: 'krea-2-raw', family: 'krea' },
+  { hf_id: 'Tongyi-MAI/Z-Image-Turbo', org: 'tongyi-mai', id: 'z-image-turbo', family: 'z-image' }
 ]

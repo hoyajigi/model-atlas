@@ -8,8 +8,8 @@ knowledge_cutoff = "2026-02-16"
 release_date = "2026-07-09"
 
 [pricing]
-input_per_mtok = 1
-output_per_mtok = 6
+input_per_mtok = 0.2
+output_per_mtok = 1.2
 cache_read_per_mtok = 0.1
 cache_write_per_mtok = 1.25
 
@@ -22,7 +22,7 @@ pdf_input = true
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-07-20"
-note = "synced from models.dev (MIT)"
+url = "https://platform.openai.com/docs/pricing"
+as_of = "2026-08-22"
+note = "curator: price corrected to match OpenAI's official pricing page"
 

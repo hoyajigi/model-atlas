@@ -8,8 +8,8 @@ knowledge_cutoff = "2025-04"
 release_date = "2025-09"
 
 [pricing]
-input_per_mtok = 0.5
-output_per_mtok = 6
+input_per_mtok = 0.15
+output_per_mtok = 1.2
 
 [capabilities]
 tool_call = true
@@ -19,7 +19,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-07-20"
-note = "synced from models.dev (MIT)"
+url = "https://www.alibabacloud.com/help/en/model-studio/billing-for-model-studio"
+as_of = "2026-08-22"
+note = "curator: price corrected to match Alibaba Cloud Model Studio international pricing page"
 

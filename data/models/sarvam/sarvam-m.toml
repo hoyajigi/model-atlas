@@ -10,8 +10,8 @@ params = 23572403200
 context = 32768
 languages = [ "en", "bn", "hi", "kn", "gu", "mr", "ml", "or", "pa", "ta", "te" ]
 release_date = "2025-05-20"
-hf_downloads_30d = 11100
-hf_likes = 346
+hf_downloads_30d = 4565
+hf_likes = 348
 
 [architecture]
 n_layers = 40
@@ -23,6 +23,6 @@ vocab_size = 131072
 
 [source]
 url = "https://huggingface.co/sarvamai/sarvam-m"
-as_of = "2026-07-22"
+as_of = "2026-08-22"
 note = "synced from HF Hub API"
 

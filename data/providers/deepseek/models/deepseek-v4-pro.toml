@@ -8,9 +8,9 @@ knowledge_cutoff = "2025-05"
 release_date = "2026-04-24"
 
 [pricing]
-input_per_mtok = 0.435
-output_per_mtok = 0.87
-cache_read_per_mtok = 0.003625
+input_per_mtok = 1.32
+output_per_mtok = 3.96
+cache_read_per_mtok = 0.044
 
 [capabilities]
 tool_call = true
@@ -21,7 +21,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-07-20"
-note = "synced from models.dev (MIT)"
+url = "https://api-docs.deepseek.com/quick_start/pricing"
+as_of = "2026-08-22"
+note = "curator: price corrected to match DeepSeek's official peak-hours pricing; off-peak discount pricing (input $0.66, output $1.98, cache-hit $0.022) not modeled"
 

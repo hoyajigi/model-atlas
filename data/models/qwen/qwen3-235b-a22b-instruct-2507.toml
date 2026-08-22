@@ -10,8 +10,8 @@ params = 235093634560
 active_params = 22000000000
 context = 262144
 release_date = "2025-07-21"
-hf_downloads_30d = 62433
-hf_likes = 792
+hf_downloads_30d = 45246
+hf_likes = 793
 
 [architecture]
 n_layers = 94
@@ -25,7 +25,7 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
-as_of = "2026-07-22"
+as_of = "2026-08-22"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
