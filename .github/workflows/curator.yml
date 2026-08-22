@@ -30,6 +30,8 @@ jobs:
           # The curator edits TOML/seeds, runs npm scripts, and opens a PR.
           # Without --allowedTools the action denies those calls and the job
           # goes green having changed nothing (11 denials on run 32567797248).
+          # 200 turns: a full four-task pass took 157 (run 32567981855) and the
+          # action hard-fails the job when the real count exceeds the limit.
           claude_args: >-
-            --max-turns 80
+            --max-turns 200
             --allowedTools "Read,Glob,Grep,Edit,Write,WebFetch,TodoWrite,Bash(npm:*),Bash(git:*),Bash(gh:*),Bash(node:*)"
