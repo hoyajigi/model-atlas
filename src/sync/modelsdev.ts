@@ -4,7 +4,7 @@ import { info, warn } from '../lib/log.ts'
 import { readTomlIfExists, writeToml } from '../lib/toml-io.ts'
 import { Offering, Provider } from '../schema/index.ts'
 import { compact, fetchJson, fileSlug, today } from './fetch.ts'
-import { preserveFields, preserveImagePricing } from './preserve.ts'
+import { preserveFields, preserveImagePricing, preserveManualPricing } from './preserve.ts'
 
 const API_URL = 'https://models.dev/api.json'
 
@@ -102,7 +102,8 @@ const syncProvider = async (p: UpstreamProvider, asOf: string): Promise<number> 
     const path = join(dir, 'models', `${fileSlug(m.id)}.toml`)
     const existing = await readTomlIfExists(path)
     const generated = toOffering(m, asOf)
-    const offering = preserveImagePricing(preserveFields(generated, existing, ['model_ref']), existing)
+    const withKeptFields = preserveFields(generated, existing, ['model_ref'])
+    const offering = preserveManualPricing(preserveImagePricing(withKeptFields, existing), existing, asOf)
     const parsed = Offering.safeParse(offering)
     if (!parsed.success) {
       warn(`${p.id}/${m.id}: skipped — ${parsed.error.issues[0]?.message}`)

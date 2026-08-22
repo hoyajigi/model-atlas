@@ -23,6 +23,10 @@ Append noteworthy events since the last entry to `changelog/<YYYY-MM>.md`: new m
 ## Rules
 
 - Every numeric field you touch must carry `source.url` and `source.as_of` (today).
+  This is load-bearing for pricing: the sync keeps hand-verified token prices only
+  when `source.url` points at the provider's own page rather than models.dev, and
+  only for 180 days from `source.as_of`. Leave the models.dev source in place and
+  your correction is reverted by the next daily sync.
 - `npm run validate` must pass before you open the PR.
 - Small, reviewable PR. If a task yields nothing this run, say so in the PR body (or skip the PR entirely if there are no changes at all).
 - Do not add API keys, secrets, or scrape sites that prohibit it.
