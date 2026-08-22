@@ -54,6 +54,18 @@ npm run sync:modelsdev  # API offerings for allowlisted providers (models.dev, M
 npm run sync:hf         # open-weights model specs from HF Hub (seeds in src/sync/seeds.ts)
 npm run sync:litellm    # pricing cross-check against LiteLLM (report only)
 npm run sync:inferencex # datacenter GPU throughput from InferenceX by SemiAnalysis (Apache-2.0)
+```
+
+A sync overwrites the offering TOML it regenerates, with one exception: token
+pricing a curator verified by hand. Upstream always writes
+`source.url = https://models.dev`, so an offering whose `source.url` points at
+the provider's own pricing page is treated as hand-verified and keeps its
+`input_per_mtok`/`output_per_mtok` (and its `source` block) through the next
+sync. The override expires after 180 days (`MANUAL_PRICING_TTL_DAYS` in
+`src/sync/preserve.ts`) so a stale correction gets re-reviewed rather than
+outliving the price it recorded.
+
+```sh
 npm run discover        # scan HF for notable new models not yet in the dataset
 ```
 
