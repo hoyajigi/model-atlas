@@ -27,4 +27,9 @@ jobs:
           # `id-token: write` and fails the job before Claude ever starts.
           github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: /curate
-          claude_args: '--max-turns 80'
+          # The curator edits TOML/seeds, runs npm scripts, and opens a PR.
+          # Without --allowedTools the action denies those calls and the job
+          # goes green having changed nothing (11 denials on run 32567797248).
+          claude_args: >-
+            --max-turns 80
+            --allowedTools "Read,Glob,Grep,Edit,Write,WebFetch,TodoWrite,Bash(npm:*),Bash(git:*),Bash(gh:*),Bash(node:*)"
