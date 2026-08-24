@@ -11,5 +11,5 @@ usd_per_image_1024 = 0.025
 
 [source]
 url = "https://fal.ai/models/fal-ai/flux/dev"
-as_of = "2026-07-20"
+as_of = "2026-08-24"
 note = "rounded up to nearest MP"

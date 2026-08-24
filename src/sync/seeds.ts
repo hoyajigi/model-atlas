@@ -71,5 +71,9 @@ export const T2I_SEEDS: Seed[] = [
   { hf_id: 'black-forest-labs/FLUX.2-klein-4B', org: 'black-forest-labs', id: 'flux.2-klein-4b', family: 'flux', modality: 'text-to-image' },
   { hf_id: 'black-forest-labs/FLUX.2-klein-9B', org: 'black-forest-labs', id: 'flux.2-klein-9b', family: 'flux', modality: 'text-to-image' },
   { hf_id: 'krea/Krea-2-Raw', org: 'krea', id: 'krea-2-raw', family: 'krea' },
-  { hf_id: 'Tongyi-MAI/Z-Image-Turbo', org: 'tongyi-mai', id: 'z-image-turbo', family: 'z-image' }
+  { hf_id: 'krea/Krea-2-Turbo', org: 'krea', id: 'krea-2-turbo', family: 'krea' },
+  { hf_id: 'Tongyi-MAI/Z-Image-Turbo', org: 'tongyi-mai', id: 'z-image-turbo', family: 'z-image' },
+  { hf_id: 'Tongyi-MAI/Z-Image', org: 'tongyi-mai', id: 'z-image', family: 'z-image' },
+  { hf_id: 'tencent/HunyuanImage-3.0', org: 'tencent', id: 'hunyuanimage-3.0', family: 'hunyuanimage', active_params: 13_000_000_000 },
+  { hf_id: 'stabilityai/stable-diffusion-3.5-medium', org: 'stabilityai', id: 'sd-3.5-medium', family: 'stable-diffusion' }
 ]

@@ -10,8 +10,8 @@ params = 1598839674782
 active_params = 49000000000
 context = 1048576
 release_date = "2026-04-22"
-hf_downloads_30d = 1103127
-hf_likes = 5470
+hf_downloads_30d = 1023204
+hf_likes = 5477
 
 [architecture]
 n_layers = 61
@@ -25,6 +25,6 @@ moe_active_experts = 6
 
 [source]
 url = "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
-as_of = "2026-08-22"
+as_of = "2026-08-24"
 note = "synced from HF Hub API"
 

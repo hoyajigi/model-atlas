@@ -1,19 +1,19 @@
-id = "z-image-turbo"
-name = "Z-Image-Turbo"
+id = "z-image"
+name = "Z-Image"
 org = "tongyi-mai"
 family = "z-image"
 modality = "text-to-image"
 open_weights = true
-hf_id = "Tongyi-MAI/Z-Image-Turbo"
+hf_id = "Tongyi-MAI/Z-Image"
 license = "apache-2.0"
 params = 6154908736
 languages = [ "en" ]
-release_date = "2025-11-25"
-hf_downloads_30d = 789945
-hf_likes = 5150
+release_date = "2026-01-23"
+hf_downloads_30d = 37553
+hf_likes = 1211
 
 [source]
-url = "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo"
+url = "https://huggingface.co/Tongyi-MAI/Z-Image"
 as_of = "2026-08-24"
 note = "synced from HF Hub API"
 

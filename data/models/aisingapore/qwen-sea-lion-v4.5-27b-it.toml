@@ -10,8 +10,8 @@ params = 27781427952
 context = 262144
 languages = [ "en", "zh", "vi", "id", "th", "ta", "ms", "my" ]
 release_date = "2026-05-14"
-hf_downloads_30d = 5102
-hf_likes = 8
+hf_downloads_30d = 4943
+hf_likes = 9
 
 [architecture]
 n_layers = 64
@@ -23,6 +23,6 @@ vocab_size = 248320
 
 [source]
 url = "https://huggingface.co/aisingapore/Qwen-SEA-LION-v4.5-27B-IT"
-as_of = "2026-08-22"
+as_of = "2026-08-24"
 note = "synced from HF Hub API"
 

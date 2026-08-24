@@ -9,7 +9,7 @@ license = "other"
 params = 3721243520
 context = 131072
 release_date = "2025-04-22"
-hf_downloads_30d = 68377
+hf_downloads_30d = 58809
 hf_likes = 221
 
 [architecture]
@@ -22,6 +22,6 @@ vocab_size = 110592
 
 [source]
 url = "https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B"
-as_of = "2026-08-22"
+as_of = "2026-08-24"
 note = "synced from HF Hub API"
 

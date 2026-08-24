@@ -10,13 +10,13 @@ params = 70553706496
 context = 131072
 languages = [ "en", "fr", "it", "pt", "hi", "es", "th", "de" ]
 release_date = "2024-11-26"
-hf_downloads_30d = 308811
-hf_likes = 2962
+hf_downloads_30d = 300169
+hf_likes = 2970
 gated = true
 
 [source]
 url = "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"
-as_of = "2026-08-22"
+as_of = "2026-08-24"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
