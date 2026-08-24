@@ -1,20 +1,20 @@
-id = "krea-2-raw"
-name = "Krea-2-Raw"
+id = "krea-2-turbo"
+name = "Krea-2-Turbo"
 org = "krea"
 family = "krea"
 modality = "text-to-image"
 open_weights = true
-hf_id = "krea/Krea-2-Raw"
+hf_id = "krea/Krea-2-Turbo"
 license = "other"
 params = 12820073036
 languages = [ "en" ]
 release_date = "2026-06-18"
-hf_downloads_30d = 78083
-hf_likes = 526
+hf_downloads_30d = 73503
+hf_likes = 919
 gated = true
 
 [source]
-url = "https://huggingface.co/krea/Krea-2-Raw"
+url = "https://huggingface.co/krea/Krea-2-Turbo"
 as_of = "2026-08-24"
 note = "synced from HF Hub API"
 

@@ -1,0 +1,29 @@
+id = "hunyuanimage-3.0"
+name = "HunyuanImage-3.0"
+org = "tencent"
+family = "hunyuanimage"
+modality = "text-to-image"
+open_weights = true
+hf_id = "tencent/HunyuanImage-3.0"
+license = "other"
+params = 83009199459
+active_params = 13000000000
+context = 22800
+release_date = "2025-09-25"
+hf_downloads_30d = 13107
+hf_likes = 1110
+
+[architecture]
+n_layers = 32
+hidden_size = 4096
+n_heads = 32
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 133120
+moe_experts = 64
+
+[source]
+url = "https://huggingface.co/tencent/HunyuanImage-3.0"
+as_of = "2026-08-24"
+note = "synced from HF Hub API"
+

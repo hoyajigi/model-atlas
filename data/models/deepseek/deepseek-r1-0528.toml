@@ -10,7 +10,7 @@ params = 684531386000
 active_params = 37000000000
 context = 131072
 release_date = "2025-05-28"
-hf_downloads_30d = 189086
+hf_downloads_30d = 191713
 hf_likes = 2458
 
 [architecture]
@@ -25,7 +25,7 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528"
-as_of = "2026-08-22"
+as_of = "2026-08-24"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
