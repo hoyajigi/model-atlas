@@ -10,8 +10,8 @@ release_date = "2026-07-09"
 [pricing]
 input_per_mtok = 2
 output_per_mtok = 12
-cache_read_per_mtok = 0.25
-cache_write_per_mtok = 3.125
+cache_read_per_mtok = 0.2
+cache_write_per_mtok = 2.5
 
 [capabilities]
 tool_call = true
@@ -23,6 +23,6 @@ caching = true
 
 [source]
 url = "https://platform.openai.com/docs/pricing"
-as_of = "2026-08-22"
-note = "curator: price corrected to match OpenAI's official pricing page"
+as_of = "2026-08-28"
+note = "curator: cache_read/cache_write corrected to match OpenAI's official pricing page exactly, short-context (<=200k) Standard tier"
 

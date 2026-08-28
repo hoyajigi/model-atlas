@@ -1,0 +1,20 @@
+id = "sd-3.5-medium"
+name = "stable-diffusion-3.5-medium"
+org = "stabilityai"
+family = "stable-diffusion"
+modality = "text-to-image"
+open_weights = true
+hf_id = "stabilityai/stable-diffusion-3.5-medium"
+license = "other"
+params = 2469663936
+languages = [ "en" ]
+release_date = "2024-10-29"
+hf_downloads_30d = 136072
+hf_likes = 1053
+gated = true
+
+[source]
+url = "https://huggingface.co/stabilityai/stable-diffusion-3.5-medium"
+as_of = "2026-08-28"
+note = "synced from HF Hub API"
+
