@@ -59,7 +59,8 @@ export const LLM_SEEDS: Seed[] = [
   { hf_id: 'Qwen/Qwen3.8-2.4T-A95B', org: 'qwen', id: 'qwen3.8-2.4t-a95b', family: 'qwen3.8', active_params: 95_000_000_000 },
   { hf_id: 'deepseek-ai/DeepSeek-V4-Pro', org: 'deepseek', id: 'deepseek-v4-pro', family: 'deepseek-v4', active_params: 49_000_000_000 },
   { hf_id: 'deepseek-ai/DeepSeek-V4-Flash', org: 'deepseek', id: 'deepseek-v4-flash', family: 'deepseek-v4', active_params: 13_000_000_000 },
-  { hf_id: 'moonshotai/Kimi-K3', org: 'moonshotai', id: 'kimi-k3', family: 'kimi-k3', active_params: 104_000_000_000 }
+  { hf_id: 'moonshotai/Kimi-K3', org: 'moonshotai', id: 'kimi-k3', family: 'kimi-k3', active_params: 104_000_000_000 },
+  { hf_id: 'Qwen/Qwen3.8-Flash-Next', org: 'qwen', id: 'qwen3.8-flash-next', family: 'qwen3.8', context: 262144, active_params: 6_000_000_000 }
 ]
 
 export const T2I_SEEDS: Seed[] = [
@@ -71,5 +72,8 @@ export const T2I_SEEDS: Seed[] = [
   { hf_id: 'black-forest-labs/FLUX.2-klein-4B', org: 'black-forest-labs', id: 'flux.2-klein-4b', family: 'flux', modality: 'text-to-image' },
   { hf_id: 'black-forest-labs/FLUX.2-klein-9B', org: 'black-forest-labs', id: 'flux.2-klein-9b', family: 'flux', modality: 'text-to-image' },
   { hf_id: 'krea/Krea-2-Raw', org: 'krea', id: 'krea-2-raw', family: 'krea' },
-  { hf_id: 'Tongyi-MAI/Z-Image-Turbo', org: 'tongyi-mai', id: 'z-image-turbo', family: 'z-image' }
+  { hf_id: 'Tongyi-MAI/Z-Image-Turbo', org: 'tongyi-mai', id: 'z-image-turbo', family: 'z-image' },
+  { hf_id: 'krea/Krea-2-Turbo', org: 'krea', id: 'krea-2-turbo', family: 'krea' },
+  { hf_id: 'Tongyi-MAI/Z-Image', org: 'tongyi-mai', id: 'z-image', family: 'z-image' },
+  { hf_id: 'stabilityai/stable-diffusion-3.5-medium', org: 'stabilityai', id: 'sd-3.5-medium', family: 'stable-diffusion' }
 ]
