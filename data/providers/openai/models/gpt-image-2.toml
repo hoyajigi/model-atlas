@@ -23,7 +23,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://developers.openai.com/api/docs/pricing"
+as_of = "2026-09-01"
+note = "curator: verified against OpenAI's official pricing page (text input $5/Mtok, output $30/Mtok); image input is billed separately at $8/Mtok, not modeled by this schema's single input_per_mtok field. LiteLLM's $10/Mtok output figure appears to be a data error"
 
