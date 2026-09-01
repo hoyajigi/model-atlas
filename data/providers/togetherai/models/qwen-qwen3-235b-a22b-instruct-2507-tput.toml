@@ -19,7 +19,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://www.together.ai/pricing"
+as_of = "2026-09-01"
+note = "curator: verified against Together AI's official pricing page ($0.20/$0.60 per Mtok); LiteLLM's $6.00/Mtok output figure appears to be a data error"
 

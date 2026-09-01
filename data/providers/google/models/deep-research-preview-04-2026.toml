@@ -1,6 +1,6 @@
 model_id = "deep-research-preview-04-2026"
 name = "Deep Research Preview (Apr-21-2026)"
-modality = "text-to-image"
+modality = "multimodal"
 status = "active"
 context = 131072
 max_output = 65536

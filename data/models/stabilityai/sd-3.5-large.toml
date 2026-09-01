@@ -9,12 +9,12 @@ license = "other"
 params = 8146280768
 languages = [ "en" ]
 release_date = "2024-10-22"
-hf_downloads_30d = 76509
-hf_likes = 3716
+hf_downloads_30d = 79363
+hf_likes = 3742
 gated = true
 
 [source]
 url = "https://huggingface.co/stabilityai/stable-diffusion-3.5-large"
-as_of = "2026-08-22"
+as_of = "2026-09-01"
 note = "synced from HF Hub API"
 

@@ -10,7 +10,7 @@ params = 23572403200
 context = 131072
 languages = [ "en", "fr", "de", "es", "pt", "it", "ja", "ko", "ru", "zh", "ar", "fa", "id", "ms", "ne", "pl" ]
 release_date = "2025-07-04"
-hf_downloads_30d = 54160
+hf_downloads_30d = 40664
 hf_likes = 368
 
 [architecture]
@@ -23,6 +23,6 @@ vocab_size = 131072
 
 [source]
 url = "https://huggingface.co/mistralai/Devstral-Small-2507"
-as_of = "2026-08-22"
+as_of = "2026-09-01"
 note = "synced from HF Hub API"
 

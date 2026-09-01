@@ -11,8 +11,8 @@ active_params = 32000000000
 context = 131072
 languages = [ "en", "zh" ]
 release_date = "2025-07-20"
-hf_downloads_30d = 114639
-hf_likes = 1410
+hf_downloads_30d = 95028
+hf_likes = 1411
 
 [architecture]
 n_layers = 92
@@ -26,7 +26,7 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/zai-org/GLM-4.5"
-as_of = "2026-08-22"
+as_of = "2026-09-01"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
