@@ -1,0 +1,30 @@
+id = "hy4-preview"
+name = "Hy4-preview"
+org = "tencent"
+family = "hy4"
+modality = "text"
+open_weights = true
+hf_id = "tencent/Hy4-preview"
+license = "apache-2.0"
+params = 779960992733
+active_params = 49000000000
+context = 1048576
+release_date = "2026-08-27"
+hf_downloads_30d = 4449
+hf_likes = 412
+
+[architecture]
+n_layers = 78
+hidden_size = 6144
+n_heads = 64
+n_kv_heads = 8
+head_dim = 64
+vocab_size = 120832
+moe_experts = 256
+moe_active_experts = 8
+
+[source]
+url = "https://huggingface.co/tencent/Hy4-preview"
+as_of = "2026-09-04"
+note = "synced from HF Hub API"
+

@@ -11,6 +11,12 @@ release_date = "2026-06-30"
 input_per_mtok = 0.25
 output_per_mtok = 30
 
+[pricing.image]
+unit = "per_image"
+usd = 0.0336
+resolution = "1024x1024"
+usd_per_image_1024 = 0.0336
+
 [capabilities]
 tool_call = true
 reasoning = true
@@ -20,7 +26,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://ai.google.dev/gemini-api/docs/pricing"
+as_of = "2026-09-04"
+note = "curator: added per-image price from Google's official pricing page (1K resolution tier)"
 
