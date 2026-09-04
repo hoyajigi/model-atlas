@@ -10,8 +10,8 @@ params = 684531386000
 active_params = 37000000000
 context = 131072
 release_date = "2025-08-21"
-hf_downloads_30d = 231614
-hf_likes = 826
+hf_downloads_30d = 227193
+hf_likes = 828
 
 [architecture]
 n_layers = 61
@@ -25,11 +25,11 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/deepseek-ai/DeepSeek-V3.1"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
-score = 1419.5
+score = 1419.7
 source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
-as_of = "2026-07-16"
+as_of = "2026-09-01"
 

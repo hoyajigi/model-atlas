@@ -9,11 +9,16 @@ license = "apache-2.0"
 params = 6154908736
 languages = [ "en" ]
 release_date = "2025-11-25"
-hf_downloads_30d = 804129
-hf_likes = 5131
+hf_downloads_30d = 678760
+hf_likes = 5199
 
 [source]
 url = "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
+
+[benchmarks.lmarena-t2i]
+score = 1080.9
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-08-07"
 

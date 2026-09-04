@@ -9,12 +9,12 @@ license = "other"
 params = 12820073036
 languages = [ "en" ]
 release_date = "2026-06-18"
-hf_downloads_30d = 78232
-hf_likes = 516
+hf_downloads_30d = 75208
+hf_likes = 614
 gated = true
 
 [source]
 url = "https://huggingface.co/krea/Krea-2-Raw"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 

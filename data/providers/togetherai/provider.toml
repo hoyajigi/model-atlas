@@ -4,6 +4,6 @@ docs_url = "https://docs.together.ai/docs/serverless-models"
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from models.dev (MIT)"
 

@@ -9,17 +9,17 @@ license = "gemma"
 params = 12187325040
 context = 131072
 release_date = "2025-03-01"
-hf_downloads_30d = 1150839
-hf_likes = 810
+hf_downloads_30d = 795690
+hf_likes = 815
 gated = true
 
 [source]
 url = "https://huggingface.co/google/gemma-3-12b-it"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
-score = 1334.2
+score = 1334.1
 source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
-as_of = "2026-07-16"
+as_of = "2026-09-01"
 

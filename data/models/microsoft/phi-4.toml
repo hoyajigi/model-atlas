@@ -10,8 +10,8 @@ params = 14659507200
 context = 16384
 languages = [ "en" ]
 release_date = "2024-12-11"
-hf_downloads_30d = 697249
-hf_likes = 2290
+hf_downloads_30d = 656806
+hf_likes = 2295
 
 [architecture]
 n_layers = 40
@@ -23,11 +23,11 @@ vocab_size = 100352
 
 [source]
 url = "https://huggingface.co/microsoft/phi-4"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
-score = 1216.8
+score = 1216.5
 source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
-as_of = "2026-07-16"
+as_of = "2026-09-01"
 

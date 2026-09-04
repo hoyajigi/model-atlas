@@ -1,0 +1,26 @@
+model_id = "accounts/fireworks/models/deepseek-v4-flash-vision-exp"
+name = "DeepSeek V4 Flash Vision Exp"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 384000
+release_date = "2026-08-21"
+
+[pricing]
+input_per_mtok = 0.22
+output_per_mtok = 0.66
+cache_read_per_mtok = 0.007
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-09-04"
+note = "synced from models.dev (MIT)"
+

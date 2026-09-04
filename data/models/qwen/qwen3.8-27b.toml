@@ -9,8 +9,8 @@ license = "apache-2.0"
 params = 27781427952
 context = 262144
 release_date = "2026-08-05"
-hf_downloads_30d = 2090699
-hf_likes = 12042
+hf_downloads_30d = 5739341
+hf_likes = 13940
 
 [architecture]
 n_layers = 64
@@ -22,6 +22,11 @@ vocab_size = 248320
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3.8-27B"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
+
+[benchmarks.lmarena-text]
+score = 1437.4
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-09-01"
 

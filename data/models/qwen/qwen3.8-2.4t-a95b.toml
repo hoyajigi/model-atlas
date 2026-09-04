@@ -10,8 +10,8 @@ params = 2446182725504
 active_params = 95000000000
 context = 262144
 release_date = "2026-08-08"
-hf_downloads_30d = 17386
-hf_likes = 1141
+hf_downloads_30d = 48006
+hf_likes = 1202
 
 [architecture]
 n_layers = 92
@@ -25,6 +25,6 @@ moe_active_experts = 10
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 
