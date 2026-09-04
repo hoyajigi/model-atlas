@@ -11,13 +11,13 @@ active_params = 17000000000
 context = 10485760
 languages = [ "ar", "de", "en", "es", "fr", "hi", "id", "it", "pt", "th", "tl", "vi" ]
 release_date = "2025-04-02"
-hf_downloads_30d = 369145
-hf_likes = 1333
+hf_downloads_30d = 177667
+hf_likes = 1338
 gated = true
 
 [source]
 url = "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]

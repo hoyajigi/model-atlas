@@ -9,11 +9,11 @@ license = "apache-2.0"
 params = 3875544576
 languages = [ "en" ]
 release_date = "2026-01-14"
-hf_downloads_30d = 526832
-hf_likes = 874
+hf_downloads_30d = 519431
+hf_likes = 898
 
 [source]
 url = "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 

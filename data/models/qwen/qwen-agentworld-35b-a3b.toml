@@ -10,8 +10,8 @@ params = 34660610688
 active_params = 3000000000
 context = 262144
 release_date = "2026-06-22"
-hf_downloads_30d = 79709
-hf_likes = 697
+hf_downloads_30d = 60898
+hf_likes = 710
 
 [architecture]
 n_layers = 40
@@ -25,6 +25,6 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 

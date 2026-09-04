@@ -10,8 +10,8 @@ params = 2779931837184
 active_params = 104000000000
 context = 1048576
 release_date = "2026-06-13"
-hf_downloads_30d = 2612739
-hf_likes = 10922
+hf_downloads_30d = 2617373
+hf_likes = 11173
 
 [architecture]
 n_layers = 93
@@ -23,6 +23,6 @@ moe_experts = 896
 
 [source]
 url = "https://huggingface.co/moonshotai/Kimi-K3"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 

@@ -8,8 +8,8 @@ knowledge_cutoff = "2024-10"
 release_date = "2024-10-01"
 
 [pricing]
-input_per_mtok = 0.04
-output_per_mtok = 0.04
+input_per_mtok = 0.1
+output_per_mtok = 0.1
 
 [capabilities]
 tool_call = true
@@ -19,7 +19,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://docs.mistral.ai/inference/pricing"
+as_of = "2026-09-04"
+note = "curator: price corrected to match Mistral's official pricing page (Ministral 3 3B tier)"
 

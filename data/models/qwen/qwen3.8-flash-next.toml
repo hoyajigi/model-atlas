@@ -1,0 +1,29 @@
+id = "qwen3.8-flash-next"
+name = "Qwen3.8-Flash-Next"
+org = "qwen"
+family = "qwen3.8"
+modality = "multimodal"
+open_weights = true
+hf_id = "Qwen/Qwen3.8-Flash-Next"
+license = "other"
+params = 179999981459
+context = 262144
+release_date = "2026-08-24"
+hf_downloads_30d = 263287
+hf_likes = 4803
+
+[architecture]
+n_layers = 48
+hidden_size = 2560
+n_heads = 24
+n_kv_heads = 2
+head_dim = 256
+vocab_size = 248320
+moe_experts = 512
+moe_active_experts = 10
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+as_of = "2026-09-04"
+note = "synced from HF Hub API"
+

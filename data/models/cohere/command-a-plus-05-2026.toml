@@ -10,8 +10,8 @@ params = 218750277872
 context = 200000
 languages = [ "en", "ar", "bg", "bn", "ca", "cs", "da", "de", "el", "es", "et", "fa", "fi", "fr", "ga", "he" ]
 release_date = "2026-05-11"
-hf_downloads_30d = 63232
-hf_likes = 141
+hf_downloads_30d = 31363
+hf_likes = 143
 
 [architecture]
 n_layers = 32
@@ -25,6 +25,6 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 

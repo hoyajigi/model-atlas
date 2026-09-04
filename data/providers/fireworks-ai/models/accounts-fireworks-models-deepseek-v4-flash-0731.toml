@@ -8,8 +8,8 @@ knowledge_cutoff = "2025-05"
 release_date = "2026-07-31"
 
 [pricing]
-input_per_mtok = 0.14
-output_per_mtok = 0.28
+input_per_mtok = 0.22
+output_per_mtok = 0.66
 cache_read_per_mtok = 0.028
 
 [capabilities]
@@ -21,7 +21,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://docs.fireworks.ai/serverless/pricing"
+as_of = "2026-09-04"
+note = "curator: price corrected to match Fireworks AI's official serverless pricing"
 
