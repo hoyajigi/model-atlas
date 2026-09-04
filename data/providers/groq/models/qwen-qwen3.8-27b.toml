@@ -1,0 +1,26 @@
+model_id = "qwen/qwen3.8-27b"
+name = "Qwen3.8 27B"
+modality = "text"
+status = "active"
+context = 131042
+max_output = 16384
+release_date = "2026-08-14"
+model_ref = "qwen/qwen3.8-27b"
+
+[pricing]
+input_per_mtok = 0.8
+output_per_mtok = 4
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = false
+
+[source]
+url = "https://models.dev"
+as_of = "2026-09-04"
+note = "synced from models.dev (MIT)"
+

@@ -10,8 +10,8 @@ params = 106031767424
 context = 131072
 languages = [ "en", "hi", "bn", "ta", "te", "mr", "gu", "kn", "ml", "pa", "or", "as", "ur", "sa", "ne", "sd" ]
 release_date = "2026-03-03"
-hf_downloads_30d = 23279
-hf_likes = 285
+hf_downloads_30d = 4411
+hf_likes = 288
 
 [architecture]
 n_layers = 32
@@ -24,6 +24,6 @@ moe_active_experts = 8
 
 [source]
 url = "https://huggingface.co/sarvamai/sarvam-105b"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 

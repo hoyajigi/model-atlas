@@ -1,0 +1,27 @@
+model_id = "glm-5.3-flash"
+name = "GLM-5.3-Flash"
+modality = "text"
+status = "active"
+context = 1000000
+max_output = 131072
+release_date = "2026-08-26"
+
+[pricing]
+input_per_mtok = 0.075
+output_per_mtok = 0.25
+cache_read_per_mtok = 0.015
+cache_write_per_mtok = 0
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-09-04"
+note = "synced from models.dev (MIT)"
+

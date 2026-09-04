@@ -9,12 +9,17 @@ license = "other"
 params = 9078581248
 languages = [ "en" ]
 release_date = "2026-01-14"
-hf_downloads_30d = 306057
-hf_likes = 1240
+hf_downloads_30d = 239377
+hf_likes = 1351
 gated = true
 
 [source]
 url = "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
+
+[benchmarks.lmarena-t2i]
+score = 1069.5
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-08-07"
 

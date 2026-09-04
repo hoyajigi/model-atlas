@@ -6,12 +6,12 @@ modality = "text"
 open_weights = true
 hf_id = "openai/gpt-oss-20b"
 license = "apache-2.0"
-params = 21511953984
+params = 20914757184
 active_params = 3600000000
 context = 131072
 release_date = "2025-08-04"
-hf_downloads_30d = 7376531
-hf_likes = 4937
+hf_downloads_30d = 6448506
+hf_likes = 4991
 
 [architecture]
 n_layers = 24
@@ -25,11 +25,11 @@ moe_active_experts = 4
 
 [source]
 url = "https://huggingface.co/openai/gpt-oss-20b"
-as_of = "2026-08-22"
+as_of = "2026-09-04"
 note = "synced from HF Hub API"
 
 [benchmarks.lmarena-text]
-score = 1287.5
+score = 1287.3
 source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
-as_of = "2026-07-16"
+as_of = "2026-09-01"
 
