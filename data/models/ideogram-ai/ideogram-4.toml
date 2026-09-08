@@ -1,0 +1,19 @@
+id = "ideogram-4"
+name = "Ideogram 4"
+org = "ideogram-ai"
+family = "ideogram"
+modality = "text-to-image"
+open_weights = true
+hf_id = "ideogram-ai/ideogram-4-fp8"
+license = "other"
+params = 9281557760
+release_date = "2026-05-30"
+hf_downloads_30d = 63313
+hf_likes = 783
+gated = true
+
+[source]
+url = "https://huggingface.co/ideogram-ai/ideogram-4-fp8"
+as_of = "2026-09-08"
+note = "synced from HF Hub API"
+
