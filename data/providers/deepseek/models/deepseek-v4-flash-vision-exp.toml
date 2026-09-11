@@ -7,9 +7,9 @@ max_output = 384000
 release_date = "2026-08-21"
 
 [pricing]
-input_per_mtok = 0.14
-output_per_mtok = 0.28
-cache_read_per_mtok = 0.0028
+input_per_mtok = 0.3
+output_per_mtok = 1.2
+cache_read_per_mtok = 0.006
 
 [capabilities]
 tool_call = true
@@ -20,7 +20,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://api-docs.deepseek.com/quick_start/pricing"
+as_of = "2026-09-11"
+note = "curator: this is a retired legacy name now served by DeepSeek-V4.1-Flash (\"deepseek-flash\") and billed at its peak-hours rate $0.3/$1.2 per Mtok; models.dev had stale $0.14/$0.28. Off-peak discount (input $0.15, output $0.6, cache-hit $0.003) not modeled."
 

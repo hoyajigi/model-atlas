@@ -7,9 +7,9 @@ max_output = 500000
 release_date = "2026-05-21"
 
 [pricing]
-input_per_mtok = 1.25
-output_per_mtok = 3.75
-cache_read_per_mtok = 0.125
+input_per_mtok = 2.0
+output_per_mtok = 6.0
+cache_read_per_mtok = 0.25
 
 [capabilities]
 tool_call = true
@@ -19,7 +19,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://www.together.ai/pricing"
+as_of = "2026-09-11"
+note = "curator: price corrected to $2.00/$6.00 per Mtok (cached input $0.25) per Together AI's official pricing page; both our prior data ($1.25/$3.75) and models.dev/LiteLLM's flagged value ($2.50/$7.50) were off"
 
