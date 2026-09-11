@@ -1,0 +1,28 @@
+id = "minicpm5-2b"
+name = "MiniCPM5-2B"
+org = "openbmb"
+family = "minicpm"
+modality = "text"
+open_weights = true
+hf_id = "openbmb/MiniCPM5-2B"
+license = "apache-2.0"
+params = 2516756480
+context = 131072
+languages = [ "en", "zh" ]
+release_date = "2026-09-06"
+hf_downloads_30d = 42289
+hf_likes = 1109
+
+[architecture]
+n_layers = 42
+hidden_size = 2048
+n_heads = 16
+n_kv_heads = 2
+head_dim = 128
+vocab_size = 130560
+
+[source]
+url = "https://huggingface.co/openbmb/MiniCPM5-2B"
+as_of = "2026-09-11"
+note = "synced from HF Hub API"
+
