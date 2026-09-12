@@ -9,12 +9,12 @@ license = "other"
 params = 11901408320
 languages = [ "en" ]
 release_date = "2024-07-31"
-hf_downloads_30d = 631339
-hf_likes = 14215
+hf_downloads_30d = 830988
+hf_likes = 14623
 gated = true
 
 [source]
 url = "https://huggingface.co/black-forest-labs/FLUX.1-dev"
-as_of = "2026-08-22"
+as_of = "2026-09-12"
 note = "synced from HF Hub API"
 

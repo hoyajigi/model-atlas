@@ -4,12 +4,13 @@ modality = "text"
 status = "active"
 context = 1000000
 max_output = 384000
-release_date = "2026-08-21"
+knowledge_cutoff = "2025-05"
+release_date = "2026-09-10"
 
 [pricing]
-input_per_mtok = 0.14
-output_per_mtok = 0.28
-cache_read_per_mtok = 0.0028
+input_per_mtok = 0.15
+output_per_mtok = 0.6
+cache_read_per_mtok = 0.003
 
 [capabilities]
 tool_call = true
@@ -21,6 +22,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-09-12"
 note = "synced from models.dev (MIT)"
 
