@@ -7,9 +7,9 @@ max_output = 384000
 release_date = "2026-08-21"
 
 [pricing]
-input_per_mtok = 0.14
-output_per_mtok = 0.28
-cache_read_per_mtok = 0.0028
+input_per_mtok = 0.30
+output_per_mtok = 1.20
+cache_read_per_mtok = 0.006
 
 [capabilities]
 tool_call = true
@@ -20,7 +20,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://api-docs.deepseek.com/quick_start/pricing"
+as_of = "2026-09-15"
+note = "curator: deepseek-v4-flash-vision-exp is a retired legacy name now served by DeepSeek-V4.1-Flash and billed at the Flash rate (peak-hours pricing; off-peak is half)"
 

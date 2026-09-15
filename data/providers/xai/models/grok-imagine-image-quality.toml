@@ -13,9 +13,9 @@ pdf_input = true
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://docs.x.ai/docs/models"
+as_of = "2026-09-15"
+note = "curator: confirmed against xAI's model catalog (1K resolution price 500000000 nano-USD/image = $0.05; 2K resolution is $0.07)"
 
 [pricing.image]
 unit = "per_image"

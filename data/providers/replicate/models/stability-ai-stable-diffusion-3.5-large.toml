@@ -12,4 +12,5 @@ usd_per_image_1024 = 0.065
 
 [source]
 url = "https://replicate.com/stability-ai/stable-diffusion-3.5-large"
-as_of = "2026-07-20"
+as_of = "2026-09-15"
+note = "curator: price unchanged, confirmed against Replicate's model page"

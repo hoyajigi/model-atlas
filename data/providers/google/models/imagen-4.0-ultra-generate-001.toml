@@ -1,0 +1,22 @@
+model_id = "imagen-4.0-ultra-generate-001"
+name = "Imagen 4 Ultra"
+modality = "text-to-image"
+status = "retired"
+
+[pricing.image]
+unit = "per_image"
+usd = 0.06
+resolution = "1024x1024"
+usd_per_image_1024 = 0.06
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = false
+pdf_input = false
+caching = false
+
+[source]
+url = "https://ai.google.dev/gemini-api/docs/pricing"
+as_of = "2026-09-15"
+note = "curator: Imagen 4 models were retired 2026-08-17; Google recommends migrating to Gemini 2.5 Flash Image (gemini-2.5-flash-image). Price is the last published rate before retirement"

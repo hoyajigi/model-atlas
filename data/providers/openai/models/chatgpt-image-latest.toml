@@ -12,9 +12,9 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://platform.openai.com/docs/pricing"
+as_of = "2026-09-15"
+note = "curator: confirmed against OpenAI's official pricing page; pricing mirrors gpt-image-1.5 (medium quality, 1024x1024, 1056 image tokens x $32/Mtok)"
 
 [pricing.image]
 unit = "per_image"

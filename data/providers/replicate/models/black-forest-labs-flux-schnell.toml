@@ -12,4 +12,5 @@ usd_per_image_1024 = 0.003
 
 [source]
 url = "https://replicate.com/pricing"
-as_of = "2026-07-20"
+as_of = "2026-09-15"
+note = "curator: price unchanged ($3 per thousand output images per Replicate's billing config); confirmed against Replicate's model page"
