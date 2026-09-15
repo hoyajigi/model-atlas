@@ -12,9 +12,9 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://platform.openai.com/docs/pricing"
+as_of = "2026-09-15"
+note = "curator: confirmed against OpenAI's official pricing page and image-generation cost guide (medium quality, 1024x1024)"
 
 [pricing.image]
 unit = "per_image"

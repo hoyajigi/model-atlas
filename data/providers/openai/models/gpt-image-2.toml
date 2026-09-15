@@ -11,9 +11,9 @@ cache_read_per_mtok = 1.25
 
 [pricing.image]
 unit = "per_image"
-usd = 0.053
+usd = 0.0317
 resolution = "1024x1024"
-usd_per_image_1024 = 0.053
+usd_per_image_1024 = 0.0317
 
 [capabilities]
 tool_call = false
@@ -23,7 +23,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://platform.openai.com/docs/pricing"
+as_of = "2026-09-15"
+note = "curator: OpenAI cut gpt-image-2 output-token price from $50 to $30 per Mtok; usd_per_image_1024 recomputed at medium quality (1056 image tokens per OpenAI's cost-calculation guide) x $30/Mtok. The guide's own worked-cost-example table still shows the stale $0.053 figure"
 
