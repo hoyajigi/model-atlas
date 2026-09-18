@@ -1,7 +1,7 @@
 model_id = "accounts/fireworks/models/deepseek-v4-pro"
 name = "DeepSeek V4 Pro"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 1000000
 max_output = 384000
 knowledge_cutoff = "2025-05"
@@ -9,9 +9,9 @@ release_date = "2026-04-24"
 model_ref = "deepseek/deepseek-v4-pro"
 
 [pricing]
-input_per_mtok = 1.74
-output_per_mtok = 3.48
-cache_read_per_mtok = 0.145
+input_per_mtok = 1.2
+output_per_mtok = 1.2
+cache_read_per_mtok = 0.6
 
 [capabilities]
 tool_call = true
@@ -23,6 +23,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-09-18"
 note = "synced from models.dev (MIT)"
 

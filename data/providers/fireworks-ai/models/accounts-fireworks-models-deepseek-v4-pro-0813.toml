@@ -1,7 +1,7 @@
 model_id = "accounts/fireworks/models/deepseek-v4-pro-0813"
 name = "DeepSeek V4 Pro 0813"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 1000000
 max_output = 384000
 release_date = "2026-08-12"
@@ -21,6 +21,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-09-18"
 note = "synced from models.dev (MIT)"
 

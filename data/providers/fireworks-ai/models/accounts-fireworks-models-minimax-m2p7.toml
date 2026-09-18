@@ -1,15 +1,15 @@
 model_id = "accounts/fireworks/models/minimax-m2p7"
 name = "MiniMax-M2.7"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 196608
-max_output = 196608
-release_date = "2026-04-12"
+max_output = 131072
+release_date = "2026-03-18"
 
 [pricing]
-input_per_mtok = 0.3
+input_per_mtok = 1.2
 output_per_mtok = 1.2
-cache_read_per_mtok = 0.06
+cache_read_per_mtok = 0.6
 
 [capabilities]
 tool_call = true
@@ -20,6 +20,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-09-18"
 note = "synced from models.dev (MIT)"
 
