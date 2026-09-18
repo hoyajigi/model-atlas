@@ -1,15 +1,15 @@
 model_id = "deepseek-v4-flash-vision-exp"
 name = "DeepSeek V4 Flash Vision Exp"
 modality = "text"
-status = "active"
+status = "retired"
 context = 1000000
 max_output = 384000
 release_date = "2026-08-21"
 
 [pricing]
-input_per_mtok = 0.14
-output_per_mtok = 0.28
-cache_read_per_mtok = 0.0028
+input_per_mtok = 0.3
+output_per_mtok = 1.2
+cache_read_per_mtok = 0.006
 
 [capabilities]
 tool_call = true
@@ -20,7 +20,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://api-docs.deepseek.com/quick_start/pricing"
+as_of = "2026-09-18"
+note = "curator: DeepSeek retired the deepseek-v4-flash-vision-exp model name; requests now route to DeepSeek-V4.1-Flash and are billed at its peak-hours Flash price (off-peak: input $0.15, output $0.6, cache-hit $0.003)"
 
