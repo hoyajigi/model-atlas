@@ -1,7 +1,7 @@
 model_id = "magistral-medium-latest"
 name = "Magistral Medium (latest)"
 modality = "text"
-status = "active"
+status = "retired"
 context = 128000
 max_output = 16384
 knowledge_cutoff = "2025-06"
@@ -19,7 +19,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://docs.mistral.ai/getting-started/models/"
+as_of = "2026-09-18"
+note = "curator: Magistral Medium line (magistral-medium-2509) shows deprecated 2026-05-22 / retired 2026-07-31 on Mistral's model overview, superseded by Mistral Medium 3.5; no longer listed on the live pricing page, so pricing left as last-known and not copied from LiteLLM's unverifiable figure"
 
