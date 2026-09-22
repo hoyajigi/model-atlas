@@ -13,9 +13,9 @@ pdf_input = true
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://docs.x.ai/docs/models"
+as_of = "2026-09-22"
+note = "curator: re-verified against xAI's official model pricing, unchanged"
 
 [pricing.image]
 unit = "per_image"

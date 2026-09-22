@@ -25,7 +25,7 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://ai.google.dev/gemini-api/docs/pricing"
+as_of = "2026-09-22"
+note = "curator: verified against Google's official pricing page; output_per_mtok is the image-output token rate ($120/Mtok), not the lower text-output rate LiteLLM compares against"
 

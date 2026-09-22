@@ -1,0 +1,30 @@
+id = "deepseek-v4.1-flash"
+name = "DeepSeek-V4.1-Flash"
+org = "deepseek"
+family = "deepseek-v4"
+modality = "multimodal"
+open_weights = true
+hf_id = "deepseek-ai/DeepSeek-V4.1-Flash"
+license = "mit"
+params = 763205315794
+active_params = 16000000000
+context = 1048576
+release_date = "2026-09-10"
+hf_downloads_30d = 512120
+hf_likes = 3526
+
+[architecture]
+n_layers = 40
+hidden_size = 5120
+n_heads = 64
+n_kv_heads = 1
+head_dim = 512
+vocab_size = 129280
+moe_experts = 384
+moe_active_experts = 6
+
+[source]
+url = "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+as_of = "2026-09-22"
+note = "synced from HF Hub API"
+

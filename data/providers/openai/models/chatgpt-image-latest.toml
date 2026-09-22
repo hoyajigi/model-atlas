@@ -4,6 +4,10 @@ modality = "text-to-image"
 status = "active"
 release_date = "2025-12-16"
 
+[pricing]
+input_per_mtok = 5
+output_per_mtok = 32
+
 [capabilities]
 tool_call = false
 reasoning = false
@@ -12,9 +16,9 @@ pdf_input = false
 caching = false
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://developers.openai.com/api/docs/pricing"
+as_of = "2026-09-22"
+note = "curator: added confirmed text-input/image-output token pricing; usd_per_image_1024 ($0.034) matches the $32/Mtok output rate at ~1056 tokens/image and is consistent with official pricing"
 
 [pricing.image]
 unit = "per_image"

@@ -23,7 +23,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://developers.openai.com/api/docs/pricing"
+as_of = "2026-09-22"
+note = "curator: verified token pricing ($5/$30 per Mtok) against OpenAI's official pricing page"
 
