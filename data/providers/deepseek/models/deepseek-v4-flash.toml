@@ -9,9 +9,9 @@ release_date = "2026-07-31"
 model_ref = "deepseek/deepseek-v4-flash"
 
 [pricing]
-input_per_mtok = 0.44
-output_per_mtok = 1.32
-cache_read_per_mtok = 0.014
+input_per_mtok = 0.3
+output_per_mtok = 1.2
+cache_read_per_mtok = 0.006
 
 [capabilities]
 tool_call = true
@@ -23,6 +23,6 @@ caching = true
 
 [source]
 url = "https://api-docs.deepseek.com/quick_start/pricing"
-as_of = "2026-08-22"
-note = "curator: price corrected to match DeepSeek's official peak-hours pricing; off-peak discount pricing (input $0.22, output $0.66, cache-hit $0.007) not modeled"
+as_of = "2026-09-22"
+note = "curator: DeepSeek retired V4 Flash on 2026-09-10 and routes this legacy name to DeepSeek-V4.1-Flash at current Flash peak-hours pricing; off-peak discount pricing (input $0.15, output $0.6, cache-hit $0.003) not modeled"
 
