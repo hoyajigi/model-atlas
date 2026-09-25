@@ -9,9 +9,9 @@ release_date = "2026-04-24"
 model_ref = "deepseek/deepseek-v4-pro"
 
 [pricing]
-input_per_mtok = 1.74
-output_per_mtok = 3.48
-cache_read_per_mtok = 0.145
+input_per_mtok = 1.32
+output_per_mtok = 3.96
+cache_read_per_mtok = 0.044
 
 [capabilities]
 tool_call = true
@@ -22,7 +22,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://docs.fireworks.ai/serverless/pricing"
+as_of = "2026-09-25"
+note = "curator: price corrected to Fireworks' official Standard serverless tier ($1.32/$3.96, cache-hit $0.044), matching the dated deepseek-v4-pro-0813 alias; Priority tier is $1.65/$4.95"
 
