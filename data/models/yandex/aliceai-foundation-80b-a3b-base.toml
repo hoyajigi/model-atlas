@@ -1,0 +1,31 @@
+id = "aliceai-foundation-80b-a3b-base"
+name = "AliceAI-Foundation-80B-A3B-Base"
+org = "yandex"
+family = "aliceai"
+modality = "text"
+open_weights = true
+hf_id = "yandex/AliceAI-Foundation-80B-A3B-Base"
+license = "apache-2.0"
+params = 81286433408
+active_params = 3000000000
+context = 262144
+languages = [ "ru", "en" ]
+release_date = "2026-09-12"
+hf_downloads_30d = 2678
+hf_likes = 321
+
+[architecture]
+n_layers = 48
+hidden_size = 2048
+n_heads = 16
+n_kv_heads = 2
+head_dim = 256
+vocab_size = 129024
+moe_experts = 512
+moe_active_experts = 10
+
+[source]
+url = "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base"
+as_of = "2026-09-25"
+note = "synced from HF Hub API"
+

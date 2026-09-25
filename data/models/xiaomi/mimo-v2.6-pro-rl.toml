@@ -1,0 +1,31 @@
+id = "mimo-v2.6-pro-rl"
+name = "MiMo-V2.6-Pro-RL"
+org = "xiaomi"
+family = "mimo-v2.6"
+modality = "text"
+open_weights = true
+hf_id = "XiaomiMiMo/MiMo-V2.6-Pro-RL"
+license = "mit"
+params = 1024216603392
+active_params = 42000000000
+context = 1048576
+languages = [ "en", "zh" ]
+release_date = "2026-09-21"
+hf_downloads_30d = 9841
+hf_likes = 477
+
+[architecture]
+n_layers = 70
+hidden_size = 6144
+n_heads = 128
+n_kv_heads = 8
+head_dim = 192
+vocab_size = 152576
+moe_experts = 384
+moe_active_experts = 8
+
+[source]
+url = "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+as_of = "2026-09-25"
+note = "synced from HF Hub API"
+
