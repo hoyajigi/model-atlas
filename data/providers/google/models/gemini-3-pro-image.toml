@@ -2,7 +2,7 @@ model_id = "gemini-3-pro-image"
 name = "Nano Banana Pro"
 modality = "text-to-image"
 status = "active"
-context = 131072
+context = 65536
 max_output = 32768
 knowledge_cutoff = "2025-01"
 release_date = "2026-05-28"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-09-25"
 note = "synced from models.dev (MIT)"
 
