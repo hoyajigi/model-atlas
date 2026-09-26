@@ -1,11 +1,11 @@
 model_id = "deepseek-v4-flash"
 name = "DeepSeek V4 Flash"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 1000000
-max_output = 384000
+max_output = 393216
 knowledge_cutoff = "2025-05"
-release_date = "2026-07-31"
+release_date = "2026-09-10"
 model_ref = "deepseek/deepseek-v4-flash"
 
 [pricing]
@@ -17,7 +17,7 @@ cache_read_per_mtok = 0.014
 tool_call = true
 reasoning = true
 structured_output = true
-vision = false
+vision = true
 pdf_input = false
 caching = true
 
