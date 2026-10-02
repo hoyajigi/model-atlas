@@ -7,8 +7,8 @@ max_output = 500000
 release_date = "2026-05-21"
 
 [pricing]
-input_per_mtok = 1.25
-output_per_mtok = 3.75
+input_per_mtok = 1.5
+output_per_mtok = 4.5
 cache_read_per_mtok = 0.125
 
 [capabilities]
@@ -19,7 +19,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://www.together.ai/pricing"
+as_of = "2026-10-02"
+note = "curator: price corrected to Together's official pricing page (was $1.25/$3.75); cache_read_per_mtok not re-verified"
 
