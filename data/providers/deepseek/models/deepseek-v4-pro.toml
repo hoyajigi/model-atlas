@@ -3,7 +3,7 @@ name = "DeepSeek V4 Pro"
 modality = "text"
 status = "active"
 context = 1000000
-max_output = 384000
+max_output = 393216
 release_date = "2026-08-12"
 model_ref = "deepseek/deepseek-v4-pro"
 
