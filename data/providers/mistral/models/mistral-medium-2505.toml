@@ -1,7 +1,7 @@
 model_id = "mistral-medium-2505"
 name = "Mistral Medium 3"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 131072
 max_output = 131072
 knowledge_cutoff = "2025-05"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-10"
 note = "synced from models.dev (MIT)"
 
