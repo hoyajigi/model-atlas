@@ -1,7 +1,7 @@
 model_id = "mistral-small-2506"
 name = "Mistral Small 3.2"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 128000
 max_output = 16384
 knowledge_cutoff = "2025-03"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-10"
 note = "synced from models.dev (MIT)"
 

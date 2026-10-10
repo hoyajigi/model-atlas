@@ -2,7 +2,7 @@ model_id = "mistral-small-latest"
 name = "Mistral Small (latest)"
 modality = "text"
 status = "active"
-context = 256000
+context = 262144
 max_output = 256000
 knowledge_cutoff = "2025-06"
 release_date = "2026-03-16"
@@ -10,16 +10,17 @@ release_date = "2026-03-16"
 [pricing]
 input_per_mtok = 0.15
 output_per_mtok = 0.6
+cache_read_per_mtok = 0.015
 
 [capabilities]
 tool_call = true
 reasoning = true
 vision = true
 pdf_input = false
-caching = false
+caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-10"
 note = "synced from models.dev (MIT)"
 

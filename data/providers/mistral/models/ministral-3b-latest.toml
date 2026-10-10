@@ -2,7 +2,7 @@ model_id = "ministral-3b-latest"
 name = "Ministral 3B (latest)"
 modality = "text"
 status = "active"
-context = 128000
+context = 131072
 max_output = 128000
 knowledge_cutoff = "2024-10"
 release_date = "2024-10-01"
@@ -14,12 +14,12 @@ output_per_mtok = 0.04
 [capabilities]
 tool_call = true
 reasoning = false
-vision = false
+vision = true
 pdf_input = false
 caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-10"
 note = "synced from models.dev (MIT)"
 

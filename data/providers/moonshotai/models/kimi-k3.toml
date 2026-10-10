@@ -3,7 +3,7 @@ name = "Kimi K3"
 modality = "text"
 status = "active"
 context = 1048576
-max_output = 131072
+max_output = 1048576
 release_date = "2026-07-16"
 model_ref = "moonshotai/kimi-k3"
 
@@ -11,6 +11,7 @@ model_ref = "moonshotai/kimi-k3"
 input_per_mtok = 3
 output_per_mtok = 15
 cache_read_per_mtok = 0.3
+cache_write_per_mtok = 3
 
 [capabilities]
 tool_call = true
@@ -22,6 +23,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-10"
 note = "synced from models.dev (MIT)"
 

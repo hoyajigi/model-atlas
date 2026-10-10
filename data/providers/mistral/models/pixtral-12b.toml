@@ -1,7 +1,7 @@
 model_id = "pixtral-12b"
 name = "Pixtral 12B"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 128000
 max_output = 128000
 knowledge_cutoff = "2024-09"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-10"
 note = "synced from models.dev (MIT)"
 
