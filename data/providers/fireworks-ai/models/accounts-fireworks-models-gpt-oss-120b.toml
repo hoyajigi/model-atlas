@@ -1,9 +1,10 @@
 model_id = "accounts/fireworks/models/gpt-oss-120b"
 name = "GPT OSS 120B"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 131072
 max_output = 32768
+knowledge_cutoff = "2024-06"
 release_date = "2025-08-05"
 model_ref = "openai/gpt-oss-120b"
 
@@ -15,12 +16,13 @@ cache_read_per_mtok = 0.015
 [capabilities]
 tool_call = true
 reasoning = true
+structured_output = true
 vision = false
 pdf_input = false
 caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-23"
 note = "synced from models.dev (MIT)"
 

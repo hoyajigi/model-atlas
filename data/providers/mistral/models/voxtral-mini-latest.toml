@@ -2,7 +2,7 @@ model_id = "voxtral-mini-latest"
 name = "Voxtral Mini (latest)"
 modality = "audio"
 status = "active"
-release_date = "2026-02-01"
+release_date = "2026-02-04"
 
 [capabilities]
 tool_call = false
@@ -13,6 +13,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-23"
 note = "synced from models.dev (MIT)"
 

@@ -14,12 +14,13 @@ output_per_mtok = 2.4
 [capabilities]
 tool_call = true
 reasoning = true
+structured_output = true
 vision = true
 pdf_input = false
 caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-23"
 note = "synced from models.dev (MIT)"
 

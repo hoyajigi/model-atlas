@@ -3,16 +3,16 @@ quant = "fp8"
 hardware = "b300"
 gpus = 8
 engine = "sglang"
-engine_version = "v0.5.15.post1-cu130"
+engine_version = "b1259f3ea3275f66237c498ea388919729018bc9f01c3d638391e06e2cf3f469"
 concurrency = 512
 seq_in = 8192
 seq_out = 1024
-tok_per_s = 2556.5
-ttft_ms = 7608.1
-measured_on = "2026-07-25"
+tok_per_s = 2456.5
+ttft_ms = 8007.2
+measured_on = "2026-10-20"
 
 [source]
-url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/30029792076/attempts/1"
-as_of = "2026-08-22"
+url = "https://github.com/SemiAnalysisAI/InferenceX/actions/runs/37869828469/attempts/1"
+as_of = "2026-10-23"
 note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
 

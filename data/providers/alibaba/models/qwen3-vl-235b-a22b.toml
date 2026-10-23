@@ -1,7 +1,7 @@
 model_id = "qwen3-vl-235b-a22b"
 name = "Qwen3-VL 235B-A22B"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 131072
 max_output = 32768
 knowledge_cutoff = "2025-04"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-23"
 note = "synced from models.dev (MIT)"
 
