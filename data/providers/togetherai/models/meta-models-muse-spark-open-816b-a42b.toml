@@ -1,0 +1,27 @@
+model_id = "meta-models/Muse-Spark-Open-816B-A42B"
+name = "Muse Spark Open"
+modality = "text"
+status = "active"
+context = 1048576
+max_output = 131072
+knowledge_cutoff = "2026-01-04"
+release_date = "2026-10-15"
+
+[pricing]
+input_per_mtok = 1.25
+output_per_mtok = 4.25
+cache_read_per_mtok = 0.15
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-10-23"
+note = "synced from models.dev (MIT)"
+

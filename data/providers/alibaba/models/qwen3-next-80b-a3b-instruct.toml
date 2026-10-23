@@ -1,7 +1,7 @@
 model_id = "qwen3-next-80b-a3b-instruct"
 name = "Qwen3-Next 80B-A3B Instruct"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 131072
 max_output = 32768
 knowledge_cutoff = "2025-04"

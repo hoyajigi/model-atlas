@@ -1,0 +1,18 @@
+model_ref = "qwen/qwen3.5-397b-a17b"
+quant = "fp8"
+hardware = "tpuv7"
+gpus = 4
+engine = "vllm"
+engine_version = "sa-oct-01"
+concurrency = 1024
+seq_in = 8192
+seq_out = 1024
+tok_per_s = 7426.8
+ttft_ms = 3191.5
+measured_on = "2026-10-12"
+
+[source]
+url = "https://github.com/SemiAnalysisAI/InferenceX-Private-TPU/actions/runs/38293412347/attempts/1"
+as_of = "2026-10-23"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+

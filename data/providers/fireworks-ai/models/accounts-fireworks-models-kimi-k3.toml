@@ -4,7 +4,7 @@ modality = "text"
 status = "active"
 context = 1048576
 max_output = 131072
-release_date = "2026-07-27"
+release_date = "2026-07-16"
 model_ref = "moonshotai/kimi-k3"
 
 [pricing]
@@ -22,6 +22,6 @@ caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-23"
 note = "synced from models.dev (MIT)"
 
