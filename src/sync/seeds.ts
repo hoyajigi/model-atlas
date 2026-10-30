@@ -59,7 +59,9 @@ export const LLM_SEEDS: Seed[] = [
   { hf_id: 'Qwen/Qwen3.8-2.4T-A95B', org: 'qwen', id: 'qwen3.8-2.4t-a95b', family: 'qwen3.8', active_params: 95_000_000_000 },
   { hf_id: 'deepseek-ai/DeepSeek-V4-Pro', org: 'deepseek', id: 'deepseek-v4-pro', family: 'deepseek-v4', active_params: 49_000_000_000 },
   { hf_id: 'deepseek-ai/DeepSeek-V4-Flash', org: 'deepseek', id: 'deepseek-v4-flash', family: 'deepseek-v4', active_params: 13_000_000_000 },
-  { hf_id: 'moonshotai/Kimi-K3', org: 'moonshotai', id: 'kimi-k3', family: 'kimi-k3', active_params: 104_000_000_000 }
+  { hf_id: 'moonshotai/Kimi-K3', org: 'moonshotai', id: 'kimi-k3', family: 'kimi-k3', active_params: 104_000_000_000 },
+  { hf_id: 'deepseek-ai/DeepSeek-V4.1-Flash-1017', org: 'deepseek', id: 'deepseek-v4.1-flash-1017', family: 'deepseek-v4', context: 1_000_000 },
+  { hf_id: 'MiniMaxAI/MiniMax-M3.1-Flash', org: 'minimax', id: 'minimax-m3.1-flash', family: 'minimax-m', context: 1_000_000, active_params: 23_000_000_000 }
 ]
 
 export const T2I_SEEDS: Seed[] = [

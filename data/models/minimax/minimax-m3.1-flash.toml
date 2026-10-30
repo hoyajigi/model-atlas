@@ -1,0 +1,30 @@
+id = "minimax-m3.1-flash"
+name = "MiniMax-M3.1-Flash"
+org = "minimax"
+family = "minimax-m"
+modality = "multimodal"
+open_weights = true
+hf_id = "MiniMaxAI/MiniMax-M3.1-Flash"
+license = "other"
+params = 220490854016
+active_params = 23000000000
+context = 1000000
+release_date = "2026-10-17"
+hf_downloads_30d = 15738
+hf_likes = 489
+
+[architecture]
+n_layers = 60
+hidden_size = 6144
+n_heads = 64
+n_kv_heads = 4
+head_dim = 128
+vocab_size = 200064
+moe_experts = 128
+moe_active_experts = 4
+
+[source]
+url = "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+as_of = "2026-10-30"
+note = "synced from HF Hub API"
+
