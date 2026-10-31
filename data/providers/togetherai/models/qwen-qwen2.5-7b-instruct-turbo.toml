@@ -1,7 +1,7 @@
 model_id = "Qwen/Qwen2.5-7B-Instruct-Turbo"
 name = "Qwen 2.5 7B Instruct Turbo"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 32768
 max_output = 32768
 release_date = "2024-09-19"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

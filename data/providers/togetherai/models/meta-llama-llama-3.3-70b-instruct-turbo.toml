@@ -1,7 +1,7 @@
 model_id = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
 name = "Llama 3.3 70B"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 131072
 max_output = 131072
 knowledge_cutoff = "2023-12"
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

@@ -7,10 +7,6 @@ max_output = 4096
 knowledge_cutoff = "2024-04"
 release_date = "2025-09-08"
 
-[pricing]
-input_per_mtok = 0.035
-output_per_mtok = 0.035
-
 [capabilities]
 tool_call = false
 reasoning = false
@@ -20,6 +16,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

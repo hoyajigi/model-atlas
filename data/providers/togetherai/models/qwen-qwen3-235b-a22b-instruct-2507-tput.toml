@@ -4,8 +4,7 @@ modality = "text"
 status = "deprecated"
 context = 262144
 max_output = 262144
-knowledge_cutoff = "2025-07"
-release_date = "2025-07-25"
+release_date = "2025-07-21"
 
 [pricing]
 input_per_mtok = 0.2
@@ -20,6 +19,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

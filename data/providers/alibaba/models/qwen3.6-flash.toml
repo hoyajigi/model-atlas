@@ -7,9 +7,10 @@ max_output = 65536
 release_date = "2026-04-27"
 
 [pricing]
-input_per_mtok = 0.1875
-output_per_mtok = 1.125
-cache_write_per_mtok = 0.234375
+input_per_mtok = 0.25
+output_per_mtok = 1.5
+cache_read_per_mtok = 0.025
+cache_write_per_mtok = 0.3125
 
 [capabilities]
 tool_call = true
@@ -17,10 +18,10 @@ reasoning = true
 structured_output = true
 vision = true
 pdf_input = false
-caching = false
+caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

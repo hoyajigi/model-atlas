@@ -3,7 +3,7 @@ name = "Qwen3.7 Max"
 modality = "text"
 status = "active"
 context = 1000000
-max_output = 65536
+max_output = 131072
 release_date = "2026-05-21"
 
 [pricing]
@@ -15,12 +15,13 @@ cache_write_per_mtok = 3.125
 [capabilities]
 tool_call = true
 reasoning = true
+structured_output = true
 vision = false
 pdf_input = false
 caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 
