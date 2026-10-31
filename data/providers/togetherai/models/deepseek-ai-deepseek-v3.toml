@@ -4,7 +4,6 @@ modality = "text"
 status = "deprecated"
 context = 131072
 max_output = 131072
-knowledge_cutoff = "2024-07"
 release_date = "2024-12-26"
 
 [pricing]
@@ -20,6 +19,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

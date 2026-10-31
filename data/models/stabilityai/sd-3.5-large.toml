@@ -9,12 +9,17 @@ license = "other"
 params = 8146280768
 languages = [ "en" ]
 release_date = "2024-10-22"
-hf_downloads_30d = 76509
-hf_likes = 3716
+hf_downloads_30d = 58060
+hf_likes = 4171
 gated = true
 
 [source]
 url = "https://huggingface.co/stabilityai/stable-diffusion-3.5-large"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from HF Hub API"
+
+[benchmarks.lmarena-t2i]
+score = 938.3
+source = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+as_of = "2026-10-26"
 

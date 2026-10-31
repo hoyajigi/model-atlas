@@ -4,7 +4,7 @@ modality = "text"
 status = "active"
 context = 131072
 max_output = 131072
-knowledge_cutoff = "2025-08"
+knowledge_cutoff = "2024-06"
 release_date = "2025-08-05"
 model_ref = "openai/gpt-oss-120b"
 
@@ -15,12 +15,13 @@ output_per_mtok = 0.6
 [capabilities]
 tool_call = true
 reasoning = true
+structured_output = true
 vision = false
 pdf_input = false
 caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 

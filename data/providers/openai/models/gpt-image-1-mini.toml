@@ -1,7 +1,7 @@
 model_id = "gpt-image-1-mini"
 name = "gpt-image-1-mini"
 modality = "text-to-image"
-status = "active"
+status = "deprecated"
 release_date = "2025-09-26"
 
 [capabilities]
@@ -13,7 +13,7 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-10-31"
 note = "synced from models.dev (MIT)"
 
 [pricing.image]
