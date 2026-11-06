@@ -1,0 +1,30 @@
+id = "mistral-large-4"
+name = "Mistral-Large-4-1T-A52B"
+org = "mistral"
+family = "mistral-large"
+modality = "multimodal"
+open_weights = true
+hf_id = "mistralai/Mistral-Large-4-1T-A52B"
+license = "other"
+active_params = 52000000000
+context = 1048576
+languages = [ "en", "fr", "de", "es", "pt", "it", "ja", "ko", "ru", "zh", "ar", "fa", "id", "ms", "ne", "pl" ]
+release_date = "2026-09-30"
+hf_downloads_30d = 9592
+hf_likes = 1615
+
+[architecture]
+n_layers = 72
+hidden_size = 6144
+n_heads = 64
+n_kv_heads = 64
+head_dim = 64
+vocab_size = 204800
+moe_experts = 128
+moe_active_experts = 4
+
+[source]
+url = "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+as_of = "2026-11-06"
+note = "synced from HF Hub API"
+

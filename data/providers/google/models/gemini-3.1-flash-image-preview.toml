@@ -26,6 +26,6 @@ caching = false
 
 [source]
 url = "https://ai.google.dev/gemini-api/docs/pricing"
-as_of = "2026-08-22"
+as_of = "2026-11-06"
 note = "curator: usd_per_image_1024 corrected — was priced at the 0.5K resolution tier ($0.045); the 1024px tier is $0.067 per Google's resolution-tiered image pricing (0.5K $0.045 / 1K $0.067 / 2K $0.101 / 4K $0.151)"
 
