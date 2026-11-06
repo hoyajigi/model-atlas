@@ -1,0 +1,28 @@
+id = "kimi-k3.1-pro"
+name = "Kimi-K3.1-Pro"
+org = "moonshotai"
+family = "kimi-k3"
+modality = "multimodal"
+open_weights = true
+hf_id = "moonshotai/Kimi-K3.1-Pro"
+license = "other"
+params = 2780110363392
+active_params = 104000000000
+context = 1048576
+release_date = "2026-11-02"
+hf_downloads_30d = 11658
+hf_likes = 937
+
+[architecture]
+n_layers = 93
+hidden_size = 7168
+n_heads = 96
+n_kv_heads = 96
+vocab_size = 163840
+moe_experts = 896
+
+[source]
+url = "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+as_of = "2026-11-06"
+note = "synced from HF Hub API"
+

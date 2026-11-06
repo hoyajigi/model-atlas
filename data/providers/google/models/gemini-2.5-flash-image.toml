@@ -26,7 +26,7 @@ pdf_input = false
 caching = true
 
 [source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+url = "https://ai.google.dev/gemini-api/docs/pricing"
+as_of = "2026-11-06"
+note = "curator: verified against Google pricing page (standard tier): $0.30/Mtok input, $30/Mtok image output, $0.039 per image up to 1024x1024"
 
