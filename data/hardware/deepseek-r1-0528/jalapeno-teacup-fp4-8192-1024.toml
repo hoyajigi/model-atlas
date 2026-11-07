@@ -1,0 +1,17 @@
+model_ref = "deepseek/deepseek-r1-0528"
+quant = "fp4"
+hardware = "jalapeno"
+gpus = 8
+engine = "teacup"
+concurrency = 2
+seq_in = 8192
+seq_out = 1024
+tok_per_s = 630.8
+ttft_ms = 578.1
+measured_on = "2026-08-22"
+
+[source]
+url = "https://inferencex.semianalysis.com"
+as_of = "2026-11-07"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+
