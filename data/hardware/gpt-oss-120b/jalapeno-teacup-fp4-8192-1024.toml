@@ -1,0 +1,17 @@
+model_ref = "openai/gpt-oss-120b"
+quant = "fp4"
+hardware = "jalapeno"
+gpus = 8
+engine = "teacup"
+concurrency = 2048
+seq_in = 8192
+seq_out = 1024
+tok_per_s = 53216.2
+ttft_ms = 24430.6
+measured_on = "2026-08-22"
+
+[source]
+url = "https://inferencex.semianalysis.com"
+as_of = "2026-11-14"
+note = "InferenceX by SemiAnalysis (Apache-2.0), throughput-optimal point per config"
+
