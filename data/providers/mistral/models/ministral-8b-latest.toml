@@ -2,7 +2,7 @@ model_id = "ministral-8b-latest"
 name = "Ministral 8B (latest)"
 modality = "text"
 status = "active"
-context = 128000
+context = 262144
 max_output = 128000
 knowledge_cutoff = "2024-10"
 release_date = "2024-10-01"
@@ -10,13 +10,15 @@ release_date = "2024-10-01"
 [pricing]
 input_per_mtok = 0.15
 output_per_mtok = 0.15
+cache_read_per_mtok = 0.015
 
 [capabilities]
 tool_call = true
 reasoning = false
-vision = false
-pdf_input = false
-caching = false
+structured_output = true
+vision = true
+pdf_input = true
+caching = true
 
 [source]
 url = "https://mistral.ai/pricing/api"

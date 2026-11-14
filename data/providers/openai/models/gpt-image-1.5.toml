@@ -1,24 +1,29 @@
 model_id = "gpt-image-1.5"
 name = "gpt-image-1.5"
 modality = "text-to-image"
-status = "active"
+status = "deprecated"
 release_date = "2025-11-25"
 
-[capabilities]
-tool_call = false
-reasoning = false
-vision = true
-pdf_input = false
-caching = false
-
-[source]
-url = "https://models.dev"
-as_of = "2026-08-22"
-note = "synced from models.dev (MIT)"
+[pricing]
+input_per_mtok = 5
+output_per_mtok = 10
+cache_read_per_mtok = 1.25
 
 [pricing.image]
 unit = "per_image"
 usd = 0.034
 resolution = "1024x1024"
 usd_per_image_1024 = 0.034
+
+[capabilities]
+tool_call = false
+reasoning = false
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-11-14"
+note = "synced from models.dev (MIT)"
 

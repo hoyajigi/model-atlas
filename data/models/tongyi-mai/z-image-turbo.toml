@@ -9,11 +9,11 @@ license = "apache-2.0"
 params = 6154908736
 languages = [ "en" ]
 release_date = "2025-11-25"
-hf_downloads_30d = 804129
-hf_likes = 5131
+hf_downloads_30d = 773857
+hf_likes = 5599
 
 [source]
 url = "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo"
-as_of = "2026-08-22"
+as_of = "2026-11-14"
 note = "synced from HF Hub API"
 
