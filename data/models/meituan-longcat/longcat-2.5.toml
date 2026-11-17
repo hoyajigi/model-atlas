@@ -1,0 +1,27 @@
+id = "longcat-2.5"
+name = "LongCat-2.5"
+org = "meituan-longcat"
+family = "longcat"
+modality = "multimodal"
+open_weights = true
+hf_id = "meituan-longcat/LongCat-2.5"
+license = "mit"
+params = 1779752648320
+active_params = 48000000000
+context = 524288
+release_date = "2026-11-04"
+hf_downloads_30d = 1850
+hf_likes = 347
+
+[architecture]
+hidden_size = 8192
+n_heads = 64
+head_dim = 128
+vocab_size = 163840
+moe_experts = 768
+
+[source]
+url = "https://huggingface.co/meituan-longcat/LongCat-2.5"
+as_of = "2026-11-17"
+note = "synced from HF Hub API"
+

@@ -1,0 +1,18 @@
+id = "minimax-h3-image"
+name = "MiniMax-H3-Image"
+org = "minimax"
+family = "minimax-h"
+modality = "text-to-image"
+open_weights = true
+hf_id = "MiniMaxAI/MiniMax-H3-Image"
+license = "other"
+languages = [ "en" ]
+release_date = "2026-11-03"
+hf_downloads_30d = 609130
+hf_likes = 1334
+
+[source]
+url = "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+as_of = "2026-11-17"
+note = "synced from HF Hub API"
+
