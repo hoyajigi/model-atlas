@@ -1,0 +1,18 @@
+id = "qwen-image-2.1-turbo"
+name = "Qwen-Image-2.1-Turbo"
+org = "qwen"
+family = "qwen-image"
+modality = "text-to-image"
+open_weights = true
+hf_id = "Qwen/Qwen-Image-2.1-Turbo"
+license = "other"
+params = 7115124736
+release_date = "2026-10-09"
+hf_downloads_30d = 34394
+hf_likes = 1059
+
+[source]
+url = "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
+as_of = "2026-10-27"
+note = "synced from HF Hub API"
+
