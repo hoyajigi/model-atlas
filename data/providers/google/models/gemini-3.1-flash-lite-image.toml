@@ -3,13 +3,13 @@ name = "Nano Banana 2 Lite"
 modality = "text-to-image"
 status = "active"
 context = 65536
-max_output = 65536
+max_output = 4096
 knowledge_cutoff = "2025-01"
 release_date = "2026-06-30"
 
 [pricing]
 input_per_mtok = 0.25
-output_per_mtok = 30
+output_per_mtok = 1.5
 
 [capabilities]
 tool_call = true
@@ -21,6 +21,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-11-21"
 note = "synced from models.dev (MIT)"
 

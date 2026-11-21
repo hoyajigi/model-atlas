@@ -1,7 +1,7 @@
 model_id = "gemini-2.5-flash-image"
 name = "Nano Banana"
 modality = "text-to-image"
-status = "active"
+status = "deprecated"
 context = 32768
 max_output = 32768
 knowledge_cutoff = "2024-06"
@@ -9,7 +9,7 @@ release_date = "2025-08-26"
 
 [pricing]
 input_per_mtok = 0.3
-output_per_mtok = 30
+output_per_mtok = 2.5
 cache_read_per_mtok = 0.075
 
 [pricing.image]
@@ -20,13 +20,13 @@ usd_per_image_1024 = 0.039
 
 [capabilities]
 tool_call = false
-reasoning = true
+reasoning = false
 vision = true
 pdf_input = false
 caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-11-21"
 note = "synced from models.dev (MIT)"
 
