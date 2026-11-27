@@ -1,0 +1,30 @@
+id = "hy4-flash"
+name = "Hy4-flash"
+org = "tencent"
+family = "hy4"
+modality = "multimodal"
+open_weights = true
+hf_id = "tencent/Hy4-flash"
+license = "other"
+params = 220251201958
+active_params = 12000000000
+context = 1048576
+release_date = "2026-11-17"
+hf_downloads_30d = 10479
+hf_likes = 748
+
+[architecture]
+n_layers = 42
+hidden_size = 3072
+n_heads = 32
+n_kv_heads = 32
+head_dim = 64
+vocab_size = 120832
+moe_experts = 512
+moe_active_experts = 16
+
+[source]
+url = "https://huggingface.co/tencent/Hy4-flash"
+as_of = "2026-11-27"
+note = "synced from HF Hub API"
+

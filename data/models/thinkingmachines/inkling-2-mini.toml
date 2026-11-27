@@ -1,0 +1,30 @@
+id = "inkling-2-mini"
+name = "Inkling-2-Mini"
+org = "thinkingmachines"
+family = "inkling"
+modality = "multimodal"
+open_weights = true
+hf_id = "thinkingmachines/Inkling-2-Mini"
+license = "apache-2.0"
+params = 26388646440
+active_params = 3400000000
+context = 1048576
+release_date = "2026-11-17"
+hf_downloads_30d = 96527
+hf_likes = 6284
+
+[architecture]
+n_layers = 24
+hidden_size = 2304
+n_heads = 24
+n_kv_heads = 8
+head_dim = 128
+vocab_size = 201024
+moe_experts = 128
+moe_active_experts = 8
+
+[source]
+url = "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+as_of = "2026-11-27"
+note = "synced from HF Hub API"
+
