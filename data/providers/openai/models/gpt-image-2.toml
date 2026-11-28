@@ -1,29 +1,24 @@
 model_id = "gpt-image-2"
 name = "gpt-image-2"
 modality = "text-to-image"
-status = "active"
+status = "deprecated"
 release_date = "2026-04-21"
-
-[pricing]
-input_per_mtok = 5
-output_per_mtok = 30
-cache_read_per_mtok = 1.25
-
-[pricing.image]
-unit = "per_image"
-usd = 0.053
-resolution = "1024x1024"
-usd_per_image_1024 = 0.053
 
 [capabilities]
 tool_call = false
 reasoning = false
 vision = true
 pdf_input = false
-caching = true
+caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-11-28"
 note = "synced from models.dev (MIT)"
+
+[pricing.image]
+unit = "per_image"
+usd = 0.053
+resolution = "1024x1024"
+usd_per_image_1024 = 0.053
 

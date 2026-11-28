@@ -1,0 +1,27 @@
+model_id = "mindlab/macaron-v1.1-venti-pro"
+name = "Macaron V1.1 Venti Pro"
+modality = "text"
+status = "active"
+context = 1048576
+max_output = 131072
+release_date = "2026-09-22"
+
+[pricing]
+input_per_mtok = 2
+output_per_mtok = 10
+cache_read_per_mtok = 0.1
+cache_write_per_mtok = 0.1
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = true
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-11-28"
+note = "synced from models.dev (MIT)"
+

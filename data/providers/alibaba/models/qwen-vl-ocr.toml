@@ -2,14 +2,14 @@ model_id = "qwen-vl-ocr"
 name = "Qwen-VL OCR"
 modality = "text"
 status = "active"
-context = 34096
-max_output = 4096
+context = 38192
+max_output = 8192
 knowledge_cutoff = "2024-04"
 release_date = "2024-10-28"
 
 [pricing]
-input_per_mtok = 0.72
-output_per_mtok = 0.72
+input_per_mtok = 0.07
+output_per_mtok = 0.16
 
 [capabilities]
 tool_call = false
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-11-28"
 note = "synced from models.dev (MIT)"
 

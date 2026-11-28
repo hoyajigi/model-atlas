@@ -1,25 +1,26 @@
 model_id = "mistral-medium-latest"
 name = "Mistral Medium (latest)"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 262144
 max_output = 262144
-release_date = "2026-04-29"
+release_date = "2026-04-28"
 
 [pricing]
 input_per_mtok = 1.5
 output_per_mtok = 7.5
+cache_read_per_mtok = 0.15
 
 [capabilities]
 tool_call = true
 reasoning = true
 structured_output = true
 vision = true
-pdf_input = false
-caching = false
+pdf_input = true
+caching = true
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-11-28"
 note = "synced from models.dev (MIT)"
 

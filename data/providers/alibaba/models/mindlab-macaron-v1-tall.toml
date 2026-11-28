@@ -1,0 +1,27 @@
+model_id = "mindlab/macaron-v1-tall"
+name = "Macaron V1 Tall"
+modality = "text"
+status = "active"
+context = 262144
+max_output = 65536
+release_date = "2026-07-21"
+
+[pricing]
+input_per_mtok = 0.45
+output_per_mtok = 2.6
+cache_read_per_mtok = 0.08
+cache_write_per_mtok = 0.08
+
+[capabilities]
+tool_call = true
+reasoning = true
+structured_output = true
+vision = false
+pdf_input = false
+caching = true
+
+[source]
+url = "https://models.dev"
+as_of = "2026-11-28"
+note = "synced from models.dev (MIT)"
+
