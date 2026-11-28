@@ -1,11 +1,11 @@
 model_id = "gemini-embedding-001"
 name = "Gemini Embedding 001"
 modality = "text"
-status = "active"
+status = "deprecated"
 context = 2048
 max_output = 1
 knowledge_cutoff = "2025-05"
-release_date = "2025-05-20"
+release_date = "2025-07-14"
 
 [pricing]
 input_per_mtok = 0.15
@@ -20,6 +20,6 @@ caching = false
 
 [source]
 url = "https://models.dev"
-as_of = "2026-08-22"
+as_of = "2026-11-28"
 note = "synced from models.dev (MIT)"
 
